@@ -47,13 +47,7 @@ def text2feat(api, api_descriptions, w2v, idf, query_matrix, query_idf_vector):
     sum_inf.append(api_sim)
     sum_inf.append(api_desc_sim)
 
-    # # 将所有特征封装成字典并返回，这样得到特征之后能直接输出topn的相关特征
-    # api_inf = dict()
-    # api_desc_inf = dict()
-    # api_inf[api] = api_sim
-    # api_desc_inf[api_descriptions] = api_desc_sim
-
-    return sum_inf#, api_inf, api_desc_inf
+    return sum_inf
 
 
 def get_AL_predict(test_feature, choose_feature, unlabel_feature, test_query, choose_pair, unlabel_pair, rec_api_test, w2v, idf):
@@ -84,11 +78,7 @@ def get_AL_predict(test_feature, choose_feature, unlabel_feature, test_query, ch
             )
 
             # add queried instance into FR
-            # choose_query.append(unlabel_query[idx])
-            # choose_answer.append(unlabel_answer[idx])
             choose_pair.append(FeedbackInfo(unlabel_pair[idx].query, unlabel_pair[idx].api))
-            # rec_api_choose.extend(rec_api_unlabel[idx*10:idx*10+10])
-            # choose_feature.extend(unlabel_feature[idx*10:idx*10+10])
             for i in range(idx*10, idx*10+10):
                 choose_feature.append(FeatureVector(unlabel_feature[i].label, unlabel_feature[i].feature, unlabel_feature[i].title))
 
@@ -96,11 +86,7 @@ def get_AL_predict(test_feature, choose_feature, unlabel_feature, test_query, ch
             for i in range(10):
                 X_train = np.delete(X_train, idx*10, axis=0)
                 y_train = np.delete(y_train, idx*10)
-            # del unlabel_query[idx]
-            # del unlabel_answer[idx]
             del unlabel_pair[idx]
-            # del rec_api_unlabel[idx*10:idx*10+10]
-            # del unlabel_feature[idx*10:idx*10+10]
             for i in range(idx*10, idx*10+10):
                 del unlabel_feature[i]
             if len(X_train) == 0:
@@ -141,7 +127,6 @@ while True:
 
     top_questions = recommendation.get_topk_questions(query, query_matrix, query_idf_vector, questions, 50, parent)
     recommended_api = recommendation.recommend_api(query_matrix, query_idf_vector, top_questions, questions, javadoc,javadoc_dict_methods,-1)
-    # recommended_api = recommendation.recommend_api_class(query_matrix, query_idf_vector, top_questions, questions, javadoc,javadoc_dict_classes,-1)
 
 
     # combine api_relevant feature with FF
@@ -150,17 +135,10 @@ while True:
     x = []
     for i,api in enumerate(recommended_api):
         print('Rank',i+1,':',api)
-        # rec_api.append(api)
-        # recommendation.summarize_api_method(api,top_questions,questions,javadoc,javadoc_dict_methods)
         api_description, questions_titles = recommendation.summarize_api_method(api, top_questions, questions, javadoc,
                                                                                  javadoc_dict_methods)
-        # api_dict_desc[api] = api_descriptions
 
         sum_inf = text2feat(api, api_description, w2v, idf, query_matrix, query_idf_vector)
-        # api_feature.append(sum_inf)
-        # print('api_feature', api_feature)
-        # print('api_inf', api_inf)
-        # print('api_desc_inf', api_desc_inf)
 
         rec_api.append(APIRec(i, api, api_description))
         rec_api[i].api_relate_sim = sum_inf
@@ -187,10 +165,6 @@ while True:
 
     # FV = RF+FF
     for i in range(len(rec_api)):
-        # # 用类构成FV
-        # x.append(rec_api[i].api_relate_sim.extend(rec_api[i].feedback_sim))
-
-        # 原始写法
         sum = rec_api[i].api_relate_sim
         sum.extend(rec_api[i].feedback_sim)
         x.append(sum)
@@ -200,10 +174,6 @@ while True:
     reader = csv.reader(fr)
     fr_feature = []
     for row in reader:
-        # # y_feature.append(row[0])
-        # x_feautre.append(row[:-1])
-        # # api_relevant_feature.append(row[1:3])
-        # rec_api_choose.append(row[-1])
         fr_feature.append(FeatureVector(row[0], row[1:-1], row[-1]))
 
     #feature info of SO
@@ -211,9 +181,6 @@ while True:
     reader = csv.reader(fr)
     so_feature = []
     for row in reader:
-        # y_feature.append(row[0])
-        # unlabel_feature.append(row[:-1])
-        # rec_api_unlabel.append(row[-1])
         so_feature.append(FeatureVector(row[0], row[1:-1], row[-1]))
 
     pred2, add_x_FR, add_x_FV, add_y_FV = get_AL_predict(x, fr_feature, so_feature, query, choose_pair, so_pair, rec_api, w2v, idf)
@@ -224,21 +191,6 @@ while True:
     print(pred2)
 
     rem = -10
-
-    # rec, rec_LTR, rec_AL = [], [], []
-    # sort, sort_LTR, sort_AL = [], [], []
-    # pred = []
-    # sum_pred1, sum_pred2 = 0, 0
-    # for i in range(len(x)):
-    #     sum_pred1 += pred1[i]+5
-    #     sum_pred2 += pred2[i]
-    # al_idx = []
-    # rerank_al = sorted(pred2, reverse=True)
-    # for i in range(len(x)):
-    #     temp = rerank_al.index(pred2[i])+1
-    #     while temp in al_idx:
-    #         temp += 1
-    #     al_idx.append(temp)
     for api in rec_api:
         api.pred_LTR = pred1[api.init_id]+5
         api.pred_AL = pred2[api.init_id]
@@ -257,23 +209,11 @@ while True:
         api.pred = (pred1[api.init_id]+5)/len(x) + m*pred2[api.init_id]/al_idx[api.init_id]
         pred.append(api.pred)
     print(pred)
-    # # 对API重排序
-    # for api in rec_api:
-    #     # 得分第i高的api的重排序序号=i
-    #     api[pred.index(max(pred))].resort_id = rec_api.index(api)
-    #     sort.append(api.resort_id)
 
     sort = []
     for i in range(len(rec_api)):
         sort.append(pred.index(max(pred)) + 1)
         pred[pred.index(max(pred))] = rem
-    #     sort_LTR.append(pred1.index(max(pred1)) + 1)
-    #     sort_AL.append(pred2.index(max(pred2)) + 1)
-    #     rec.append(max(pred))
-    #     rec_LTR.append(max(pred1))
-    #     rec_AL.append(max(pred2))
-    #     pred1[pred1.index(max(pred1))] = rem
-    #     pred2[pred2.index(max(pred2))] = rem
     print(sort, rec_api)
 
     # 将api重新排序，输出相关结果
@@ -282,30 +222,19 @@ while True:
         print(sort.index(i) + 1, rec_api[i-1].title, rec_api[i-1].api_description)
         api_obj = {'id': sort.index(i) + 1, 'api': rec_api[i-1].title, 'desc': rec_api[i-1].api_description}
         responseToClient.append(api_obj)
-    # rerank = []
-    # for i in sort:
-    #     api_mod = rec_api[i-1]
-    #     print(sort.index(i) + 1, api_mod)
-    #     # api_obj = {'id': sort.index(i) + 1, 'api':api_mod, 'desc':api_dict_desc[api_mod] }
-    #     api_obj = {'id': sort.index(i) + 1, 'api': api_mod, 'desc': rec_api[api_mod].api_description}
-    #     rerank.append(api_mod)
-    #     responseToClient.append(api_obj)
     # start5 = time.time()
 
-    # print(rerank)
     print(responseToClient)
 
     print('choose API:')
     choose = input()
 
-    # if not math.isnan(api_feature[0][0]):
     if not math.isnan(rec_api[0].api_relate_sim[0]):
         if int(choose):
             fw = open('../data/feedback_rec.csv', 'a+', newline='')
             writer = csv.writer(fw)
             writer.writerow((query, rec_api[sort[int(choose)-1]-1].title))
             fw.close()
-            # rec_api[sort[int(choose) - 1]].title=rerank[int(choose)-1]
             fw = open('../data/feedback_feature_rec.csv', 'a+', newline='')
             writer = csv.writer(fw)
             for i in sort:
@@ -313,7 +242,6 @@ while True:
                 if sort.index(i) == int(choose)-1:
                     y = 1
                     rec_api[i-1].feedback_sim[0] = 1
-                # writer.writerow([y] + api_feature[i-1][:2] + feedback_inf[i-1] + [rerank[sort.index(i)]])
                 writer.writerow([y] + rec_api[i-1].api_relate_sim[:2] + rec_api[i-1].feedback_sim + [rec_api[i-1].title])
             n = len(rec_api)
             while n < 10:

@@ -47,29 +47,7 @@ def get_feedback_api(pair, query_matrix, query_idf_vector, w2v, idf):
     return feeds, feed_sim
 
 
-# def get_feedback_inf(test, question, answer, rec_api_test, w2v, idf):
-#     feedback_inf = []
-#     length = len(rec_api_test)
-#
-#     if isinstance(test, str):
-#         test = [test]
-#
-#     for query in test:
-#         query_matrix, query_idf_vector = load_matrix(query, w2v, idf)
-#         feedbacks_inf, feed_sim = get_feedback_api(question, answer, query_matrix, query_idf_vector, w2v, idf)
-#         for api in rec_api_test[length*test.index(query):length*test.index(query)+length]:
-#             feed_label = []
-#             for feed in feedbacks_inf[0:5]:
-#                 if feed[1] == api:
-#                     feed_label.append(feed[2])
-#                 else:
-#                     feed_label.append(0)
-#             feedback_inf.append(feed_label)
-#     return feedback_inf
-
-
 def get_feedback_inf(test, pair, rec_api_test, w2v, idf):
-    feedback_inf = []
     length = len(rec_api_test)
 
     if isinstance(test, str):
@@ -91,5 +69,3 @@ def get_feedback_inf(test, pair, rec_api_test, w2v, idf):
                 else:
                     feed_label.append(0)
             api.feedback_sim = feed_label
-            # feedback_inf.append(feed_label)
-    # return feedback_inf
