@@ -45,14 +45,16 @@ def preprocess_javadoc(javadoc,javadoc_dict_classes,javadoc_dict_methods,idf,w2v
 
 
 def summarize_api_class(api_class, top_questions, questions, javadoc, javadoc_dict_classes):
+    api_descriptions = []
     for api in javadoc:
         for i, method in enumerate(api.methods):
             if api.package_name + '.' + api.class_name == api_class:
-                print('>>>JavaDoc<<<')
-                print(api.class_name)
-                print(api.class_description)
-                api_descriptions = api.class_description[i]
-                print(api_descriptions)
+                # print('>>>JavaDoc<<<')
+                # print(api.class_name)
+                # print(api.class_description)
+                api_descriptions = [SnowballStemmer('english').stem(word) for word in api.class_description]
+                # api_descriptions = api.class_description[i]
+                # print(api_descriptions)
                 break
 
     titles = dict()
@@ -139,7 +141,7 @@ def summarize_api_class(api_class, top_questions, questions, javadoc, javadoc_di
     # if tot==0:
     #     print('\n-----------------------------------------------\n')
     # else: print('-----------------------------------------------\n')
-    return titles
+    return api_descriptions, titles
 
 
 def recommend_api(query_matrix,query_idf_vector,top_questions,questions,javadoc,javadoc_dict_methods,topk):

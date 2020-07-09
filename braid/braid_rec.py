@@ -2,7 +2,7 @@ import csv
 import math
 from preprocess import recommendation
 from preprocess import similarity
-from braid import APIRec, FeedbackInfo, FeatureVector
+from main import APIRec, FeedbackInfo, FeatureVector
 import gensim
 import _pickle as pickle
 import time
@@ -13,31 +13,22 @@ from sklearn.linear_model import LogisticRegression
 from modAL.models import ActiveLearner
 from modAL.uncertainty import uncertainty_sampling
 import split_data, feedback, metric, braid_LTR, braid_AL
+from os import path
 import warnings
 warnings.filterwarnings("ignore")
 
 
-w2v = gensim.models.Word2Vec.load('../data/w2v_model_stemmed') # pre-trained word embedding
-idf = pickle.load(open('../data/idf', 'rb')) # pre-trained idf value of all words in the w2v dictionary
-questions = pickle.load(open('../data/api_questions_pickle_new', 'rb')) # the pre-trained knowledge base of api-related questions (about 120K questions)
-questions = recommendation.preprocess_all_questions(questions, idf, w2v) # matrix transformation
-javadoc = pickle.load(open('../data/javadoc_pickle_wordsegmented','rb')) # the pre-trained knowledge base of javadoc
-javadoc_dict_classes = dict()
-javadoc_dict_methods = dict()
-recommendation.preprocess_javadoc(javadoc,javadoc_dict_classes,javadoc_dict_methods,idf,w2v) # matrix transformation
-parent = dict() # In online mode, there is no need to remove duplicate question of the query
 
-
-print('loading data finished')
 
 
 def text2feat(api, api_descriptions, w2v, idf, query_matrix, query_idf_vector):
     api_matrix, api_idf_vector = feedback.load_matrix(api, w2v, idf)
-    api_descriptions_matrix, api_descriptions_idf_vector = feedback.load_matrix(api_descriptions, w2v, idf)
+    api_descriptions_matrix = similarity.init_doc_matrix(api_descriptions, w2v)
+    api_descriptions_idf_vector = similarity.init_doc_idf_vector(api_descriptions, idf)
 
     # 获取api及doc信息并计算其相似度，相关问题在推荐中已经获得
     api_sim = similarity.sim_doc_pair(query_matrix, api_matrix, query_idf_vector, api_idf_vector)
-    if api_descriptions == 'null':
+    if api_descriptions == []:
         api_desc_sim = 0
     else:
         api_desc_sim = similarity.sim_doc_pair(query_matrix, api_descriptions_matrix, query_idf_vector, api_descriptions_idf_vector)
@@ -116,139 +107,165 @@ def get_AL_predict(test_feature, choose_feature, unlabel_feature, test_query, ch
 
     return predict, X, new_X_feedback, new_y_feedback
 
+if __name__=='__main__':
+    path1 = 'I:/first_review_biker/first_review_data/'
 
-while True:
-    print('Please input your query:')
-    query = input()
-    # query = 'how to convert int to string?'
-    if not query:
-        continue
-    query_matrix, query_idf_vector = feedback.load_matrix(query, w2v, idf)
+    w2v = gensim.models.Word2Vec.load(path.join(path1, './w2v_model_stemmed'))  # pre-trained word embedding
+    idf = pickle.load(open(path.join(path1, './idf'), 'rb'))  # pre-trained idf value of all words in the w2v dictionary
+    questions = pickle.load(open(path.join(path1, './api_questions_pickle_new'), 'rb'))  # the pre-trained knowledge base of api-related questions (about 120K questions)
+    questions = recommendation.preprocess_all_questions(questions, idf, w2v)  # matrix transformation
+    javadoc = pickle.load(
+        open(path.join(path1, './javadoc_pickle_wordsegmented'), 'rb'))  # the pre-trained knowledge base of javadoc
+    javadoc_dict_classes = dict()
+    javadoc_dict_methods = dict()
+    recommendation.preprocess_javadoc(javadoc, javadoc_dict_classes, javadoc_dict_methods, idf,
+                                      w2v)  # matrix transformation
+    parent = dict()  # In online mode, there is no need to remove duplicate question of the query
 
-    top_questions = recommendation.get_topk_questions(query, query_matrix, query_idf_vector, questions, 50, parent)
-    recommended_api = recommendation.recommend_api(query_matrix, query_idf_vector, top_questions, questions, javadoc,javadoc_dict_methods,-1)
-
-
-    # combine api_relevant feature with FF
-    pos = -1
-    rec_api = []
-    x = []
-    for i,api in enumerate(recommended_api):
-        print('Rank',i+1,':',api)
-        api_description, questions_titles = recommendation.summarize_api_method(api, top_questions, questions, javadoc,
-                                                                                 javadoc_dict_methods)
-
-        sum_inf = text2feat(api, api_description, w2v, idf, query_matrix, query_idf_vector)
-
-        rec_api.append(APIRec(i, api, api_description))
-        rec_api[i].api_relate_sim = sum_inf
-
-        if i == 9:
-            break
-    # print('##################')
-
-    start1 = time.time()
-    # feedback info of user query from SO
-    fr = open('../data/feedback_all.csv', 'r')
-    reader = csv.reader(fr)
-    so_pair = []
-    for row in reader:
-        so_pair.append(FeedbackInfo(row[0], row[1:]))
+    print('loading data finished')
 
     # feedback info of user query from FR
-    fr = open('../data/feedback_rec.csv', 'r')
+    fr = open(path.join(path1, './feedback_rec.csv'), 'r')
     reader = csv.reader(fr)
     choose_pair = []
     for row in reader:
-        choose_pair.append(FeedbackInfo(row[0], row[1:]))
-    feedback.get_feedback_inf(query, choose_pair, rec_api, w2v, idf)
+        print(row[0], row[1:])
 
-    # FV = RF+FF
-    for i in range(len(rec_api)):
-        sum = rec_api[i].api_relate_sim
-        sum.extend(rec_api[i].feedback_sim)
-        x.append(sum)
+    while True:
+        print('Please input your query:')
+        query = input()
+        # query = 'how to convert int to string?'
+        if not query:
+            continue
+        query_matrix, query_idf_vector = feedback.load_matrix(query, w2v, idf)
 
-    # feature info of FR
-    fr = open('../data/feedback_feature_rec.csv', 'r')
-    reader = csv.reader(fr)
-    fr_feature = []
-    for row in reader:
-        fr_feature.append(FeatureVector(row[0], row[1:-1], row[-1]))
+        top_questions = recommendation.get_topk_questions(query, query_matrix, query_idf_vector, questions, 50, parent)
+        # recommended_api = recommendation.recommend_api(query_matrix, query_idf_vector, top_questions, questions, javadoc,javadoc_dict_methods,-1)
+        recommended_api = recommendation.recommend_api_class(query_matrix, query_idf_vector, top_questions, questions, javadoc,javadoc_dict_classes,-1)
 
-    #feature info of SO
-    fr = open('../data/get_feature_method.csv', 'r')
-    reader = csv.reader(fr)
-    so_feature = []
-    for row in reader:
-        so_feature.append(FeatureVector(row[0], row[1:-1], row[-1]))
 
-    pred2, add_x_FR, add_x_FV, add_y_FV = get_AL_predict(x, fr_feature, so_feature, query, choose_pair, so_pair, rec_api, w2v, idf)
+        # combine api_relevant feature with FF
+        pos = -1
+        rec_api = []
+        x = []
+        for i,api in enumerate(recommended_api):
+            print('Rank',i+1,':',api)
+            # api_description, questions_titles = recommendation.summarize_api_method(api, top_questions, questions, javadoc,
+            #                                                                          javadoc_dict_methods)
+            api_description, questions_titles = recommendation.summarize_api_class(api, top_questions, questions, javadoc,
+                                                                                     javadoc_dict_classes)
 
-    pred1 = braid_LTR.get_LTR_predict(add_x_FR, add_x_FV, add_y_FV)
-    print(pred1)
-    print('-----')
-    print(pred2)
+            sum_inf = text2feat(api, api_description, w2v, idf, query_matrix, query_idf_vector)
 
-    rem = -10
-    for api in rec_api:
-        api.pred_LTR = pred1[api.init_id]+5
-        api.pred_AL = pred2[api.init_id]
+            rec_api.append(APIRec(i, api, api_description))
+            rec_api[i].api_relate_sim = sum_inf
 
-    # 获取pred_AL排序:pos_i
-    al_idx = []
-    for i in sorted(pred2, reverse=True):
-        al_idx.append(pred2.index(i)+1)
-        pred2[pred2.index(i)] = -1
-    print('rerank_AL', al_idx)
+            if i == 9:
+                break
+        # print('##################')
 
-    # 计算API_pred
-    m = 0.6
-    pred = []
-    for api in rec_api:
-        api.pred = (pred1[api.init_id]+5)/len(x) + m*pred2[api.init_id]/al_idx[api.init_id]
-        pred.append(api.pred)
-    print(pred)
+        start1 = time.time()
+        # feedback info of user query from SO
+        fr = open(path.join(path1, './feedback_all.csv'), 'r')
+        reader = csv.reader(fr)
+        so_pair = []
+        for row in reader:
+            so_pair.append(FeedbackInfo(row[0], row[1:]))
 
-    sort = []
-    for i in range(len(rec_api)):
-        sort.append(pred.index(max(pred)) + 1)
-        pred[pred.index(max(pred))] = rem
-    print(sort, rec_api)
+        # feedback info of user query from FR
+        fr = open(path.join(path1, './feedback_rec.csv'), 'r')
+        reader = csv.reader(fr)
+        choose_pair = []
+        for row in reader:
+            choose_pair.append(FeedbackInfo(row[0], row[1:]))
+        feedback.get_feedback_inf(query, choose_pair, rec_api, w2v, idf)
 
-    # 将api重新排序，输出相关结果
-    responseToClient = []
-    for i in sort:
-        print(sort.index(i) + 1, rec_api[i-1].title, rec_api[i-1].api_description)
-        api_obj = {'id': sort.index(i) + 1, 'api': rec_api[i-1].title, 'desc': rec_api[i-1].api_description}
-        responseToClient.append(api_obj)
-    # start5 = time.time()
+        # FV = RF+FF
+        for i in range(len(rec_api)):
+            sum = rec_api[i].api_relate_sim
+            sum.extend(rec_api[i].feedback_sim)
+            x.append(sum)
 
-    print(responseToClient)
+        # feature info of FR
+        fr = open(path.join(path1, './feedback_feature_rec.csv'), 'r')
+        reader = csv.reader(fr)
+        fr_feature = []
+        for row in reader:
+            fr_feature.append(FeatureVector(row[0], row[1:-1], row[-1]))
 
-    print('choose API:')
-    choose = input()
+        #feature info of SO
+        fr = open(path.join(path1, './get_feature_method.csv'), 'r')
+        reader = csv.reader(fr)
+        so_feature = []
+        for row in reader:
+            so_feature.append(FeatureVector(row[0], row[1:-1], row[-1]))
 
-    if not math.isnan(rec_api[0].api_relate_sim[0]):
-        if int(choose):
-            fw = open('../data/feedback_rec.csv', 'a+', newline='')
-            writer = csv.writer(fw)
-            writer.writerow((query, rec_api[sort[int(choose)-1]-1].title))
-            fw.close()
-            fw = open('../data/feedback_feature_rec.csv', 'a+', newline='')
-            writer = csv.writer(fw)
-            for i in sort:
-                y = 0
-                if sort.index(i) == int(choose)-1:
-                    y = 1
-                    rec_api[i-1].feedback_sim[0] = 1
-                writer.writerow([y] + rec_api[i-1].api_relate_sim[:2] + rec_api[i-1].feedback_sim + [rec_api[i-1].title])
-            n = len(rec_api)
-            while n < 10:
-                writer.writerow((0, 0, 0, 0, 0, 0, 0, 0, 'null'))
-                n += 1
-            fw.close()
-            print(query, rec_api[sort[int(choose)-1]-1].title)
-        else:
-            print('none')
+        pred2, add_x_FR, add_x_FV, add_y_FV = get_AL_predict(x, fr_feature, so_feature, query, choose_pair, so_pair, rec_api, w2v, idf)
+
+        pred1 = braid_LTR.get_LTR_predict(add_x_FR, add_x_FV, add_y_FV)
+        print(pred1)
+        print('-----')
+        print(pred2)
+
+        rem = -10
+        for api in rec_api:
+            api.pred_LTR = pred1[api.init_id]+5
+            api.pred_AL = pred2[api.init_id]
+
+        # 获取pred_AL排序:pos_i
+        al_idx = []
+        for i in sorted(pred2, reverse=True):
+            al_idx.append(pred2.index(i)+1)
+            pred2[pred2.index(i)] = -1
+        print('rerank_AL', al_idx)
+
+        # 计算API_pred
+        m = 0.6
+        pred = []
+        for api in rec_api:
+            api.pred = (pred1[api.init_id]+5)/len(x) + m*pred2[api.init_id]/al_idx[api.init_id]
+            pred.append(api.pred)
+        print(pred)
+
+        sort = []
+        for i in range(len(rec_api)):
+            sort.append(pred.index(max(pred)) + 1)
+            pred[pred.index(max(pred))] = rem
+        print(sort, rec_api)
+
+        # 将api重新排序，输出相关结果
+        responseToClient = []
+        for i in sort:
+            print(sort.index(i) + 1, rec_api[i-1].title)
+            api_obj = {'id': sort.index(i) + 1, 'api': rec_api[i-1].title}
+            responseToClient.append(api_obj)
+        # start5 = time.time()
+
+        print(responseToClient)
+
+        print('choose API:')
+        choose = input()
+
+        if not math.isnan(rec_api[0].api_relate_sim[0]):
+            if int(choose):
+                fw = open(path.join(path1, './feedback_rec.csv', 'a+'), newline='')
+                writer = csv.writer(fw)
+                writer.writerow((query, rec_api[sort[int(choose)-1]-1].title))
+                fw.close()
+                fw = open(path.join(path1, './feedback_feature_rec.csv'), 'a+', newline='')
+                writer = csv.writer(fw)
+                for i in sort:
+                    y = 0
+                    if sort.index(i) == int(choose)-1:
+                        y = 1
+                        rec_api[i-1].feedback_sim[0] = 1
+                    writer.writerow([y] + rec_api[i-1].api_relate_sim[:2] + rec_api[i-1].feedback_sim + [rec_api[i-1].title])
+                n = len(rec_api)
+                while n < 10:
+                    writer.writerow((0, 0, 0, 0, 0, 0, 0, 0, 'null'))
+                    n += 1
+                fw.close()
+                print(query, rec_api[sort[int(choose)-1]-1].title)
+            else:
+                print('none')
 

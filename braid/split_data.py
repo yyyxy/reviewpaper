@@ -1,13 +1,16 @@
 import csv
 import random
+from os import path
 
+
+path1 = 'I:/first_review_biker/first_review_data/'
 
 # split the '' element in each row of sim_test.csv
 def split_test():
-    fr = open('../data/sim_test_class_2.csv', 'r', encoding='utf-8')
+    fr = open(path.join(path1, './sim_test_class_2.csv'), 'r', encoding='utf-8')
     reader = csv.reader(fr)
     queries, test_query, test_answer, train_query, train_answer, index_test, test_row = [], [], [], [], [], [], []
-    fw = open('../data/sim_test_3.csv', 'w', newline='', encoding='utf-8')
+    fw = open(path.join(path1, './sim_test_3.csv'), 'w', newline='', encoding='utf-8')
     writer = csv.writer(fw)
     for row in reader:
         temp = []
@@ -17,7 +20,7 @@ def split_test():
         print(temp)
         test_row.append(temp)
 
-    fr = open('../data/feedback_all_class.csv', 'r')
+    fr = open(path.join(path1, './feedback_all_class.csv'), 'r')
     reader = csv.reader(fr)
     for row in reader:
         queries.append(row[0])
@@ -39,14 +42,14 @@ def split_test():
 # split the testing and training set
 def get_test_train():
     queries, test_query, test_answer, train_query, train_answer, index_test, test_row = [], [], [], [], [], [], []
-    fr = open('../data/sim_test_3.csv', 'r', encoding='utf-8')
+    fr = open(path.join(path1, './sim_test_3.csv'), 'r', encoding='utf-8')
     reader = csv.reader(fr)
     for row in reader:
         test_row.append(row)
         print(row[0])
     print(test_row)
 
-    fr = open('../data/feedback_all_class.csv', 'r')
+    fr = open(path.join(path1, './feedback_all_class.csv'), 'r')
     reader = csv.reader(fr)
     for row in reader:
         queries.append(row[0])
@@ -63,7 +66,7 @@ def get_test_train():
             train_query.append(row[0])
             train_answer.append(row[1:])
 
-    fr = open('../data/get_feature_class.csv', 'r')
+    fr = open(path.join(path1, './get_feature_class.csv'), 'r')
     reader = csv.reader(fr)
     feat, rec_api_test, rec_api_train, test_feature, train_feature = [], [], [], [], []
     for row in reader:
@@ -117,7 +120,7 @@ def split_10_choose_unlabel(train_query, train_answer, rec_api_train):
     #     # print(f.split('\n')[0])
     #     choose_query.append(f.split('\n')[0])
 
-    fr = open('../data/feedback_random.csv', 'r')
+    fr = open(path.join(path1, './feedback_random.csv'), 'r')
     reader = csv.reader(fr)
     for row in reader:
         choose_query.append(row[0])
@@ -140,7 +143,7 @@ def split_10_choose_unlabel(train_query, train_answer, rec_api_train):
 def get_choose_10_query(train_feature, choose):
     choose_feature, unlabel_feature, rec_api_choose = [], [], []
 
-    fr = open('../data/feedback_feature_random.csv', 'r')
+    fr = open(path.join(path1, './feedback_feature_random.csv'), 'r')
     reader = csv.reader(fr)
     for row in reader:
         choose_feature.append(row[:-1])
