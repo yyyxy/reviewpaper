@@ -3,7 +3,8 @@ import random
 from os import path
 
 
-path1 = 'I:/first_review_biker/first_review_data/'
+# path1 = 'I:/first_review_biker/first_review_data/'
+path1 = 'D:/first_review_data/'
 
 # split the '' element in each row of sim_test.csv
 def split_test():
@@ -81,6 +82,20 @@ def get_test_train():
             rec_api_train.append(feat[i][-1])
     print(111, len(test_query), len(train_query))
     return test_query, test_answer, train_query, train_answer, test_feature, train_feature, rec_api_test, rec_api_train
+
+
+def idx_to_data(train_idx, fbd_idx, test_idx):
+    fr = open(path.join(path1, './feedback_all_class.csv'), 'r')
+    reader = csv.reader(fr)
+    for i, row in enumerate(reader):
+        # print(i, row)
+        if i in train_idx:
+            print(i, 'train')
+        if i in fbd_idx:
+            print(i, 'feedback')
+        if i in test_idx:
+            print(i, 'test')
+
 
 
 def split_choose_unlabel(train_query, train_answer, rec_api_train, num):

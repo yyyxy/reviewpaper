@@ -17,8 +17,9 @@ from os import path
 import warnings
 warnings.filterwarnings("ignore")
 
-
-
+"""
+online API recommendation
+"""
 
 
 def text2feat(api, api_descriptions, w2v, idf, query_matrix, query_idf_vector):
@@ -107,6 +108,7 @@ def get_AL_predict(test_feature, choose_feature, unlabel_feature, test_query, ch
 
     return predict, X, new_X_feedback, new_y_feedback
 
+
 if __name__=='__main__':
     path1 = 'I:/first_review_biker/first_review_data/'
 
@@ -140,7 +142,6 @@ if __name__=='__main__':
         query_matrix, query_idf_vector = feedback.load_matrix(query, w2v, idf)
 
         top_questions = recommendation.get_topk_questions(query, query_matrix, query_idf_vector, questions, 50, parent)
-        # recommended_api = recommendation.recommend_api(query_matrix, query_idf_vector, top_questions, questions, javadoc,javadoc_dict_methods,-1)
         recommended_api = recommendation.recommend_api_class(query_matrix, query_idf_vector, top_questions, questions, javadoc,javadoc_dict_classes,-1)
 
 
@@ -150,8 +151,6 @@ if __name__=='__main__':
         x = []
         for i,api in enumerate(recommended_api):
             print('Rank',i+1,':',api)
-            # api_description, questions_titles = recommendation.summarize_api_method(api, top_questions, questions, javadoc,
-            #                                                                          javadoc_dict_methods)
             api_description, questions_titles = recommendation.summarize_api_class(api, top_questions, questions, javadoc,
                                                                                      javadoc_dict_classes)
 
@@ -234,14 +233,10 @@ if __name__=='__main__':
         print(sort, rec_api)
 
         # 将api重新排序，输出相关结果
-        responseToClient = []
         for i in sort:
             print(sort.index(i) + 1, rec_api[i-1].title)
             api_obj = {'id': sort.index(i) + 1, 'api': rec_api[i-1].title}
-            responseToClient.append(api_obj)
         # start5 = time.time()
-
-        print(responseToClient)
 
         print('choose API:')
         choose = input()
