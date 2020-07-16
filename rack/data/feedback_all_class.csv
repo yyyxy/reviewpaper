@@ -1,0 +1,413 @@
+How to convert binary string value to decimal,Integer
+How can I use html styles in strings with format arguments,String
+Converting a sentence string to a string array of words in Java,String
+"How do I create a parent-last / child-first ClassLoader in Java, or How to override an old Xerces version that was already loaded in the parent CL",Class
+How to timeout a thread,Future,Thread
+How to modify a Collection while iterating using for-each loop without ConcurrentModificationException,Iterator
+How to hide cursor in a Swing application,Toolkit,Cursor
+How to generate a random permutation in Java,Collections
+Java generating Strings with placeholders,String
+Collect Linux command output,Process
+How to subtract X days from a date using Java calendar,Calendar
+How do I make my ArrayList Thread-Safe? Another approach to problem in Java,Collections
+First char to upper case,String,Character
+Grouping elements of a list into sublists (maybe by using guava),Collectors
+Escaping special characters in Java Regular Expressions,Pattern
+How do I get localized date pattern string,SimpleDateFormat,DateTimeFormatter
+Setting the default Java character encoding,String,Charset
+16 bit hex string to signed int in Java,Integer
+Resolving ip-address of a hostname,InetAddress
+Splitting a string in java on more than one symbol,String
+How to remove newlines from beginning and end of a string (Java),String
+How to reverse a list in Java,Collections
+Java Convert File to Byte Array and visa versa,Files
+How can I get a Unicode character's code,Character
+Java: How to test on array equality,Arrays
+How do I convert from int to String,Integer
+convert Object[] from a hashmap keyset to String[],Set
+Fastest way to create new array with length N and fill it by repeating a given array,System
+How to measure time taken by Java code,System
+Java string align to right,String
+How to split a comma-separated string,String,Arrays
+toString java of arrays,Arrays
+How to find the exact word using a regex in Java,Matcher
+Remove all non alphabetic characters from a String array in java,String
+Java reflection get all private fields,Field
+How to get the current date and time of your timezone in Java,TimeZone
+How can I get screen resolution in java,Toolkit
+Java: join array of primitives with separator,String
+How to instantiate inner class with reflection in Java,Class
+How to wrap text in a JTextArea,JTextArea
+How to convert Integer to int,Integer
+Grouping by List of Map in Java 8,Collectors
+How to sort by two fields in Java,Collections,String
+Getting a list of accessible methods for a given class via reflection,Class
+How do I format a long integer as a string without separator in Java,Long
+How to get system time in Java without creating a new Date,System,Date
+How to loop over a Class attributes in Java,Class
+Calculate whether an IP address is in a specified range in Java,InetAddress
+Comparing strings with == which are declared final in Java,String
+Java8 java.util.Date conversion to java.time.ZonedDateTime,ZonedDateTime,Date
+How to see if an object is an array without using reflection,Arrays,Class
+Elegant way to read file into byte[] array in Java,Files
+Java parse a number in exponential notation,Double
+How to sort file names in ascending order,Collections,Arrays
+"How do you get the ""object reference"" of an object in java when toString() and hashCode() have been overridden",Object,System
+How to count the number of 1's a number will have in binary,Integer
+How to get the current Time and TimeZone from Locale,TimeZone,Locale
+How to use Scanner to accept only valid int as input,Scanner
+How to test a Class.forName call in Java code,Class
+How to print the address of an object if you have redefined toString method,System,Object
+How to get all possible values of an enum in java? (not knowing the specific Enum),Class
+Best way to exit a program when I want an exception to be thrown,System
+Double value to round up in Java,Double
+Make a negative number positive,Math
+Get string character by index - Java,Character,String
+"How to use ""cd"" command using Java runtime",ProcessBuilder,Runtime
+How to get the insert ID in JDBC,Statement
+How to scan a folder in Java,Files,File
+How do I copy a 2 Dimensional array in Java,System,Arrays
+Checking for a null int value from a Java ResultSet,ResultSet
+How to check if internet connection is present in java,InetAddress,URL
+Replacing single '\' with '\\' in Java,String
+Add elements to a List while iterating over it. (Java),List
+Calling System.gc( ) explicitly,System
+Compare two arrays of primitives in Java,Arrays
+How can I get the current date and time in UTC or GMT in Java,Date
+How to name a variable that is a copy of a parameter,Arrays
+Garbage collector in Android,System
+Java 7 default locale,Locale
+Equals operator for zeros (BigDecimal / Double) in Java,BigDecimal
+java: How to fix the Unchecked cast warning,Class
+Removing range (tail) from a List,List
+How to convert a Binary String to a base 10 integer in Java,Integer
+How to get string value from a Java field via reflection,Field
+Concatenating null strings in Java,String
+Linking static library with JNI,System
+Round up BigDecimal to Integer value,BigDecimal
+How can I stop a Java while loop from eating >50% of my CPU,Thread,System
+Convert Set to List without creating new List,List
+How to rotate text with Graphics2D in Java,Graphics2D
+Changing Java PriorityQueue to a Max PQ,Collections
+How can I abort a running JDBC transaction,Connection,Statement
+How Object objects return Strings? (Java),Object
+"How to wait for all threads to finish, using ExecutorService",ExecutorService
+Calculate the display width of a string in Java,Graphics,FontMetrics
+Initializing a boolean array to false,Arrays
+How to show full stack trace on eclipse,Throwable
+How to convert date format to milliseconds,Date
+How to find and stop all currently running threads,Thread
+How to Convert a Java 8 Stream to an Array,Stream
+How can I check if a single character appears in a string,String
+Java garbage collection,System
+Instantiating an inner class,Class
+Java ResultSet - get Column name based on Index,ResultSet
+Is there a way to instantiate a class by name in Java,Class
+Test if a string contains any of the strings from an array,String
+How to get file size in Java,File
+java hashmap key iteration,Map
+Java Fastest way to read through text file with 2 million lines,BufferedReader
+Merge 3 arraylist to one,Arrays,Stream,ArrayList
+How can I create a stream from an array,Arrays,Stream
+initializing a boolean array in java,Arrays,Boolean
+Get java.nio.file.Path object from java.io.File,File
+How to get concrete type of a generic interface,ParameterizedType,Class
+Cast Object to Generic Type for returning,Class
+Combine stream of Collections into one Collection - Java 8,Stream
+Accessing non-visible classes with reflection,Class
+Precise time measurement in Java,System
+Comparing strings by their alphabetical order,String
+Java - How to format a number to a 2 char string,String
+Convert from Radians to Degrees in Java,Math
+Append relative URL to java.net.URL,URL
+Correct way to synchronize ArrayList in java,Collections
+How to find out which object currently has focus,Window
+How to convert BigDecimal to Double in Java,BigDecimal
+Java: splitting the filename into a base and extension,String
+How to add new System Properties in java,System
+LocalDate to java.util.Date and vice versa simplest conversion,Date
+Java: function for arrays like PHP's join(),String
+How can I find whitespace space in a String,String
+How can I measure the speed of code written in Java? (AI algorithms),System
+Set specific precision of a BigDecimal,BigDecimal
+how to check if string contains '+' character,String
+best way to reverse bytes in an int in java,Integer,Double,Float
+Programmatically determine which Java thread holds a lock,Thread
+Defensive copy of Calendar,Calendar
+Get MAC address on local machine with Java,NetworkInterface
+java escape parenthesis,Pattern
+Sorting int array in descending order,Collections
+How to get the name of a class without the package,Class
+How to initialize all the elements of an array to any specific value in java,Arrays
+Create intermediate folders if one doesn't exist,File
+Take a char input from the Scanner,Scanner
+how to find before and after sub-string in a string,String
+Check if class exists in Java classpath without running its static initializer,Class
+Java Round up Any Number,Math
+How do you kill a thread in Java,Thread
+How to split a string in Java,String
+How to clean up threadlocals,ThreadLocal
+Creating a draw rectangle (filled with black color) function in Java for a grid,Graphics
+Java - Splitting String based on multiple delimiters,String
+Ways to iterate over a List in java,List
+"How can one Java thread check the state of another one, e.g. whether the other one is blocked",Thread
+Alternative to successive String.replace,StringBuilder,String
+Handling passwords used for auth in source code,JPasswordField
+How to capture System.exit event,Runtime
+How do I know if I'm on the event dispatch thread,Runnable,SwingWorker,SwingUtilities
+Splitting a string using Regex in Java,String
+Quickly square a double,Math
+Java: How can I access a class's field by a name stored in a variable,AccessibleObject,Class,Field
+How to find time taken to run java program,System
+Close one JFrame without closing another,JFrame
+How to add elements of a Java8 stream into an existing List,List,Collectors,ArrayList,Collector
+Java how to instantiate a class from string,Constructor,Class
+"Java, how to change current database to another",Connection
+How to Execute Windows Commands Using Java - Change Network Settings,Runtime
+How do you crash a JVM,System
+Getting A File's Mime Type In Java,Files
+Combine collect of list with single value using streams,Stream
+"How to use comparison operators like >, =, < on BigDecimal",BigDecimal
+Find the Biggest number in HashSet/HashMap java,HashMap,Collections
+Sort ArrayList of custom Objects by property,Comparator,List
+Efficiently finding the intersection of a variable number of sets of strings,Set
+How to stop a thread created by implementing runnable interface,Thread
+Making Thread sleep for random amount of MS,Thread
+instantiate class from class object,Class
+iterator for replacing list members in Java,List,ListIterator
+Java reflection: get class of field,Field
+How do I measure time elapsed in Java,System
+Loading files with ClassLoader,Class,ClassLoader
+How to generate random array of ints using Stream API Java 8,Random
+How to reuse application of filter & map on a Stream,Stream
+How to check if element exists using a lambda expression,Stream
+Stream from two dimensional array in java,Arrays,Stream
+How to make a separated copy of an ArrayList,ArrayList
+How to subtract X day from a Date object  in Java,Calendar
+Instantiate a class object with constructor that accepts a string parameter,Class
+How to make a symlink in Java when running in Linux,Files,Runtime
+How to round the double value to 2 decimal points,Math
+Enums shared static look-up method,Class
+JOptionPane to get password,JOptionPane
+How to run linux commands in java code,Runtime
+Compare two objects with a check for null,Objects
+How to create a multipart zip file and read it back,ZipInputStream
+print array in the log cat android,Arrays
+Implement binary search in objects,Collections
+Getting unix timestamp from Date(),Date
+Java ArrayList - Check if list is empty,List
+Convert between LocalDate and sql.Date,Date
+Sleep function in android program,Thread
+How to check that a string is parseable to a double,Double
+How can I pad a String in Java,String
+How to round a number to n decimal places in Java,DecimalFormat,BigDecimal,Math
+Tokenizing a String but ignoring delimiters within quotes,String
+how do I set the default locale for my JVM,Locale
+Check if a class is subclass of another class in Java,Class
+"Given a string in Java, just take the first X letters",String
+How to split a String into a Stream of Strings,String,Arrays,Stream
+Preferred Java way to ping an HTTP URL for availability,InetAddress,HttpURLConnection
+JFileChooser change default directory in Windows,JFileChooser
+How can I remove a substring from a given String,String
+How can I check if an InputStream is empty without reading from it,InputStream
+In java how to get substring from a string till a character c,String
+Replace part of a string between indexes in Java,String
+Java negative indexOf (counting from the end [length()] ),String
+Set System Property for JUnit Runner (Eclipse) to test a Spring Web App,System
+Waiting on a condition in a reentrant lock,Condition
+How can I check if multiplying two numbers in Java will cause an overflow,Math
+How do I properly load a BufferedImage in java,ImageIO
+How can I iterate over the elements in Hashmap,HashMap
+How to ensure order of processing in java8 streams,Stream,BaseStream,package-summary
+How do I get a UTC Timestamp from Calendar,Calendar
+"How can I get the size of an array, a Collection, or a String in Java",Collection,String,Map
+Raising a number to a power in Java,Math
+How to Find the Default Charset/Encoding in Java,Charset
+Escaping Shell Commands In java,Runtime
+adding comment in .properties files,Properties
+How to obtain the start time and end time of a day,LocalDate
+Checking if a number is an Integer in Java,Integer
+Reading a plain text file in Java,Files,BufferedReader
+How to insert NULL in mysql especially INT dataType,PreparedStatement
+How do I schedule a task to run once,index,ScheduledExecutorService,Future
+How to change JFrame icon,Window,JFrame
+How do I print a double value without scientific notation using Java,Formatter,Double
+Java Wait for thread to finish,Thread
+Calendar date to yyyy-MM-dd format in java,Date
+Checking if a class is java.lang.Enum,Class
+How can I read input from the console using the Scanner class in Java,Scanner
+How can I shuffle a specific range of an ArrayList,List,Collections
+"BigDecimal, precision and scale",BigDecimal
+How to compare two object arrays in Java,Arrays
+how to detect operating system language (locale) from java code,Locale
+How to cast an Object to an int in java,Integer
+How to dynamically monitor Java heap size,Runtime
+Create new object using reflection,Class
+Sorting a LinkedHashSet,Collections
+How to create a generic array,Array
+Deep copy of an object array,Object
+How can I divide properly using BigDecimal,BigDecimal
+Android - Check whether a value exist in an Array,List,Arrays
+How do you escape colon (:) in Properties file,Properties
+Always Round UP a Double,Math
+Java 8 streams: process every possible pair of elements from list,Stream
+Getting the IP address of the current machine using Java,NetworkInterface,InetAddress
+how to compare the Java Byte[] array,Arrays
+Best approach to converting Boolean object to string in java,String
+java - Safe way to create a Temp file,File
+Access static final variable using reflection,Field
+How to iterate through ArrayList of objects,ArrayList
+#Call return statement or System.exit on try or catch block,System
+How to replace all characters in a user input string except one,String
+How can I run my haskell functions through Java,Runtime
+How can I exchange the first and last characters of a string in Java,String
+Getting User input with Scanner,Integer,Scanner
+How to get generic type information from getAnnotatedParameterTypes() in Java 8,Executable,Method
+getting file creator/owner attributes in Java,Files
+Is there any way to find os name using java,System
+Interrupt java thread running nashorn script,Thread
+Java - parse binary to long,Long
+How cancel the execution of a SwingWorker,SwingWorker
+What is the fastest way to copy a double[] in Java,System
+java explode a line/string like php explode,String
+how to create a file in Java only if one doesn't already exist,File
+Creating new object in abstract class in Java,Class,Constructor
+Load Java Image inside package from a class in a different package,Class,ClassLoader
+How to collect DoubleStream to List,DoubleStream,Double,Stream
+Java Streams: find if stream contains null,Stream
+JDesktopPane - how to get active frame,JDesktopPane
+JAVA: Concurrency control for access to list in java,Collections
+How do I use swing in a shutdown hook,Runtime,System
+How to ensure a piece of code is run before exiting a java application,Runtime,System
+Java concatenate to build string or format,String
+Listing only files in directory,File
+How to blur a portion of an image with JAVA,BufferedImage
+Is there any way we can execute some java code when a jvm process is killed,Runtime
+Java Stream API - count items of a nested list,Stream,IntStream
+Show an animated BG in Swing,Graphics,Component
+How to append text to file in Java 8 using specified Charset,Files
+Run batch file from Java code,Runtime
+Setting log level for inner class (in Glassfish),Logger
+Java enums in generic type,Enum
+How to call c++ functionality from java,Runtime
+Get words around a position in a string,String
+Align Strings in columns in JTextArea,Formatter,String
+Measuring Download Speed Java,System
+Properly closing SSLSocket,Socket
+How can I write to a specific line number in a txt file in Java,Files
+Java starting another Java Application,Runtime
+Program to get all files within a directory in Java,File
+How to explicitly perform garbage collection,System
+Setting the default application icon image in Java swing on OS X,JFrame
+Remove end of line characters from end of Java String,String
+How to determine last element when using an iterator,Iterator
+How should I call a Perl Script in Java,Process,Runtime
+Replace first occurrence of character in Android/Java,String
+how to kill a thread which is waiting for blocking function call in Java,Thread
+Fastest way to sort an array of objects in java,Arrays
+What is the sorting algorithm for Java,Collections,Arrays
+passing parameters to a JDBC PreparedStatement,PreparedStatement
+Check if class exists without running into ClassNotFoundException,Class
+Determine which thread owns a monitor,Thread,ThreadMXBean
+How can a Swing WindowListener veto JFrame closing,JFrame
+Finding Mouse Position relative to a panel,MouseEvent
+How to format a 3-digit integer to a 4-digit string,String
+"In java, how do I process CompletableFutures and get the first desireable result that completes",CompletableFuture
+How to iterate from last to first an ArrayList,List
+How to convert util.Date to time.LocalDate correctly for dates before 1893,LocalDate
+How do I create a log4j Logger using Spring XML configuration,Logger
+Java scroll JScrollPane with JPanel within to bottom,JComponent,JScrollPane
+how to make multiple line string to single line string,String
+Using the equals() method with String and Object in Java,Object,String
+How do I iterate over an Array field reflectively,Field
+Sorting an ArrayList of Person with java collections,Collections
+"Inserting values in Map< K, V >",Map
+Select a particular type of file in java,File
+How to sort an attribute of an object using Collections,Collections
+How to get key position from a HashMap in Java,Map
+Avoiding PermGen out of memory and GC overhead limit exceeded,System
+Determine if a Java `Lock` is held by the current thread,ReentrantLock
+How to create a Class of primitive array,Class
+How to convert a negative integer into two's complement binary form? (Java),Integer
+"How to replace "" \ "" with "" \\ "" in java",String
+Converting result of Math.sin(x) into a result for degrees in java,Math
+Does anyone know a library containing all localized country names in java,Locale
+String pool creating two string objects for same String in Java,String
+Hash a double in Java,Double
+Varargs method modifies caller's array instead of its own copy,System,Arrays
+How to retrieve milliseconds from java.sql.Timestamp,Timestamp
+Read/write blob data in chunks with Hibernate,Blob
+Help typecasting a String Array of bytes to actual bytes,Byte,Integer
+Best approach for dealing with time measures,Long,Duration,System
+Java replacing special characters,String,Pattern
+Efficient way to convert io.netty.buffer.ByteBuf to java.nio.ByteBuffer,ByteBuffer
+collecting from parallel stream in java 8,Stream
+Java - Draw a ruler (line with tick marks at 90 degree angle),Graphics,Math
+How to Instruct JVM to keep memory footprint as low as possible,System
+How to show different cards in a CardLayout,CardLayout
+How to Sort Date in descending order From Arraylist Date in android,Collections
+String Concatenation and Autoboxing in Java,StringBuilder,String
+Stopping looping thread in Java,Thread
+How do I Click a JButton without the user Clicking it,AbstractButton
+Convert a byte or int to bitset,BitSet
+Java Array Comparison,Arrays
+How to create a type safe generic array in java,Array
+"Comparing two objects, either of which could be null",Objects
+Java rounding to nearest 0.05,Math
+NetBeans (Java Swing): Set window size,Window,Component
+Intercepting java machine shutdown call,Runtime
+How to determine if a Java Class implements a particular Interface,Class
+End Java threads after a while statement has been run,Thread
+Hide a column in JTable,JTable
+Java: How to programmatically select and expand multiple nodes in a JTree,JTree,TreeSelectionModel
+How to turn uppercase to lowercase using the charAt method,String,Character
+Gracefully ending a thread that's waiting on a blocking queue,Thread
+How to check whether a class exists,Class
+comparing the two times is greater or lesser in java,Date
+Remove trailing zeros from double,BigDecimal
+Remove all characters from string which are not on whitelist,String
+Execute shell command in Tomcat,Runtime
+Stable timer independent of system time,System
+"Shuffling a Deck of Cards , Redundancy after swapping two values",Collections
+How do I make my Android app generate a random number,Random
+String.join() vs other string concatenation operations,String
+Scan a file folder in android for file paths,File
+Only let users input positive integers (no decimals or strings),Integer
+How to make a list thread-safe for serialization,Collections
+Cube root of a negative number,Math
+How to make an 2D ArrayList immutable,Collections
+"Extract all occurrences of pattern K and check if string matches ""K*"" in 1 pass",Matcher,String
+Java 8 grouping using custom collector,Collectors
+How to detect overflow when convert string to integer in java,BigInteger,Integer
+Is there a way to only have the OK button in a JOptionPane showInputDialog (and no CANCEL button),JOptionPane
+Robust skipping of data in a java.io.InputStream and its subtypes,FileInputStream
+Can we call the Garbage Collector explicitly,System
+What is optimal way to get four unique random number from 0-9,Collections
+Sorting a List alphabetically using compareTo() method,Comparable,String,Collections
+Java Sort List of Lists,Collections
+Converting a time String to ISO 8601 format,DateTimeFormatter,Instant
+Finding substring in a string in Java,String
+Java - Wait for third party threads to finish,Thread
+Stop a Runnable submitted to ExecutorService,ExecutorService,Future
+String object to Boolean,Boolean
+killing a running thread in java,Thread
+Case Insensitive matching in Java,String
+Pick a number randomly from two numbers,Random,Collections
+How to make ImageIO read from InputStream :Java,ImageIO,Class
+add custom attribute or metadata to file java,Files
+Find the index in an ArrayList that contains a string,String,List
+How to check if part of a string equals another string in android,String
+How do I compare two-dimensional (or nested) Java Arrays,Arrays
+Add all files recursively from root with Java 8 Stream,FileVisitOption,Files
+Set main frame not resizable,Frame
+Get the list of values using dom parser in android,Node
+How to enumerate all environment variable in Java,System
+Write to same location in a console window with java,System
+How to initialize a TreeMap with pre-sorted data,TreeMap
+Loading XML File which is in classpath in Java,ClassLoader,Class
+How to call Collections.Shuffle on only part of an array Java,List
+Reopen database connection in Java,DriverManager
+How to force terminate all workers in ThreadPoolExecutor immediately,ThreadPoolExecutor
+How do I check if a BigDecimal is in a Set or Map in a scale independent way,BigDecimal
+Java - Is it possible to add a JMenuBar to a JFrame's decoration window,JFrame
+TimeZone validation in Java,TimeZone

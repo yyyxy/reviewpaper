@@ -16,7 +16,7 @@ def re_sort(pred, rec_api_test, answer_test, n, rank_mod, rankall, rem = -10):
     api_temp = ''
     flag = 0
     for i in sort:
-        api_mod = rec_api[i-1].lower()
+        api_mod = rec_api[i-1]#.lower()
         # api_mod = rec_api[i - 1]
         print(i, api_mod, answer_test[n])
         if api_mod in answer_test[n]:
@@ -48,7 +48,7 @@ def ALTR_re_sort(pred, rec_api_test, answer_test, n, rank_mod, rankall, rem = -1
     api_temp = ''
     flag = 0
     for i in sort:
-        api_mod = rec_api[i-1].lower()
+        api_mod = rec_api[i-1]#.lower()
         # api_mod = rec_api[i - 1]
         # print(i, api_mod, answer_test[n])
         if api_mod in answer_test[n]:

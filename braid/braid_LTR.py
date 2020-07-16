@@ -55,23 +55,35 @@ def get_LTR_predict_LTR(test_feature, test_feedback_info, choose_feature, train_
     y_predict = y_predict.tolist()
     return y_predict
 
-
 params = {
-        'booster': 'gbtree',
-        'objective': 'rank:pairwise',
-        'gamma': 0.3,
-        'max_depth': 3,
-        'lambda': 1,
-        'subsample': 0.6,
-        'colsample_bytree': 0.8,
-        'min_child_weight': 3,
-        'silent': 1,
-        'eta': 0.01,
-        'seed': 100,
-        'alpha': 1,
-        'nthread': -1,
-        'eval_metric': 'map@1-',
+    'booster': 'gbtree',
+    'objective': 'rank:pairwise',
+    'eval_metric': 'mae',
+    'min_child_weight': 5,
+    'max_depth': 8,
+    'subsample': 0.5,
+    'colsample_bytree': 0.5,
+    'eta': 0.001,
+    'seed': 2020,
+    'nthread': -1,
+    'silent': True,
     }
+# params = {
+#         'booster': 'gbtree',
+#         'objective': 'rank:pairwise',
+#         'gamma': 0.3,
+#         'max_depth': 3,
+#         'lambda': 1,
+#         'subsample': 0.6,
+#         'colsample_bytree': 0.8,
+#         'min_child_weight': 3,
+#         'silent': 1,
+#         'eta': 0.01,
+#         'seed': 100,
+#         'alpha': 1,
+#         'nthread': -1,
+#         'eval_metric': 'map@1-',
+#     }
 
 
 if __name__ == "__main__":

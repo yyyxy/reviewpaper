@@ -10,9 +10,10 @@ from modAL.models import ActiveLearner
 from modAL.uncertainty import uncertainty_sampling
 from sklearn.linear_model import LogisticRegression
 import csv
-import math
+from os import path
 
 
+path1 = 'D:/first_review_data/'
 def get_AL_feature(t_answer, t_rec_api, feature):
     training_feature = []
     for i, train in enumerate(t_answer):
@@ -39,19 +40,28 @@ def max_list(lt):
     return max_str
 
 
-# def get_active_data(pre_feedback_inf, pre_feature):
-def get_active_data(pre_feature):
+def get_active_data_rec(pre_feature):
     X_pool = []
     y_feature = []
-    # for row in pre_feature:
-    #     x_feature.append(row.feature)
-    # x_feature, y_feature = split_data.get_train_feature_matrix(pre_feedback_inf, feature)
     for row in pre_feature:
         x = []
         for val in range(len(row.feature)):
             x.append(float(row.feature[val]))
         X_pool.append(x)
         y_feature.append(row.label)
+    X_pool = np.array(X_pool)
+    y_pool = np.array(y_feature)
+    return X_pool, y_pool
+
+
+def get_active_data(pre_feedback_inf, pre_feature):
+    X_pool = []
+    x_feature, y_feature = split_data.get_train_feature_matrix(pre_feedback_inf, pre_feature)
+    for row in x_feature:
+        x = []
+        for val in range(len(row)):
+            x.append(float(row[val]))
+        X_pool.append(x)
     X_pool = np.array(X_pool)
     y_pool = np.array(y_feature)
     return X_pool, y_pool
@@ -69,6 +79,9 @@ def get_AL_predict(test_feature, choose_feature, unlabel_feature, test_query, ch
     X_train, y_train = get_active_data(unlabel_feedback_info, unlabel_feature)
     X_feedback, y_feedback = get_active_data(label_feedback_info, choose_feature)
 
+    print('X_feedback', len(X_feedback), len(y_feedback))
+    print('X_feedback', list(X_feedback))
+    print('y_feedback', list(y_feedback))
     # initializing the active learner
     learner = ActiveLearner(
         # estimator=KNeighborsClassifier(n_neighbors=4),
@@ -79,7 +92,7 @@ def get_AL_predict(test_feature, choose_feature, unlabel_feature, test_query, ch
     predict, sel_query, add_unlabel_feature = [], [], []
     if len(unlabel_query) > 0:
         # pool-based sampling
-        n_queries = 100
+        n_queries = 10
         sel_idx, sel_label = [], []
         for idx in range(n_queries):
             # query_idx, query_instance = learner.query(X=X_train)
@@ -116,6 +129,10 @@ def get_AL_predict(test_feature, choose_feature, unlabel_feature, test_query, ch
 
     add_label_feedback_info = feedback.get_feedback_inf(choose_query, choose_query, choose_answer, rec_api_choose, w2v, idf)
     new_X_feedback, new_y_feedback = get_active_data(add_label_feedback_info, choose_feature)
+    print('new_X_feedback', len(new_X_feedback), len(new_y_feedback))
+    print('X_train', len(X_train), len(y_train))
+    print('new_X_feedback', list(new_X_feedback))
+    print('new_y_feedback', list(new_y_feedback))
     learner = ActiveLearner(
         # estimator=KNeighborsClassifier(n_neighbors=4),
         estimator=LogisticRegression(penalty='l1', solver='liblinear'),
@@ -123,10 +140,12 @@ def get_AL_predict(test_feature, choose_feature, unlabel_feature, test_query, ch
     )
     feedback_info = feedback.get_feedback_inf(test_query, choose_query, choose_answer, rec_api_test, w2v, idf)
     X = split_data.get_test_feature_matrix(feedback_info, test_feature)
-
+    print('X', X)
+    print('test_feature', test_feature)
+    print('feedback_info', feedback_info)
     X_test = np.array(X)
     # 用反馈数据学习过后的模型来预测测试数据
-    for query_idx in range(400):
+    for query_idx in range(len(X)):
         y_pre = learner.predict_proba(X=X_test[query_idx].reshape(1, -1))
         predict.append(float(y_pre[0, 1]))
         # predict.append(math.log(float(y_pre[0, 1])+1))
@@ -134,13 +153,13 @@ def get_AL_predict(test_feature, choose_feature, unlabel_feature, test_query, ch
         x = X_test[query_idx].reshape(1, -1)
     # print(predict)
     # print('new_choose', len(choose_query), len(choose_answer))
-    # fw = open('../data/add_FR.csv', 'a+', newline='')
+    # fw = open(path.join(path1, './add_FR.csv'), 'w', newline='')
     # writer = csv.writer(fw)
     # for i, fr_q in enumerate(choose_query):
     #     writer.writerow((fr_q, choose_answer[i]))
     # fw.close()
 
-    return predict, X, new_X_feedback, new_y_feedback #sorted(sel_query)
+    return predict, X, new_X_feedback, new_y_feedback
 
 
 if __name__ == "__main__":
