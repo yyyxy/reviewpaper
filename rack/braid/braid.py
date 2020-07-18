@@ -4,6 +4,7 @@ import _pickle as pickle
 import csv
 import time
 from sklearn.model_selection import KFold
+from sklearn.model_selection import StratifiedKFold
 import random
 from os import path
 import warnings
@@ -15,37 +16,30 @@ path1 = 'D:/first_review_data/'
 w2v = gensim.models.Word2Vec.load(path.join(path1, './w2v_model_stemmed'))  # pre-trained word embedding
 idf = pickle.load(open(path.join(path1, './idf'), 'rb'))  # pre-trained idf value of all words in the w2v dictionary
 
-# test_query, test_answer, train_query, train_answer, test_feature, train_feature, rec_api_test, rec_api_train = split_data.get_test_train()
-# LTR_train_feature = braid_LTR.get_LTR_feature(train_answer, rec_api_train, train_feature)
-# AL_train_feature = braid_AL.get_AL_feature(train_answer, rec_api_train, train_feature)
-
 
 top1, top3, top5, map, mrr = 0, 0, 0, 0, 0
 LTR_top1, LTR_top3, LTR_top5, LTR_map, LTR_mrr = 0, 0, 0, 0, 0
 AL_top1, AL_top3, AL_top5, AL_map, AL_mrr = 0, 0, 0, 0, 0
 
-num_choose = 37
+num_choose = 15
 
 queries = []
-fr = open('../data/feedback_all_biker.csv', 'r')
+fr = open('../data/feedback_all_new_rack.csv', 'r')
 reader = csv.reader(fr)
 for row in reader:
     queries.append(row[0])
 
 
-
 # k-fold cross validation
 kf = KFold(n_splits=10)
 for train_idx, test_idx in kf.split(queries):
-    # print("%s %s" % (train_idx, test_idx))
     train_idx = list(train_idx)
     test_idx = list(test_idx)
+    print('test_idx', test_idx)
 
     # iteration for 10times because the feedback is chosen randomly
     # iteration begin
     for round in range(1):
-        # get the test_query, train_query as before
-        # split the training and feedback idx
         # 数据分为训练集、反馈集、测试集
         choose_idx = sorted(random.sample(train_idx, num_choose))
         train_idx = [i for i in train_idx if i not in choose_idx]
@@ -68,13 +62,8 @@ for train_idx, test_idx in kf.split(queries):
         # choose_query, choose_answer, rec_api_choose, unlabel_query, unlabel_answer, rec_api_unlabel, choose = split_data.split_10_choose_unlabel(
         #     train_query, train_answer, rec_api_train)
 
-        # AL_choose_feature, AL_unlabel_feature = split_data.get_choose(AL_train_feature, choose)
-        # AL_predict, add_x_FR, add_x_FV, add_y_FV = braid_AL.get_AL_predict(test_feature, test_query, train_feature, train_query, rec_api_test, rec_api_train, w2v, idf)
-        AL_predict, add_x_FR, add_x_FV, add_y_FV = braid_AL.get_AL_predict(test_feature, AL_choose_feature, AL_unlabel_feature, test_query, choose_query, choose_answer, unlabel_query, unlabel_answer, test_rec_api, choose_rec_api, unlabel_rec_api, w2v, idf)
-
-        # add_rec_api_choose = split_data.get_add_FR_rec_api(unlabel_query, rec_api_unlabel, add_unlabel_index)
-        # rec_api_choose.extend(add_rec_api_choose)
-        LTR_predict = braid_LTR.get_LTR_predict(add_x_FR, add_x_FV, add_y_FV)
+        AL_predict, add_x_FV, add_x_FR, add_y_FR = braid_AL.get_AL_predict(test_feature, AL_choose_feature, AL_unlabel_feature, test_query, choose_query, choose_answer, unlabel_query, unlabel_answer, test_rec_api, choose_rec_api, unlabel_rec_api, w2v, idf)
+        LTR_predict = braid_LTR.get_LTR_predict(add_x_FV, add_x_FR, add_y_FR)
 
         rank_mod, rankall, LTR_rank_mod, LTR_rankall, AL_rank_mod, AL_rankall = [], [], [], [], [], []
         m = 0.6
@@ -128,7 +117,7 @@ print(top1/10, top3/10, top5/10, map/10, mrr/10)
 print(LTR_top1/10, LTR_top3/10, LTR_top5/10, LTR_map/10, LTR_mrr/10)
 print(AL_top1/10, AL_top3/10, AL_top5/10, AL_map/10, AL_mrr/10)
 
-fw = open('../data/metric_biker.csv', 'a+', newline='')
+fw = open('../data/metric_nlp.csv', 'a+', newline='')
 writer = csv.writer(fw)
 writer.writerow(('BRAID', num_choose, top1/10, top3/10, top5/10, map/10, mrr/10))
 writer.writerow(('LTR', num_choose, LTR_top1/10, LTR_top3/10, LTR_top5/10, LTR_map/10, LTR_mrr/10))

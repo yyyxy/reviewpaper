@@ -4,11 +4,10 @@ import _pickle as pickle
 import numpy as np
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.gaussian_process import GaussianProcessRegressor
-from sklearn.gaussian_process.kernels import WhiteKernel, RBF
 from modAL.models import ActiveLearner
 from modAL.uncertainty import uncertainty_sampling
 from sklearn.linear_model import LogisticRegression
+import csv
 import math
 
 
@@ -76,7 +75,6 @@ def get_AL_predict(test_feature, choose_feature, unlabel_feature, test_query, ch
         # pool-based sampling
         n_queries = 20
         for idx in range(n_queries):
-            # query_idx, query_instance = learner.query(X=X_train)
             query_idx, query_instance = uncertainty_sampling(classifier=learner, X=X_train)
             # print('uncertain', query_idx, X_train[query_idx], y_train[query_idx])
             idx = int(query_idx/10)
@@ -115,6 +113,18 @@ def get_AL_predict(test_feature, choose_feature, unlabel_feature, test_query, ch
     feedback_info = feedback.get_feedback_inf(test_query, choose_query, choose_answer, rec_api_test, w2v, idf)
     X = split_data.get_test_feature_matrix(feedback_info, test_feature)
 
+    # 扩展的标记集（feedback repository数据）特征向量
+    fw = open('../data/train.csv', 'w', newline='')
+    writer = csv.writer(fw)
+    for i, x in enumerate(new_X_feedback):
+        writer.writerow(new_X_feedback[i])
+
+    # 测试集特征向量
+    fw = open('../data/test.csv', 'w', newline='')
+    writer = csv.writer(fw)
+    for i, x in enumerate(X):
+        writer.writerow(x+[rec_api_test[i]])
+
     X_test = np.array(X)
     # 用反馈数据学习过后的模型来预测测试数据
     for query_idx in range(len(X)):
@@ -122,7 +132,6 @@ def get_AL_predict(test_feature, choose_feature, unlabel_feature, test_query, ch
         predict.append(float(y_pre[0, 1]))
         # predict.append(math.log(float(y_pre[0, 1])+1))
         # predict.extend(y_pre.tolist())
-        x = X_test[query_idx].reshape(1, -1)
     # print(predict)
     # print('new_choose', len(choose_query), len(choose_answer))
 

@@ -122,7 +122,7 @@ def get_choose(train_feature, choose):
 
 def idx_to_data(idx):
     # 索引转化为数据
-    fr = open('../data/feedback_all_biker.csv', 'r')
+    fr = open('../data/feedback_all_new_rack.csv', 'r')
     reader = csv.reader(fr)
     idx_query, idx_answer = [], []
     for i, row in enumerate(reader):
@@ -130,7 +130,7 @@ def idx_to_data(idx):
             idx_query.append(row[0])
             idx_answer.append(row[1:])
 
-    fr = open('../data/get_feature_biker.csv', 'r')
+    fr = open('../data/get_feature_new_rack.csv', 'r')
     reader = csv.reader(fr)
     idx_rec_api, idx_feature = [], []
     for i, row in enumerate(reader):

@@ -3,13 +3,26 @@
   <component name="ChangeListManager">
     <list default="true" id="d32dcbea-6d56-4dff-a7fa-3a59ad826840" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/braid_AL.py" beforeDir="false" afterPath="$PROJECT_DIR$/braid_AL.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/braid_LTR.py" beforeDir="false" afterPath="$PROJECT_DIR$/braid_LTR.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/braid_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/braid_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feedback.py" beforeDir="false" afterPath="$PROJECT_DIR$/feedback.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fortest.py" beforeDir="false" afterPath="$PROJECT_DIR$/fortest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/metric.py" beforeDir="false" afterPath="$PROJECT_DIR$/metric.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/split_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/split_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rack/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../rack/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rack/braid/braid.py" beforeDir="false" afterPath="$PROJECT_DIR$/../rack/braid/braid.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rack/braid/braid_AL.py" beforeDir="false" afterPath="$PROJECT_DIR$/../rack/braid/braid_AL.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rack/braid/braid_LTR.py" beforeDir="false" afterPath="$PROJECT_DIR$/../rack/braid/braid_LTR.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rack/braid/split_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/../rack/braid/split_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rack/data/feedback_all_biker.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rack/data/feedback_all_class.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rack/data/feedback_all_method.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rack/data/feedback_all_nlp.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rack/data/feedback_all_rack.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../rack/data/feedback_all_rack.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rack/data/get_feature_method_fdbtag.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rack/data/get_feature_method_fdbtag1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rack/data/get_feature_method_fdbtag2.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rack/data/get_feature_method_fdbtag3.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rack/data/get_feature_method_fdbtag4.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rack/data/get_feature_nlp_fdbtag2.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rack/data/get_feature_rack_fdbtag2.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rack/data/metric_biker.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../rack/data/metric_biker.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rack/data/metric_nlp.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../rack/data/metric_nlp.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rack/data/metric_rack.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../rack/data/metric_rack.csv" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +72,7 @@
     <session id="-1847940979">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.24" value="1" />
@@ -116,10 +129,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/braid_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
+            <state relative-caret-position="756">
               <caret line="52" column="60" selection-start-line="52" selection-start-column="60" selection-end-line="52" selection-end-column="60" />
               <folding>
                 <element signature="e#0#56#0" expanded="true" />
@@ -133,18 +146,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-580">
               <caret line="74" selection-start-line="74" selection-end-line="74" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/preprocess/recommendation.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-312">
-              <caret line="226" selection-start-line="226" selection-end-line="226" />
-              <folding>
-                <element signature="e#0#22#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -475,7 +476,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.36622807" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.36622807" />
       <window_info anchor="bottom" id="TODO" order="3" weight="0.32899022" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
@@ -594,26 +595,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/braid_AL.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="77" column="47" selection-start-line="77" selection-start-column="47" selection-end-line="77" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/braid_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="52" column="60" selection-start-line="52" selection-start-column="60" selection-end-line="52" selection-end-column="60" />
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/origin_result.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -621,13 +602,6 @@
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/feedback.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-580">
-          <caret line="74" selection-start-line="74" selection-end-line="74" />
         </state>
       </provider>
     </entry>
@@ -676,10 +650,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/preprocess/recommendation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-312">
+        <state relative-caret-position="255">
           <caret line="226" selection-start-line="226" selection-end-line="226" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/feedback.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-580">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/braid_AL.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="91">
+          <caret line="77" column="47" selection-start-line="77" selection-start-column="47" selection-end-line="77" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/braid_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="52" column="60" selection-start-line="52" selection-start-column="60" selection-end-line="52" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
           </folding>
         </state>
       </provider>

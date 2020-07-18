@@ -27,10 +27,6 @@ def get_LTR_feature(t_answer, t_rec_api, feature):
 
 
 def get_LTR_predict(test_feature, train_x_feature, train_y_feature):
-    # X_train, y_train = split_data.get_train_feature_matrix(train_feedback_info, choose_feature)
-    # X_test = split_data.get_test_feature_matrix(test_feedback_info, test_feature)
-    X_test = test_feature
-
     # # 一共2组*每组3条，6条样本，特征维数是2
     # n_group = int(len(train_x_feature)/10)
     # n_choice = 10
@@ -43,11 +39,11 @@ def get_LTR_predict(test_feature, train_x_feature, train_y_feature):
     # print(len(train_x_feature), len(train_y_feature), len(dgroup), dgroup)
 
     dtrain = xgb.DMatrix(train_x_feature, train_y_feature)
-    # dtrain = xgb.DMatrix(train_x_feature)
     num_rounds = 100
     plst = params.items()
     model = xgb.train(plst, dtrain, num_rounds)
 
+    X_test = test_feature
     dtest = xgb.DMatrix(X_test)
 
     y_predict = model.predict(dtest)
