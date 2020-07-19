@@ -37,12 +37,14 @@ def get_feedback_api(query, answer, query_matrix, query_idf_vector, w2v, idf):
                     feeds.append(feed)
         line += 1
     feeds = sorted(feeds, key=lambda item: item[2], reverse=True)
+    # print('feeds', feeds)
     while len(feeds) < 5:
         feeds.append([0, 0, 0])
     feed_sim = []
     for inf in feeds:
         if len(feed_sim) < 5:
             feed_sim.append(inf[2])
+    # print('feed_sim', feed_sim)
     return feeds, feed_sim
 
 
@@ -58,10 +60,13 @@ def get_feedback_inf(test, question, answer, rec_api_test, w2v, idf):
                 if feed[1] == api:
                     feed_label.append(feed[2])
                     label += 5-i
-                else:
-                    feed_label.append(0)
+                # else:
+                #     feed_label.append(0)
                 i += 1
+            while len(feed_label) < 5:
+                feed_label.append(0)
             feed_label.append(round(label/15, 2))
+            # print('feed_label', feed_label)
             # print(round(label/15, 2))
             # if feedbacks_inf[0:5] != [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]]:
             #     feed_label.append(1)

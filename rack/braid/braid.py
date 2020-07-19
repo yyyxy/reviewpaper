@@ -21,10 +21,10 @@ top1, top3, top5, map, mrr = 0, 0, 0, 0, 0
 LTR_top1, LTR_top3, LTR_top5, LTR_map, LTR_mrr = 0, 0, 0, 0, 0
 AL_top1, AL_top3, AL_top5, AL_map, AL_mrr = 0, 0, 0, 0, 0
 
-num_choose = 15
+num_choose = 37
 
 queries = []
-fr = open('../data/feedback_all_new_rack.csv', 'r')
+fr = open('../data/feedback_all_original_biker.csv', 'r')
 reader = csv.reader(fr)
 for row in reader:
     queries.append(row[0])
@@ -46,16 +46,17 @@ for train_idx, test_idx in kf.split(queries):
         print(len(train_idx), len(test_idx), len(choose_idx))
         print('---------------------')
 
-        # 获取AL初始训练数据，即反馈数据
-        choose_query, choose_answer, choose_rec_api, choose_feature = split_data.idx_to_data(choose_idx)
-        AL_choose_feature = braid_AL.get_AL_feature(choose_answer, choose_rec_api, choose_feature)
-
-        # 获取初始未标记数据，注意这里和之前结果的区别（将未标记数据集也做了0，1转化，之前也有），导致实验结果大幅度提升
-        unlabel_query, unlabel_answer, unlabel_rec_api, unlabele_feature = split_data.idx_to_data(train_idx)
-        AL_unlabel_feature = braid_AL.get_AL_feature(unlabel_answer, unlabel_rec_api, unlabele_feature)
-
         # 获取测试数据
         test_query, test_answer, test_rec_api, test_feature = split_data.idx_to_data(test_idx)
+
+        # 获取AL初始训练数据，即反馈数据
+        # choose_query, choose_answer, choose_rec_api, choose_feature = split_data.idx_to_data(choose_idx)
+        choose_query, choose_answer, choose_rec_api, choose_feature = split_data.get_choose_data(choose_idx, test_query, w2v, idf)
+        AL_choose_feature = braid_AL.get_AL_feature(choose_answer, choose_rec_api, choose_feature)
+
+        # 获取初始未标记数据，从stack overflow获取
+        unlabel_query, unlabel_answer, unlabel_rec_api, unlabele_feature = split_data.get_unlabel_data(test_query, w2v, idf)
+        AL_unlabel_feature = braid_AL.get_AL_feature(unlabel_answer, unlabel_rec_api, unlabele_feature)
 
         # choose_query, choose_answer, rec_api_choose, unlabel_query, unlabel_answer, rec_api_unlabel, choose = split_data.split_choose_unlabel(
         #     train_query, train_answer, rec_api_train, num_choose)
@@ -117,7 +118,7 @@ print(top1/10, top3/10, top5/10, map/10, mrr/10)
 print(LTR_top1/10, LTR_top3/10, LTR_top5/10, LTR_map/10, LTR_mrr/10)
 print(AL_top1/10, AL_top3/10, AL_top5/10, AL_map/10, AL_mrr/10)
 
-fw = open('../data/metric_nlp.csv', 'a+', newline='')
+fw = open('../data/metric_biker.csv', 'a+', newline='')
 writer = csv.writer(fw)
 writer.writerow(('BRAID', num_choose, top1/10, top3/10, top5/10, map/10, mrr/10))
 writer.writerow(('LTR', num_choose, LTR_top1/10, LTR_top3/10, LTR_top5/10, LTR_map/10, LTR_mrr/10))

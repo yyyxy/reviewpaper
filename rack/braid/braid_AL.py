@@ -62,45 +62,52 @@ def get_AL_predict(test_feature, choose_feature, unlabel_feature, test_query, ch
     X_train, y_train = get_active_data(unlabel_feedback_info, unlabel_feature)
     X_feedback, y_feedback = get_active_data(label_feedback_info, choose_feature)
 
-    # initializing the active learner
-    learner = ActiveLearner(
-        estimator=LogisticRegression(penalty='l1', solver='liblinear'),
-        # estimator=KNeighborsClassifier(n_neighbors=5),
-        # estimator=RandomForestClassifier(criterion="entropy"),
-        X_training=X_feedback, y_training=y_feedback
-    )
+    predict = []
+    if len(X_feedback) > 0:
+        # initializing the active learner
+        learner = ActiveLearner(
+            estimator=LogisticRegression(penalty='l1', solver='liblinear'),
+            # estimator=KNeighborsClassifier(n_neighbors=5),
+            # estimator=RandomForestClassifier(criterion="entropy"),
+            X_training=X_feedback, y_training=y_feedback
+        )
 
-    predict, sel_query, add_unlabel_feature = [], [], []
-    if len(unlabel_query) > 0:
-        # pool-based sampling
-        n_queries = 20
-        for idx in range(n_queries):
-            query_idx, query_instance = uncertainty_sampling(classifier=learner, X=X_train)
-            # print('uncertain', query_idx, X_train[query_idx], y_train[query_idx])
-            idx = int(query_idx/10)
-            # print(idx, len(X_train))
-            learner.teach(
-                X=X_train[query_idx].reshape(1, -1),
-                y=y_train[query_idx].reshape(1, )
-            )
-            # print(idx, len(unlabel_query))
-            # print(unlabel_query[idx], unlabel_answer[idx], rec_api_unlabel[idx*10:idx*10+10], rec_api_unlabel[idx*10:idx*10+10])
-            # add queried instance into FR
-            choose_query.append(unlabel_query[idx])
-            choose_answer.append(unlabel_answer[idx])
-            rec_api_choose.extend(rec_api_unlabel[idx*10:idx*10+10])
-            choose_feature.extend(unlabel_feature[idx*10:idx*10+10])
+        sel_query, add_unlabel_feature = [], []
+        if len(unlabel_query) > 0:
+            # pool-based sampling
+            n_queries = len(unlabel_query)
+            for idx in range(n_queries):
+                query_idx, query_instance = uncertainty_sampling(classifier=learner, X=X_train)
+                # print('uncertain', query_idx, X_train[query_idx], y_train[query_idx])
+                idx = int(query_idx/10)
+                # print(idx, len(X_train))
+                learner.teach(
+                    X=X_train[query_idx].reshape(1, -1),
+                    y=y_train[query_idx].reshape(1, )
+                )
+                # print(idx, len(unlabel_query))
+                # print(unlabel_query[idx], unlabel_answer[idx], rec_api_unlabel[idx*10:idx*10+10], rec_api_unlabel[idx*10:idx*10+10])
+                # add queried instance into FR
+                choose_query.append(unlabel_query[idx])
+                choose_answer.append(unlabel_answer[idx])
+                rec_api_choose.extend(rec_api_unlabel[idx*10:idx*10+10])
+                choose_feature.extend(unlabel_feature[idx*10:idx*10+10])
 
-            # remove queried instance from pool
-            for i in range(10):
-                X_train = np.delete(X_train, idx*10, axis=0)
-                y_train = np.delete(y_train, idx*10)
-            del unlabel_query[idx]
-            del unlabel_answer[idx]
-            del rec_api_unlabel[idx*10:idx*10+10]
-            del unlabel_feature[idx*10:idx*10+10]
-            if len(X_train) == 0:
-                break
+                # remove queried instance from pool
+                for i in range(10):
+                    X_train = np.delete(X_train, idx*10, axis=0)
+                    y_train = np.delete(y_train, idx*10)
+                del unlabel_query[idx]
+                del unlabel_answer[idx]
+                del rec_api_unlabel[idx*10:idx*10+10]
+                del unlabel_feature[idx*10:idx*10+10]
+                if len(X_train) == 0:
+                    break
+    else:
+        choose_query = unlabel_query
+        choose_answer = unlabel_answer
+        rec_api_choose = rec_api_unlabel
+        choose_feature = unlabel_feature
 
     add_label_feedback_info = feedback.get_feedback_inf(choose_query, choose_query, choose_answer, rec_api_choose, w2v, idf)
     new_X_feedback, new_y_feedback = get_active_data(add_label_feedback_info, choose_feature)
@@ -112,12 +119,12 @@ def get_AL_predict(test_feature, choose_feature, unlabel_feature, test_query, ch
     )
     feedback_info = feedback.get_feedback_inf(test_query, choose_query, choose_answer, rec_api_test, w2v, idf)
     X = split_data.get_test_feature_matrix(feedback_info, test_feature)
-
+    print('new_X_feedback', len(new_X_feedback), len(new_y_feedback))
     # 扩展的标记集（feedback repository数据）特征向量
     fw = open('../data/train.csv', 'w', newline='')
     writer = csv.writer(fw)
-    for i, x in enumerate(new_X_feedback):
-        writer.writerow(new_X_feedback[i])
+    for i in range(len(new_y_feedback)):
+        writer.writerow((new_y_feedback[i], new_X_feedback[i][0], new_X_feedback[i][1], choose_query[int(i/10)], rec_api_choose[i]))
 
     # 测试集特征向量
     fw = open('../data/test.csv', 'w', newline='')

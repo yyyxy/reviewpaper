@@ -5,7 +5,7 @@ import split_data
 # split_data.split_test()
 
 # test preprocessing
-fr = open('../data/feedback_all_nlp.csv', 'r')
+fr = open('../data/feedback_all_original_biker.csv', 'r')
 reader = csv.reader(fr)
 test_query = []
 test_answer = []
@@ -16,7 +16,7 @@ for row in reader:
 print(test_query)
 print(test_answer)
 
-fr = open('../data/get_rec_nlp.csv', 'r')
+fr = open('../data/get_rec_biker.csv', 'r')
 reader = csv.reader(fr)
 
 queries = []

@@ -2,27 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f9a61c8-6b06-427e-8b48-7f4104a237fd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../braid/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../braid/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/braid/braid.py" beforeDir="false" afterPath="$PROJECT_DIR$/braid/braid.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/braid/braid_AL.py" beforeDir="false" afterPath="$PROJECT_DIR$/braid/braid_AL.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/braid/braid_LTR.py" beforeDir="false" afterPath="$PROJECT_DIR$/braid/braid_LTR.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/braid/feedback.py" beforeDir="false" afterPath="$PROJECT_DIR$/braid/feedback.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/braid/origin_result.py" beforeDir="false" afterPath="$PROJECT_DIR$/braid/origin_result.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/braid/split_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/braid/split_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/feedback_all_biker.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/feedback_all_class.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/feedback_all_method.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/feedback_all_nlp.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/feedback_all_rack.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/feedback_all_rack.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/get_feature_method_fdbtag.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/get_feature_method_fdbtag1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/get_feature_method_fdbtag2.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/get_feature_method_fdbtag3.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/get_feature_method_fdbtag4.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/get_feature_nlp_fdbtag2.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/get_feature_rack_fdbtag2.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/data/metric_biker.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/metric_biker.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/metric_nlp.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/metric_nlp.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/metric_rack.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/metric_rack.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/test.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/train.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/train.csv" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,12 +20,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/rack$origin_result.coverage" NAME="origin_result Coverage Results" MODIFIED="1594870904777" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/braid" />
+    <SUITE FILE_PATH="coverage/rack$origin_result.coverage" NAME="origin_result Coverage Results" MODIFIED="1595061169823" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/braid" />
     <SUITE FILE_PATH="coverage/rack$split_data.coverage" NAME="split_data Coverage Results" MODIFIED="1594967989545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/braid" />
-    <SUITE FILE_PATH="coverage/rack$feedback.coverage" NAME="feedback Coverage Results" MODIFIED="1594866841666" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/braid" />
-    <SUITE FILE_PATH="coverage/rack$braid_AL.coverage" NAME="braid_AL Coverage Results" MODIFIED="1594899668743" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/braid" />
+    <SUITE FILE_PATH="coverage/rack$feedback.coverage" NAME="feedback Coverage Results" MODIFIED="1595070585094" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/braid" />
+    <SUITE FILE_PATH="coverage/rack$braid_AL.coverage" NAME="braid_AL Coverage Results" MODIFIED="1595061313294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/braid" />
     <SUITE FILE_PATH="coverage/rack$change_order.coverage" NAME="change_order Coverage Results" MODIFIED="1595057774630" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/braid" />
-    <SUITE FILE_PATH="coverage/rack$braid.coverage" NAME="braid Coverage Results" MODIFIED="1595057958413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/braid" />
+    <SUITE FILE_PATH="coverage/rack$braid.coverage" NAME="braid Coverage Results" MODIFIED="1595128800388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/braid" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="1041913260">
@@ -48,32 +37,32 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="15" />
+          <entry key="py" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="15" />
+          <entry key="Python" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="2118" />
+          <entry key="py" value="3492" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="2118" />
+          <entry key="Python" value="3492" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/braid/braid.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
+            <state relative-caret-position="207">
               <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
               <folding>
                 <element signature="e#0#56#0" expanded="true" />
@@ -82,11 +71,50 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/braid/split_data.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="406">
+              <caret line="201" lean-forward="true" selection-start-line="201" selection-end-line="201" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+                <element signature="e#27#79#0" />
+                <element signature="e#1418#1456#0" />
+                <marker date="1595128800344" expanded="true" signature="7462:7508" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/braid/braid_LTR.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="98" lean-forward="true" selection-start-line="98" selection-end-line="98" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/braid/braid_AL.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="118" column="5" lean-forward="true" selection-start-line="118" selection-start-column="5" selection-end-line="118" selection-end-column="5" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/braid/change_order.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="82">
-              <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
+            <state relative-caret-position="55">
+              <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
                 <element signature="e#1475#1487#0" />
@@ -100,8 +128,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/braid/feedback.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="63" column="49" lean-forward="true" selection-start-line="63" selection-start-column="49" selection-end-line="63" selection-end-column="49" />
+            <state relative-caret-position="379">
+              <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -110,50 +138,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/braid/braid_AL.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/braid/braid_LTR.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/braid/origin_result.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="432">
+              <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/braid/split_data.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="132" column="43" selection-start-line="132" selection-start-column="43" selection-end-line="132" selection-end-column="43" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-                <element signature="e#27#79#0" />
-                <element signature="e#1418#1456#0" />
               </folding>
             </state>
           </provider>
@@ -173,6 +163,11 @@
       <find>get_LTR_predict</find>
       <find>null</find>
       <find>test_idx</find>
+      <find>idx_to_data</find>
+      <find>feeds</find>
+      <find>get_train_feature_matrix</find>
+      <find>_feedback</find>
+      <find>new_X_feedback</find>
       <find>top1</find>
     </findStrings>
   </component>
@@ -183,13 +178,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/braid/metric.py" />
+        <option value="$PROJECT_DIR$/braid/change_order.py" />
         <option value="$PROJECT_DIR$/braid/origin_result.py" />
-        <option value="$PROJECT_DIR$/braid/braid_LTR.py" />
         <option value="$PROJECT_DIR$/braid/feedback.py" />
         <option value="$PROJECT_DIR$/braid/braid_AL.py" />
-        <option value="$PROJECT_DIR$/braid/split_data.py" />
-        <option value="$PROJECT_DIR$/braid/change_order.py" />
+        <option value="$PROJECT_DIR$/braid/braid_LTR.py" />
         <option value="$PROJECT_DIR$/braid/braid.py" />
+        <option value="$PROJECT_DIR$/braid/split_data.py" />
       </list>
     </option>
   </component>
@@ -199,7 +194,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -316,6 +311,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="feedback" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="rack" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/braid" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/braid/feedback.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="origin_result" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="rack" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -338,42 +355,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="split_data" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="rack" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/braid" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/braid/split_data.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Python.braid" />
       <item itemvalue="Python.origin_result" />
       <item itemvalue="Python.braid_AL" />
       <item itemvalue="Python.change_order" />
-      <item itemvalue="Python.split_data" />
+      <item itemvalue="Python.feedback" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.braid" />
-        <item itemvalue="Python.change_order" />
-        <item itemvalue="Python.split_data" />
+        <item itemvalue="Python.feedback" />
         <item itemvalue="Python.braid_AL" />
         <item itemvalue="Python.origin_result" />
+        <item itemvalue="Python.change_order" />
       </list>
     </recent_temporary>
   </component>
@@ -465,52 +460,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/braid/feedback.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="63" column="49" lean-forward="true" selection-start-line="63" selection-start-column="49" selection-end-line="63" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/braid/braid_AL.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/braid/braid_LTR.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/braid/split_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="132" column="43" selection-start-line="132" selection-start-column="43" selection-end-line="132" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#27#79#0" />
-            <element signature="e#1418#1456#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/braid/origin_result.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="432">
+          <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
@@ -519,8 +472,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/braid/change_order.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
+        <state relative-caret-position="55">
+          <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
             <element signature="e#1475#1487#0" />
@@ -530,12 +483,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/braid/feedback.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/braid/braid_AL.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="118" column="5" lean-forward="true" selection-start-line="118" selection-start-column="5" selection-end-line="118" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/braid/braid_LTR.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="98" lean-forward="true" selection-start-line="98" selection-end-line="98" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/braid/braid.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
+        <state relative-caret-position="207">
           <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
           <folding>
             <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/braid/split_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="201" lean-forward="true" selection-start-line="201" selection-end-line="201" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#27#79#0" />
+            <element signature="e#1418#1456#0" />
+            <marker date="1595128800344" expanded="true" signature="7462:7508" ph="..." />
           </folding>
         </state>
       </provider>

@@ -1,5 +1,7 @@
 import csv
 import random
+import feedback
+from preprocess import similarity
 
 
 # # split the '' element in each row of sim_test.csv
@@ -122,7 +124,7 @@ def get_choose(train_feature, choose):
 
 def idx_to_data(idx):
     # 索引转化为数据
-    fr = open('../data/feedback_all_new_rack.csv', 'r')
+    fr = open('../data/feedback_all_original_biker.csv', 'r')
     reader = csv.reader(fr)
     idx_query, idx_answer = [], []
     for i, row in enumerate(reader):
@@ -130,7 +132,7 @@ def idx_to_data(idx):
             idx_query.append(row[0])
             idx_answer.append(row[1:])
 
-    fr = open('../data/get_feature_new_rack.csv', 'r')
+    fr = open('../data/get_feature_biker.csv', 'r')
     reader = csv.reader(fr)
     idx_rec_api, idx_feature = [], []
     for i, row in enumerate(reader):
@@ -141,20 +143,94 @@ def idx_to_data(idx):
     return idx_query, idx_answer, idx_rec_api, idx_feature
 
 
+def get_choose_data(choose_idx, test_query, w2v, idf):
+    matrix, idf_vector = [], []
+    for query in test_query:
+        query_matrix, query_idf_vector = feedback.load_matrix(query, w2v, idf)
+        matrix.append(query_matrix)
+        idf_vector.append(query_idf_vector)
+
+    # 索引转化为数据
+    choose_query, choose_answer, choose_rec_api, choose_feature = idx_to_data(choose_idx)
+    print(len(choose_query), len(choose_rec_api))
+    idx = []
+    for i in range(len(choose_query)):
+        q1_matrix, q1_idf_vector = feedback.load_matrix(choose_query[i], w2v, idf)
+        for n in range(len(matrix)):
+            q_sim = similarity.sim_doc_pair(q1_matrix, matrix[n], q1_idf_vector, idf_vector[n])
+            if q_sim > 0.7:
+                # print(i, q_sim)
+                idx.append(i)
+                break
+
+    print('choose_idx', idx)
+    query, answer, rec_api, feature = [], [], [], []
+    for i in idx:
+        query.append(choose_query[i])
+        answer.append(choose_answer[i])
+        for n in range(10):
+            feature.append(choose_feature[i*10+n])
+            rec_api.append(choose_rec_api[i*10+n])
+    print('len(choose_feature)', len(query), len(feature))
+
+    return query, answer, rec_api, feature
+
+
+def get_unlabel_data(test_query, w2v, idf):
+    matrix, idf_vector = [], []
+    for query in test_query:
+        query_matrix, query_idf_vector = feedback.load_matrix(query, w2v, idf)
+        matrix.append(query_matrix)
+        idf_vector.append(query_idf_vector)
+
+    # 索引转化为数据
+    fr = open('../data/feedback_repository_sim8_new.csv', 'r')
+    reader = csv.reader(fr)
+    idx = []
+    query, answer = [], []
+    for i, row in enumerate(reader):
+        q1_matrix, q1_idf_vector = feedback.load_matrix(row[0], w2v, idf)
+        for n in range(len(matrix)):
+            q_sim = similarity.sim_doc_pair(q1_matrix, matrix[n], q1_idf_vector, idf_vector[n])
+            if q_sim > 0.64:
+                query.append(row[0])
+                answer.append(row[1:])
+                idx.append(i)
+                # print(i, q_sim)
+                break
+    print(len(idx), idx)
+
+    fr = open('../data/get_feature_sim8.csv', 'r')
+    reader = csv.reader(fr)
+    rec_api, feature = [], []
+    for i, row in enumerate(reader):
+        if int(i/10) in idx:
+            feature.append(row[:-1])
+            rec_api.append(row[-1])
+    print(len(feature))
+
+    return query, answer, rec_api, feature
+
+
 def get_train_feature_matrix(feedback_inf, choose_feature):
     X, y, line = [], [], 0
 
     for row in choose_feature:
         x = []
-        # print(row)
-        # for i in range(len(row[1:])):
-        #     feat = float(row[i+1])
-        #     x.append(feat)
         yy = float(row[0])
         x.append(float(row[1]))
         x.append(float(row[2]))
         # x.append(float(row[3]))
         x.extend(feedback_inf[line])
+        # for fr in feedback_inf[line]:
+        #     if float(row[1]) != 0.0:
+        #         x.append(fr/float(row[1]))
+        #     else:
+        #         x.append(0)
+        #     if float(row[2]) != 0.0:
+        #         x.append(fr/float(row[2]))
+        #     else:
+        #         x.append(0)
         X.append(x)
         y.append(int(yy))
         line += 1
@@ -171,12 +247,17 @@ def get_test_feature_matrix(feedback_inf, test_feature):
         x.append(float(row[2]))
         # x.append(float(row[3]))
         x.extend(feedback_inf[line])
+        # for fr in feedback_inf[line]:
+        #     if float(row[1]) != 0.0:
+        #         x.append(fr/float(row[1]))
+        #     else:
+        #         x.append(0)
+        #     if float(row[2]) != 0.0:
+        #         x.append(fr/float(row[2]))
+        #     else:
+        #         x.append(0)
         X.append(x)
         line += 1
     print('len(feedback_inf)', len(feedback_inf))
     print(len(X))
     return X
-
-# index_test, test_query, train_query = get_test_train()
-# test_feature, train_feature, choose = get_feature(index_test, train_query, 13)
-# get_AL_feature(train_feature, choose)
