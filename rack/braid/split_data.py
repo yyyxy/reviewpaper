@@ -143,7 +143,7 @@ def idx_to_data(idx):
     return idx_query, idx_answer, idx_rec_api, idx_feature
 
 
-def get_choose_data(choose_idx, test_query, w2v, idf):
+def get_choose_data(choose_idx, test_query, pct, w2v, idf):
     matrix, idf_vector = [], []
     for query in test_query:
         query_matrix, query_idf_vector = feedback.load_matrix(query, w2v, idf)
@@ -158,12 +158,11 @@ def get_choose_data(choose_idx, test_query, w2v, idf):
         q1_matrix, q1_idf_vector = feedback.load_matrix(choose_query[i], w2v, idf)
         for n in range(len(matrix)):
             q_sim = similarity.sim_doc_pair(q1_matrix, matrix[n], q1_idf_vector, idf_vector[n])
-            if q_sim > 0.7:
+            if q_sim > 0.65+round(pct, 2)*0.1:
                 # print(i, q_sim)
                 idx.append(i)
                 break
 
-    print('choose_idx', idx)
     query, answer, rec_api, feature = [], [], [], []
     for i in idx:
         query.append(choose_query[i])
@@ -184,7 +183,7 @@ def get_unlabel_data(test_query, w2v, idf):
         idf_vector.append(query_idf_vector)
 
     # 索引转化为数据
-    fr = open('../data/feedback_repository_sim8_new.csv', 'r')
+    fr = open('../data/feedback_repository_rack_sim75.csv', 'r')
     reader = csv.reader(fr)
     idx = []
     query, answer = [], []
@@ -192,22 +191,21 @@ def get_unlabel_data(test_query, w2v, idf):
         q1_matrix, q1_idf_vector = feedback.load_matrix(row[0], w2v, idf)
         for n in range(len(matrix)):
             q_sim = similarity.sim_doc_pair(q1_matrix, matrix[n], q1_idf_vector, idf_vector[n])
-            if q_sim > 0.64:
+            if q_sim > 0.75:
                 query.append(row[0])
                 answer.append(row[1:])
                 idx.append(i)
                 # print(i, q_sim)
                 break
-    print(len(idx), idx)
+    print('ground_truth_training', len(idx), idx)
 
-    fr = open('../data/get_feature_sim8.csv', 'r')
+    fr = open('../data/get_feature_sim75.csv', 'r')
     reader = csv.reader(fr)
     rec_api, feature = [], []
     for i, row in enumerate(reader):
         if int(i/10) in idx:
             feature.append(row[:-1])
             rec_api.append(row[-1])
-    print(len(feature))
 
     return query, answer, rec_api, feature
 

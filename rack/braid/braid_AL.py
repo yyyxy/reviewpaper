@@ -56,13 +56,14 @@ def GP_regression_std(regressor, X):
     return query_idx, X[query_idx]
 
 
-def get_AL_predict(test_feature, choose_feature, unlabel_feature, test_query, choose_query, choose_answer, unlabel_query, unlabel_answer, rec_api_test, rec_api_choose, rec_api_unlabel, w2v, idf):
+def get_AL_predict(pct, test_feature, choose_feature, unlabel_feature, test_query, choose_query, choose_answer, unlabel_query, unlabel_answer, rec_api_test, rec_api_choose, rec_api_unlabel, w2v, idf):
     unlabel_feedback_info = feedback.get_feedback_inf(unlabel_query, choose_query, choose_answer, rec_api_unlabel, w2v, idf)
     label_feedback_info = feedback.get_feedback_inf(choose_query, choose_query, choose_answer, rec_api_choose, w2v, idf)
     X_train, y_train = get_active_data(unlabel_feedback_info, unlabel_feature)
     X_feedback, y_feedback = get_active_data(label_feedback_info, choose_feature)
 
     predict = []
+    print('len', len(X_feedback), len(unlabel_query))
     if len(X_feedback) > 0:
         # initializing the active learner
         learner = ActiveLearner(
@@ -75,7 +76,8 @@ def get_AL_predict(test_feature, choose_feature, unlabel_feature, test_query, ch
         sel_query, add_unlabel_feature = [], []
         if len(unlabel_query) > 0:
             # pool-based sampling
-            n_queries = len(unlabel_query)
+            n_queries = int(pct*100)
+            print('n_queries', n_queries)
             for idx in range(n_queries):
                 query_idx, query_instance = uncertainty_sampling(classifier=learner, X=X_train)
                 # print('uncertain', query_idx, X_train[query_idx], y_train[query_idx])
@@ -104,10 +106,10 @@ def get_AL_predict(test_feature, choose_feature, unlabel_feature, test_query, ch
                 if len(X_train) == 0:
                     break
     else:
-        choose_query = unlabel_query
-        choose_answer = unlabel_answer
-        rec_api_choose = rec_api_unlabel
-        choose_feature = unlabel_feature
+        choose_query = unlabel_query[:10]
+        choose_answer = unlabel_answer[:10]
+        rec_api_choose = rec_api_unlabel[:100]
+        choose_feature = unlabel_feature[:100]
 
     add_label_feedback_info = feedback.get_feedback_inf(choose_query, choose_query, choose_answer, rec_api_choose, w2v, idf)
     new_X_feedback, new_y_feedback = get_active_data(add_label_feedback_info, choose_feature)

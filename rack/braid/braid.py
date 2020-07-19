@@ -21,7 +21,7 @@ top1, top3, top5, map, mrr = 0, 0, 0, 0, 0
 LTR_top1, LTR_top3, LTR_top5, LTR_map, LTR_mrr = 0, 0, 0, 0, 0
 AL_top1, AL_top3, AL_top5, AL_map, AL_mrr = 0, 0, 0, 0, 0
 
-num_choose = 37
+num_choose = 14
 
 queries = []
 fr = open('../data/feedback_all_original_biker.csv', 'r')
@@ -43,7 +43,8 @@ for train_idx, test_idx in kf.split(queries):
         # 数据分为训练集、反馈集、测试集
         choose_idx = sorted(random.sample(train_idx, num_choose))
         train_idx = [i for i in train_idx if i not in choose_idx]
-        print(len(train_idx), len(test_idx), len(choose_idx))
+        pct = len(choose_idx)/(len(train_idx)+len(choose_idx))
+        print(len(train_idx), len(test_idx), len(choose_idx), pct)
         print('---------------------')
 
         # 获取测试数据
@@ -51,7 +52,7 @@ for train_idx, test_idx in kf.split(queries):
 
         # 获取AL初始训练数据，即反馈数据
         # choose_query, choose_answer, choose_rec_api, choose_feature = split_data.idx_to_data(choose_idx)
-        choose_query, choose_answer, choose_rec_api, choose_feature = split_data.get_choose_data(choose_idx, test_query, w2v, idf)
+        choose_query, choose_answer, choose_rec_api, choose_feature = split_data.get_choose_data(choose_idx, test_query, pct, w2v, idf)
         AL_choose_feature = braid_AL.get_AL_feature(choose_answer, choose_rec_api, choose_feature)
 
         # 获取初始未标记数据，从stack overflow获取
@@ -63,7 +64,7 @@ for train_idx, test_idx in kf.split(queries):
         # choose_query, choose_answer, rec_api_choose, unlabel_query, unlabel_answer, rec_api_unlabel, choose = split_data.split_10_choose_unlabel(
         #     train_query, train_answer, rec_api_train)
 
-        AL_predict, add_x_FV, add_x_FR, add_y_FR = braid_AL.get_AL_predict(test_feature, AL_choose_feature, AL_unlabel_feature, test_query, choose_query, choose_answer, unlabel_query, unlabel_answer, test_rec_api, choose_rec_api, unlabel_rec_api, w2v, idf)
+        AL_predict, add_x_FV, add_x_FR, add_y_FR = braid_AL.get_AL_predict(pct, test_feature, AL_choose_feature, AL_unlabel_feature, test_query, choose_query, choose_answer, unlabel_query, unlabel_answer, test_rec_api, choose_rec_api, unlabel_rec_api, w2v, idf)
         LTR_predict = braid_LTR.get_LTR_predict(add_x_FV, add_x_FR, add_y_FR)
 
         rank_mod, rankall, LTR_rank_mod, LTR_rankall, AL_rank_mod, AL_rankall = [], [], [], [], [], []
@@ -118,7 +119,7 @@ print(top1/10, top3/10, top5/10, map/10, mrr/10)
 print(LTR_top1/10, LTR_top3/10, LTR_top5/10, LTR_map/10, LTR_mrr/10)
 print(AL_top1/10, AL_top3/10, AL_top5/10, AL_map/10, AL_mrr/10)
 
-fw = open('../data/metric_biker.csv', 'a+', newline='')
+fw = open('../data/metric_rack.csv', 'a+', newline='')
 writer = csv.writer(fw)
 writer.writerow(('BRAID', num_choose, top1/10, top3/10, top5/10, map/10, mrr/10))
 writer.writerow(('LTR', num_choose, LTR_top1/10, LTR_top3/10, LTR_top5/10, LTR_map/10, LTR_mrr/10))
