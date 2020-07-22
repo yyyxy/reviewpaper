@@ -2788,103 +2788,163 @@
 0,0.117739747,0.0,how to prevent multiple instances of an application,Override
 0,0.244971741,0.0,how to prevent multiple instances of an application,String
 0,0.0,0.0,how to prevent multiple instances of an application,RecordFieldBase
-0,0.348469951,0.0,Convert from txt to xml,String
-0,-0.015276562,0.0,Convert from txt to xml,Example
-0,0.155688353,0.0,Convert from txt to xml,Value
-1,0.349728893,1.0000000000000002,Convert from txt to xml,File
-0,0.231242188,0.0,Convert from txt to xml,System
-0,0.0,0.0,Convert from txt to xml,ConverterActivity
-0,0.085798338,0.0,Convert from txt to xml,Unknown
-0,0.243211611,0.0,Convert from txt to xml,EditText
-0,0.088252109,0.0,Convert from txt to xml,Uml
-1,0.237193202,0.0,Convert from txt to xml,Source
-0,0.479728365,0.0,Get files from a zip file,ZipOutputStream
-1,0.459577583,1.0,Get files from a zip file,ZipEntry
-1,0.56193405,1.0,Get files from a zip file,ZipFile
-0,0.744596083,0.0,Get files from a zip file,Files
-0,0.744258239,0.0,Get files from a zip file,Zip
-0,0.744596083,0.0,Get files from a zip file,File
-0,0.335985832,0.0,Get files from a zip file,String
-0,0.190587479,0.0,Get files from a zip file,System
-0,0.118312931,0.0,Get files from a zip file,ZipFileSystem
-0,0.168906501,0.0,Get files from a zip file,IOException
-1,0.361430033,0.0,How do I format a number in Java,NumberFormat
-1,0.373719137,1.0,How do I format a number in Java,DecimalFormat
-1,0.159818555,0.0,How do I format a number in Java,Locale
-0,0.411431056,0.0,How do I format a number in Java,String
-0,0.095753756,0.0,How do I format a number in Java,System
-1,0.653367208,0.0,How do I format a number in Java,Number
-1,0.229285093,0.0,How do I format a number in Java,ParseException
-0,0.0,0.0,How do I format a number in Java,NumberTextWatcher
-0,0.0,0.0,How do I format a number in Java,ClientApp
-0,0.176324457,0.0,How do I format a number in Java,NumberFormatException
-0,0.699609094,0.0,How to print out all substrings of a string,String
-0,0.09073675,0.0,How to print out all substrings of a string,System
-0,0.172183803,0.0,How to print out all substrings of a string,ArrayDeque
-0,0.550834674,0.0,How to print out all substrings of a string,Integer
-0,0.407262101,0.0,How to print out all substrings of a string,Matcher
-0,0.396160307,0.0,How to print out all substrings of a string,TreeSet
-0,0.227630983,0.0,How to print out all substrings of a string,Pattern
-0,0.509374402,0.0,How to print out all substrings of a string,Arrays
-0,0.481191195,0.0,How to print out all substrings of a string,List
-0,0.0,0.0,How to print out all substrings of a string,ShortestCommonSuperstringAlgorithm
-0,0.388767066,0.0,remove elements from XML file in java,String
-0,0.638027749,0.0,remove elements from XML file in java,File
-0,-0.090299873,0.0,remove elements from XML file in java,Passenger
-0,0.078794987,0.0,remove elements from XML file in java,Train
-0,0.0,0.0,remove elements from XML file in java,LogoAndTextButton
-0,0.0,0.0,remove elements from XML file in java,IMFile
-0,0.663425411,0.0,remove elements from XML file in java,Element
-0,0.118676145,0.0,remove elements from XML file in java,System
-0,0.393148234,0.0,remove elements from XML file in java,List
-0,0.0,0.0,remove elements from XML file in java,TicketNumber
-0,0.238450493,0.0,How do I delete an element from an array of objects,TreeNode
-0,0.632741575,0.0,How do I delete an element from an array of objects,ArrayList
-0,0.465798375,0.0,How do I delete an element from an array of objects,String
-0,0.066572253,0.0,How do I delete an element from an array of objects,System
-0,0.0,0.0,How do I delete an element from an array of objects,EmployeeClass
-0,0.498165639,0.0,How do I delete an element from an array of objects,Integer
-0,0.509532684,0.0,How do I delete an element from an array of objects,List
-0,0.0,0.0,How do I delete an element from an array of objects,AdminOperation
-0,0.660781657,0.0,How do I delete an element from an array of objects,Object
-0,0.128130641,0.0,How do I delete an element from an array of objects,Override
-0,0.47438186,0.7493048986207977,How can I read comments from a Zip file,ZipInputStream
-1,0.490570752,1.0000000000000002,How can I read comments from a Zip file,ZipFile
-0,0.414148856,0.0,How can I read comments from a Zip file,ZipOutputStream
-0,0.307864675,0.0,How can I read comments from a Zip file,String
-0,0.344576815,0.0,How can I read comments from a Zip file,Section
-0,0.659228861,0.0,How can I read comments from a Zip file,File
-0,0.168149456,0.0,How can I read comments from a Zip file,System
-1,0.399112147,1.0000000000000002,How can I read comments from a Zip file,ZipEntry
-0,0.134600307,0.0,How can I read comments from a Zip file,IOException
-0,0.361603834,0.0,How can I read comments from a Zip file,FileOutputStream
-0,0.345090463,0.0,Need java Regex to remove/replace the XML elements from specific string,Pattern
-0,0.0,0.0,Need java Regex to remove/replace the XML elements from specific string,BlockedMatch
-0,0.066597957,0.0,Need java Regex to remove/replace the XML elements from specific string,Deviation
-0,0.150793937,0.0,Need java Regex to remove/replace the XML elements from specific string,Correlation
-0,0.649306687,0.0,Need java Regex to remove/replace the XML elements from specific string,String
-0,0.0,0.0,Need java Regex to remove/replace the XML elements from specific string,Beatle
-0,0.421742647,0.0,Need java Regex to remove/replace the XML elements from specific string,Matcher
-0,0.071865081,0.0,Need java Regex to remove/replace the XML elements from specific string,Dangerous
-0,0.064824323,0.0,Need java Regex to remove/replace the XML elements from specific string,System
-0,0.0,0.0,Need java Regex to remove/replace the XML elements from specific string,Guilherme
-0,0.51234293,0.0,How can I calculate the SHA-256 hash of a string in Android,MessageDigest
-0,0.285576274,0.0,How can I calculate the SHA-256 hash of a string in Android,NoSuchAlgorithmException
-0,0.606273349,0.0,How can I calculate the SHA-256 hash of a string in Android,String
-0,0.074325475,0.0,How can I calculate the SHA-256 hash of a string in Android,System
-0,-0.007574848,0.0,How can I calculate the SHA-256 hash of a string in Android,Exception
-0,0.0,0.0,How can I calculate the SHA-256 hash of a string in Android,HashMethod
-0,0.146510514,0.0,How can I calculate the SHA-256 hash of a string in Android,UnsupportedEncodingException
-0,0.362091327,0.0,How can I calculate the SHA-256 hash of a string in Android,Digest
-0,0.144283083,0.0,How can I calculate the SHA-256 hash of a string in Android,Mac
-0,0.0,0.0,How can I calculate the SHA-256 hash of a string in Android,SignedInfo
-0,0.50606128,0.0,Converting CSV file into 2D Array Java,String
-0,0.0,0.0,Converting CSV file into 2D Array Java,AlternateNew
-0,0.113391443,0.0,Converting CSV file into 2D Array Java,System
-0,0.090554862,0.0,Converting CSV file into 2D Array Java,Metro
-0,0.038762085,0.0,Converting CSV file into 2D Array Java,Company
-0,0.0,0.0,Converting CSV file into 2D Array Java,LocalityName
-0,0.0,0.0,Converting CSV file into 2D Array Java,BusStops
-0,0.31259276,0.0,Converting CSV file into 2D Array Java,FileReader
-0,0.0,0.0,Converting CSV file into 2D Array Java,ParentLocalityName
-0,0.0,0.0,Converting CSV file into 2D Array Java,GeographicLocation
+0,0.231425912,0.0,How to Download an image from server to client,String
+1,0.319225994,1.0,How to Download an image from server to client,InputStream
+0,0.141090677,0.0,How to Download an image from server to client,IOException
+0,0.183183463,0.0,How to Download an image from server to client,ImageReader
+0,0.0,0.0,How to Download an image from server to client,FilesOnServer
+0,0.139585356,0.0,How to Download an image from server to client,System
+0,0.326421318,0.0,How to Download an image from server to client,File
+0,0.446052411,0.0,How to Download an image from server to client,Bitmap
+0,0.185812625,0.0,How to Download an image from server to client,Date
+0,0.076435934,0.0,How to Download an image from server to client,Exception
+0,0.348469951,0.0,Convert from txt to xml                                                       ,String
+0,-0.015276562,0.0,Convert from txt to xml                                                       ,Example
+0,0.155688353,0.0,Convert from txt to xml                                                       ,Value
+1,0.349728893,0.0,Convert from txt to xml                                                       ,File
+0,0.231242188,0.0,Convert from txt to xml                                                       ,System
+0,0.0,0.0,Convert from txt to xml                                                       ,ConverterActivity
+0,0.085798338,0.0,Convert from txt to xml                                                       ,Unknown
+0,0.243211611,0.0,Convert from txt to xml                                                       ,EditText
+0,0.088252109,0.0,Convert from txt to xml                                                       ,Uml
+1,0.237193202,0.0,Convert from txt to xml                                                       ,Source
+0,0.479728365,0.0,Get files from a zip file                                                     ,ZipOutputStream
+1,0.459577583,1.0,Get files from a zip file                                                     ,ZipEntry
+1,0.56193405,1.0,Get files from a zip file                                                     ,ZipFile
+0,0.744596083,0.0,Get files from a zip file                                                     ,Files
+0,0.744258239,0.0,Get files from a zip file                                                     ,Zip
+0,0.744596083,0.0,Get files from a zip file                                                     ,File
+0,0.335985832,0.0,Get files from a zip file                                                     ,String
+0,0.190587479,0.0,Get files from a zip file                                                     ,System
+0,0.118312931,0.0,Get files from a zip file                                                     ,ZipFileSystem
+0,0.168906501,0.0,Get files from a zip file                                                     ,IOException
+1,0.361430033,0.0,How do I format a number in Java                                              ,NumberFormat
+1,0.373719137,0.0,How do I format a number in Java                                              ,DecimalFormat
+1,0.159818555,0.0,How do I format a number in Java                                              ,Locale
+0,0.411431056,0.0,How do I format a number in Java                                              ,String
+0,0.095753756,0.0,How do I format a number in Java                                              ,System
+1,0.653367208,1.0,How do I format a number in Java                                              ,Number
+1,0.229285093,0.0,How do I format a number in Java                                              ,ParseException
+0,0.0,0.0,How do I format a number in Java                                              ,NumberTextWatcher
+0,0.0,0.0,How do I format a number in Java                                              ,ClientApp
+0,0.176324457,0.0,How do I format a number in Java                                              ,NumberFormatException
+0,0.699609094,0.0,How to print out all substrings of a string                                   ,String
+0,0.09073675,0.0,How to print out all substrings of a string                                   ,System
+0,0.172183803,0.0,How to print out all substrings of a string                                   ,ArrayDeque
+0,0.550834674,0.0,How to print out all substrings of a string                                   ,Integer
+0,0.407262101,0.0,How to print out all substrings of a string                                   ,Matcher
+0,0.396160307,0.0,How to print out all substrings of a string                                   ,TreeSet
+0,0.227630983,0.0,How to print out all substrings of a string                                   ,Pattern
+0,0.509374402,0.0,How to print out all substrings of a string                                   ,Arrays
+0,0.481191195,0.0,How to print out all substrings of a string                                   ,List
+0,0.0,0.0,How to print out all substrings of a string                                   ,ShortestCommonSuperstringAlgorithm
+0,0.353196344,0.0,Convert an XML file to CSV file using java,String
+0,0.683108771,0.0,Convert an XML file to CSV file using java,File
+0,0.0,0.0,Convert an XML file to CSV file using java,NbOfTxs
+0,0.298774277,0.0,Convert an XML file to CSV file using java,Date
+0,0.0,0.0,Convert an XML file to CSV file using java,GrpHdr
+0,0.0,0.0,Convert an XML file to CSV file using java,CsvSchema
+0,0.0,0.0,Convert an XML file to CSV file using java,Nm
+0,0.087554387,0.0,Convert an XML file to CSV file using java,CsvMapper
+0,0.058415927,0.0,Convert an XML file to CSV file using java,Product
+0,0.0,0.0,Convert an XML file to CSV file using java,CSVConverterBean
+0,0.378395255,0.0,How to Print Text out,String
+0,0.114822041,0.0,How to Print Text out,System
+0,0.679925196,0.0,How to Print Text out,Text
+0,0.209819119,0.0,How to Print Text out,PrinterJob
+0,0.103366028,0.0,How to Print Text out,PrintService
+0,0.674740237,0.0,How to Print Text out,Print
+0,0.0,0.0,How to Print Text out,PrintJobWatcher
+0,0.227016288,0.0,How to Print Text out,PrintStream
+0,-0.011338822,0.0,How to Print Text out,CommonTree
+0,0.0,0.0,How to Print Text out,DocFlavor
+1,0.45076035,0.9999999999999999,how to gray out red color for an image with filter,BufferedImage
+0,0.0,0.0,how to gray out red color for an image with filter,ColorConvertOp
+0,0.664427267,0.0,how to gray out red color for an image with filter,Color
+0,0.0,0.0,how to gray out red color for an image with filter,GrayFilter
+0,0.291152445,0.0,how to gray out red color for an image with filter,ColorSpace
+1,0.622643855,0.9999999999999999,how to gray out red color for an image with filter,Image
+0,0.250624444,0.0,how to gray out red color for an image with filter,String
+0,0.672399779,0.0,how to gray out red color for an image with filter,Gray
+0,0.20905692,0.0,how to gray out red color for an image with filter,ColorMatrix
+0,0.225750369,0.0,how to gray out red color for an image with filter,Gamma
+0,0.388767066,0.0,remove elements from XML file in java                                         ,String
+1,0.638027749,0.0,remove elements from XML file in java                                         ,File
+0,-0.090299873,0.0,remove elements from XML file in java                                         ,Passenger
+0,0.078794987,0.0,remove elements from XML file in java                                         ,Train
+0,0.0,0.0,remove elements from XML file in java                                         ,LogoAndTextButton
+0,0.0,0.0,remove elements from XML file in java                                         ,IMFile
+1,0.663425411,0.0,remove elements from XML file in java                                         ,Element
+0,0.118676145,0.0,remove elements from XML file in java                                         ,System
+0,0.393148234,0.0,remove elements from XML file in java                                         ,List
+0,0.0,0.0,remove elements from XML file in java                                         ,TicketNumber
+0,0.238450493,0.0,How do I delete an element from an array of objects                           ,TreeNode
+0,0.632741575,0.0,How do I delete an element from an array of objects                           ,ArrayList
+0,0.465798375,0.0,How do I delete an element from an array of objects                           ,String
+0,0.066572253,0.0,How do I delete an element from an array of objects                           ,System
+0,0.0,0.0,How do I delete an element from an array of objects                           ,EmployeeClass
+0,0.498165639,0.0,How do I delete an element from an array of objects                           ,Integer
+0,0.509532684,0.0,How do I delete an element from an array of objects                           ,List
+0,0.0,0.0,How do I delete an element from an array of objects                           ,AdminOperation
+0,0.660781657,0.0,How do I delete an element from an array of objects                           ,Object
+0,0.128130641,0.0,How do I delete an element from an array of objects                           ,Override
+0,0.47438186,0.0,How can I read comments from a Zip file                                       ,ZipInputStream
+1,0.490570752,1.0000000000000002,How can I read comments from a Zip file                                       ,ZipFile
+0,0.414148856,0.0,How can I read comments from a Zip file                                       ,ZipOutputStream
+0,0.307864675,0.0,How can I read comments from a Zip file                                       ,String
+0,0.344576815,0.0,How can I read comments from a Zip file                                       ,Section
+0,0.659228861,0.0,How can I read comments from a Zip file                                       ,File
+0,0.168149456,0.0,How can I read comments from a Zip file                                       ,System
+1,0.399112147,1.0000000000000002,How can I read comments from a Zip file                                       ,ZipEntry
+0,0.134600307,0.0,How can I read comments from a Zip file                                       ,IOException
+0,0.361603834,0.0,How can I read comments from a Zip file                                       ,FileOutputStream
+0,0.345090463,0.0,Need java Regex to remove/replace the XML elements from specific string       ,Pattern
+0,0.0,0.0,Need java Regex to remove/replace the XML elements from specific string       ,BlockedMatch
+0,0.066597957,0.0,Need java Regex to remove/replace the XML elements from specific string       ,Deviation
+0,0.150793937,0.0,Need java Regex to remove/replace the XML elements from specific string       ,Correlation
+0,0.649306687,0.0,Need java Regex to remove/replace the XML elements from specific string       ,String
+0,0.0,0.0,Need java Regex to remove/replace the XML elements from specific string       ,Beatle
+0,0.421742647,0.0,Need java Regex to remove/replace the XML elements from specific string       ,Matcher
+0,0.071865081,0.0,Need java Regex to remove/replace the XML elements from specific string       ,Dangerous
+0,0.064824323,0.0,Need java Regex to remove/replace the XML elements from specific string       ,System
+0,0.0,0.0,Need java Regex to remove/replace the XML elements from specific string       ,Guilherme
+1,0.45095227,1.0000000000000002,Flip an image upside-down,AffineTransform
+1,0.461428613,1.0000000000000002,Flip an image upside-down,BufferedImage
+0,0.289968809,0.0,Flip an image upside-down,JFrame
+0,0.344285033,0.0,Flip an image upside-down,TextureRegion
+0,0.235976066,0.0,Flip an image upside-down,String
+0,0.640212903,0.0,Flip an image upside-down,Image
+0,0.216594056,0.0,Flip an image upside-down,Piece
+0,0.345477073,0.0,Flip an image upside-down,Graphics
+0,0.025300452,0.0,Flip an image upside-down,Override
+0,0.0,0.0,Flip an image upside-down,MyRect
+0,0.442504254,0.0,Merge an image over another in the specified position and save it as a new image,Bitmap
+0,0.301683587,0.0,Merge an image over another in the specified position and save it as a new image,File
+0,0.283055685,0.0,Merge an image over another in the specified position and save it as a new image,String
+0,0.609943657,0.0,Merge an image over another in the specified position and save it as a new image,Image
+1,0.427964735,1.0,Merge an image over another in the specified position and save it as a new image,BufferedImage
+0,0.0,0.0,Merge an image over another in the specified position and save it as a new image,ImageTapView
+0,0.262800371,0.0,Merge an image over another in the specified position and save it as a new image,View
+0,0.230426122,0.0,Merge an image over another in the specified position and save it as a new image,Override
+1,0.455864132,1.0,Merge an image over another in the specified position and save it as a new image,ImageIcon
+0,0.0,0.0,Merge an image over another in the specified position and save it as a new image,VisualizationImageServer
+0,0.51234293,0.0,How can I calculate the SHA-256 hash of a string in Android                   ,MessageDigest
+0,0.285576274,0.0,How can I calculate the SHA-256 hash of a string in Android                   ,NoSuchAlgorithmException
+0,0.606273349,0.0,How can I calculate the SHA-256 hash of a string in Android                   ,String
+0,0.074325475,0.0,How can I calculate the SHA-256 hash of a string in Android                   ,System
+0,-0.007574848,0.0,How can I calculate the SHA-256 hash of a string in Android                   ,Exception
+0,0.0,0.0,How can I calculate the SHA-256 hash of a string in Android                   ,HashMethod
+0,0.146510514,0.0,How can I calculate the SHA-256 hash of a string in Android                   ,UnsupportedEncodingException
+0,0.362091327,0.0,How can I calculate the SHA-256 hash of a string in Android                   ,Digest
+0,0.144283083,0.0,How can I calculate the SHA-256 hash of a string in Android                   ,Mac
+0,0.0,0.0,How can I calculate the SHA-256 hash of a string in Android                   ,SignedInfo
+0,0.270855991,0.0,Insert images in mongoDB,DBCollection
+0,0.238906831,0.0,Insert images in mongoDB,BasicDBObject
+0,0.0,0.0,Insert images in mongoDB,DBTCPConnector
+0,0.0,0.0,Insert images in mongoDB,DBApiLayer
+0,0.348087658,0.0,Insert images in mongoDB,DBObject
+0,0.26221749,0.0,Insert images in mongoDB,String
+1,0.253584084,0.9999999999999998,Insert images in mongoDB,MongoClient
+0,0.0,0.0,Insert images in mongoDB,DBPort
+0,0.058840296,0.0,Insert images in mongoDB,WriteConcern
+0,0.058490859,0.0,Insert images in mongoDB,BasicDBList

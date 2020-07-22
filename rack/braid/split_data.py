@@ -158,7 +158,7 @@ def get_choose_data(choose_idx, test_query, pct, w2v, idf):
         q1_matrix, q1_idf_vector = feedback.load_matrix(choose_query[i], w2v, idf)
         for n in range(len(matrix)):
             q_sim = similarity.sim_doc_pair(q1_matrix, matrix[n], q1_idf_vector, idf_vector[n])
-            if q_sim > 0.65+round(pct, 2)*0.1:
+            if q_sim > 0.65:
                 # print(i, q_sim)
                 idx.append(i)
                 break
