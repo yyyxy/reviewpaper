@@ -21,27 +21,30 @@ top1, top3, top5, map, mrr = 0, 0, 0, 0, 0
 LTR_top1, LTR_top3, LTR_top5, LTR_map, LTR_mrr = 0, 0, 0, 0, 0
 AL_top1, AL_top3, AL_top5, AL_map, AL_mrr = 0, 0, 0, 0, 0
 
-num_choose = 279
+num_choose = 96
 
 queries = []
-fr = open('../data/feedback_all_new_nlp.csv', 'r')
+fr = open('../data/feedback_all_new_rack.csv', 'r')
 reader = csv.reader(fr)
 for row in reader:
     queries.append(row[0])
 
 
-# k-fold cross validation
-kf = KFold(n_splits=10)
-for train_idx, test_idx in kf.split(queries):
-    train_idx = list(train_idx)
-    test_idx = list(test_idx)
-    print('test_idx', test_idx)
+# iteration for 10times because the feedback is chosen randomly
+# iteration begin
+for round in range(10):
+    round_top1, round_top3, round_top5, round_map, round_mrr = 0, 0, 0, 0, 0
 
-    # iteration for 10times because the feedback is chosen randomly
-    # iteration begin
-    for round in range(1):
+    # k-fold cross validation
+    kf = KFold(n_splits=10)
+    for train_idx, test_idx in kf.split(queries):
+        train_idx = list(train_idx)
+        test_idx = list(test_idx)
+        print('test_idx', test_idx)
+
         # 数据分为训练集、反馈集、测试集
         choose_idx = sorted(random.sample(train_idx, num_choose))
+        print('choose_idx', train_idx, len(train_idx), num_choose)
         train_idx = [i for i in train_idx if i not in choose_idx]
         pct = len(choose_idx)/(len(train_idx)+len(choose_idx))
         print(len(train_idx), len(test_idx), len(choose_idx), pct)
@@ -101,6 +104,11 @@ for train_idx, test_idx in kf.split(queries):
         temp_top1, temp_top3, temp_top5, temp_map, temp_mrr = metric.metric_val(rank_mod, rankall, len(test_rec_api))
         LTR_temp_top1, LTR_temp_top3, LTR_temp_top5, LTR_temp_map, LTR_temp_mrr = metric.metric_val(LTR_rank_mod, LTR_rankall, len(test_rec_api))
         AL_temp_top1, AL_temp_top3, AL_temp_top5, AL_temp_map, AL_temp_mrr = metric.metric_val(AL_rank_mod, AL_rankall, len(test_rec_api))
+        round_top1 += temp_top1
+        round_top3 += temp_top3
+        round_top5 += temp_top5
+        round_map += temp_map
+        round_mrr += temp_mrr
         top1 += temp_top1
         top3 += temp_top3
         top5 += temp_top5
@@ -116,15 +124,21 @@ for train_idx, test_idx in kf.split(queries):
         AL_top5 += AL_temp_top5
         AL_map += AL_temp_map
         AL_mrr += AL_temp_mrr
-print(top1/10, top3/10, top5/10, map/10, mrr/10)
-print(LTR_top1/10, LTR_top3/10, LTR_top5/10, LTR_map/10, LTR_mrr/10)
-print(AL_top1/10, AL_top3/10, AL_top5/10, AL_map/10, AL_mrr/10)
 
-fw = open('../data/metric_nlp.csv', 'a+', newline='')
+    fw = open('../data/metric_rack.csv', 'a+', newline='')
+    writer = csv.writer(fw)
+    writer.writerow((round+1, num_choose, round_top1/10, round_top3/10, round_top5/10, round_map/10, round_mrr/10))
+    fw.close()
+
+print(top1/100, top3/100, top5/100, map/100, mrr/100)
+print(LTR_top1/100, LTR_top3/100, LTR_top5/100, LTR_map/100, LTR_mrr/100)
+print(AL_top1/100, AL_top3/100, AL_top5/100, AL_map/100, AL_mrr/100)
+
+fw = open('../data/metric_rack.csv', 'a+', newline='')
 writer = csv.writer(fw)
-writer.writerow(('BRAID', num_choose, top1/10, top3/10, top5/10, map/10, mrr/10))
-writer.writerow(('LTR', num_choose, LTR_top1/10, LTR_top3/10, LTR_top5/10, LTR_map/10, LTR_mrr/10))
-writer.writerow(('AL', num_choose, AL_top1/10, AL_top3/10, AL_top5/10, AL_map/10, AL_mrr/10))
+writer.writerow(('BRAID', num_choose, top1/100, top3/100, top5/100, map/100, mrr/100))
+# writer.writerow(('LTR', num_choose, LTR_top1/10, LTR_top3/10, LTR_top5/10, LTR_map/10, LTR_mrr/10))
+# writer.writerow(('AL', num_choose, AL_top1/10, AL_top3/10, AL_top5/10, AL_map/10, AL_mrr/10))
 # writer.writerow(('BRAID', '10_query', top1, top3, top5, map, mrr))
 fw.close()
 

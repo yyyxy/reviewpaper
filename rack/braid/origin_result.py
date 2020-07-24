@@ -88,7 +88,7 @@ for n in sort_all:
     map += temp
 
 print(top1/len(test_query), top3/len(test_query), top5/len(test_query), map/len(test_query), mrr/len(test_query), ndcg/len(test_query))
-# fw = open('../data/metric_rack.csv', 'a+', newline='')
-# writer = csv.writer(fw)
-# writer.writerow(('original', top1/len(test_query), top3/len(test_query), top5/len(test_query), map/len(test_query), mrr/len(test_query)))
-# fw.close()
+fw = open('../data/metric_biker.csv', 'a+', newline='')
+writer = csv.writer(fw)
+writer.writerow(('original', top1/len(test_query), top3/len(test_query), top5/len(test_query), map/len(test_query), mrr/len(test_query)))
+fw.close()
