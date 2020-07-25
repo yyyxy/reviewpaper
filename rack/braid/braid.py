@@ -21,10 +21,10 @@ top1, top3, top5, map, mrr = 0, 0, 0, 0, 0
 LTR_top1, LTR_top3, LTR_top5, LTR_map, LTR_mrr = 0, 0, 0, 0, 0
 AL_top1, AL_top3, AL_top5, AL_map, AL_mrr = 0, 0, 0, 0, 0
 
-num_choose = 96
+num_choose = 252
 
 queries = []
-fr = open('../data/feedback_all_new_rack.csv', 'r')
+fr = open('../data/feedback_all_new_nlp.csv', 'r')
 reader = csv.reader(fr)
 for row in reader:
     queries.append(row[0])
@@ -125,7 +125,7 @@ for round in range(10):
         AL_map += AL_temp_map
         AL_mrr += AL_temp_mrr
 
-    fw = open('../data/metric_rack.csv', 'a+', newline='')
+    fw = open('../data/metric_nlp.csv', 'a+', newline='')
     writer = csv.writer(fw)
     writer.writerow((round+1, num_choose, round_top1/10, round_top3/10, round_top5/10, round_map/10, round_mrr/10))
     fw.close()
@@ -134,7 +134,7 @@ print(top1/100, top3/100, top5/100, map/100, mrr/100)
 print(LTR_top1/100, LTR_top3/100, LTR_top5/100, LTR_map/100, LTR_mrr/100)
 print(AL_top1/100, AL_top3/100, AL_top5/100, AL_map/100, AL_mrr/100)
 
-fw = open('../data/metric_rack.csv', 'a+', newline='')
+fw = open('../data/metric_nlp.csv', 'a+', newline='')
 writer = csv.writer(fw)
 writer.writerow(('BRAID', num_choose, top1/100, top3/100, top5/100, map/100, mrr/100))
 # writer.writerow(('LTR', num_choose, LTR_top1/10, LTR_top3/10, LTR_top5/10, LTR_map/10, LTR_mrr/10))

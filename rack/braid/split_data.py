@@ -124,7 +124,7 @@ def get_choose(train_feature, choose):
 
 def idx_to_data(idx):
     # 索引转化为数据
-    fr = open('../data/feedback_all_new_rack.csv', 'r')
+    fr = open('../data/feedback_all_new_nlp.csv', 'r')
     reader = csv.reader(fr)
     idx_query, idx_answer = [], []
     for i, row in enumerate(reader):
@@ -132,7 +132,7 @@ def idx_to_data(idx):
             idx_query.append(row[0])
             idx_answer.append(row[1:])
 
-    fr = open('../data/get_feature_new_rack.csv', 'r')
+    fr = open('../data/get_feature_new_nlp.csv', 'r')
     reader = csv.reader(fr)
     idx_rec_api, idx_feature = [], []
     for i, row in enumerate(reader):
@@ -183,7 +183,7 @@ def get_unlabel_data(test_query, w2v, idf):
         idf_vector.append(query_idf_vector)
 
     # 索引转化为数据
-    fr = open('../data/feedback_repository_rack_sim7.csv', 'r')
+    fr = open('../data/feedback_repository_nlp_sim75.csv', 'r')
     reader = csv.reader(fr)
     idx = []
     query, answer = [], []
@@ -191,7 +191,7 @@ def get_unlabel_data(test_query, w2v, idf):
         q1_matrix, q1_idf_vector = feedback.load_matrix(row[0], w2v, idf)
         for n in range(len(matrix)):
             q_sim = similarity.sim_doc_pair(q1_matrix, matrix[n], q1_idf_vector, idf_vector[n])
-            if q_sim > 0.7:
+            if q_sim > 0.75:
                 query.append(row[0])
                 answer.append(row[1:])
                 idx.append(i)
@@ -199,7 +199,7 @@ def get_unlabel_data(test_query, w2v, idf):
                 break
     print('ground_truth_training', len(idx), idx)
 
-    fr = open('../data/get_feature_rack_sim7.csv', 'r')
+    fr = open('../data/get_feature_nlp_sim75.csv', 'r')
     reader = csv.reader(fr)
     rec_api, feature = [], []
     for i, row in enumerate(reader):
