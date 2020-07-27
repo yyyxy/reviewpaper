@@ -1,0 +1,9 @@
+Getting the current date and time of the timezone,['java.util.TimeZone.getDefault']
+How to sort two fields (date and boolean) comparator in Java,"['java.util.Collections.sort', 'java.lang.String.compareTo']"
+How to get an accessible method list of a specific class,"['java.lang.Class.getMethods', 'java.lang.Class.getDeclaredMethods']"
+How to parse a number to double,['java.lang.Double.valueOf']
+How can I get the index of a single character in a string,['java.lang.String.indexOf']
+Loading a BufferedImage ,['javax.imageio.ImageIO.read']
+how to create a new file,['java.io.File.createNewFile']
+How to insert values into Map,['java.util.Map.put']
+How to obtain part of an array,['java.util.List.subList']

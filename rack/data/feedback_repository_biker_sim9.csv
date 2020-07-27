@@ -1,119 +1,215 @@
-How do you crash a JVM,java.lang.System.exit
-How to round a number to n decimal places in Java,java.text.DecimalFormat.setRoundingMode,java.math.BigDecimal.setScale,java.lang.Math.round
-split string using regex,java.lang.String.split
-Determine if a String is an Integer in Java,java.lang.Integer.parseInt
-Checking if a number is an Integer in Java,java.lang.Integer.parseInt
-How do I copy a 2 Dimensional array in Java,java.lang.System.arraycopy,java.util.Arrays.copyOf
-Convert from Radians to Degrees in Java,java.lang.Math.toDegrees
-How to round the double value to 2 decimal points,java.lang.Math.round
-Split a string in java,java.lang.String.split,java.lang.String.split
-Get MAC address on local machine with Java,java.net.NetworkInterface.getHardwareAddress,java.net.NetworkInterface.getNetworkInterfaces
-how to split the string in java,java.lang.String.split
-Comparing strings by their alphabetical order,java.lang.String.compareTo
-Measuring Download Speed Java,java.lang.System.nanoTime
-How to find time taken to run a Java program,java.lang.System.nanoTime
-Help typecasting a String Array of bytes to actual bytes,java.lang.Byte.parseByte,java.lang.Integer.parseInt
-How to Execute Windows Commands Using Java - Change Network Settings,java.lang.Runtime.exec
-Java replace special characters in a string,java.lang.String.replace,java.util.regex.Pattern.quote
-How to convert binary string value to decimal,java.lang.Integer.parseInt
-How to remove newlines from beginning and end of a string (Java),java.lang.String.trim
-Append relative URL to java.net.URL,java.net.URL.toURI
-How to show full stack trace on eclipse,java.lang.Throwable.printStackTrace
-In java how to get substring from a string till a character c,java.lang.String.indexOf,java.lang.String.substring
-What is the fastest way to copy a double[] in Java,java.lang.System.arraycopy
-How can I remove a substring from a given String,java.lang.String.replace
-Getting unix timestamp from Date(),java.util.Date.getTime
-Cube root of a negative number,java.lang.Math.cbrt
-Splitting strings based on a delimiter,java.lang.String.split
-regular expressions escape on character,java.util.regex.Pattern.quote
-Raising a number to a power in Java,java.lang.Math.pow
-how to find before and after sub-string in a string,java.lang.String.split
-Java rounding to nearest 0.05,java.lang.Math.round
-How to detect overflow when convert string to integer in java,java.math.BigInteger.BigInteger,java.lang.Integer.parseInt
-How to find the exact word using a regex in Java,java.util.regex.Matcher.find
-Hash a double in Java,java.lang.Double.hashCode,java.lang.Double.doubleToLongBits
-How to add new System Properties in java,java.lang.System.setProperty
-Is there a way to instantiate a class by name in Java,java.lang.Class.forName
-how to check if string contains '+' character,java.lang.String.contains
-Java String concatenation - nulls,java.lang.String.valueOf
-How to convert a Binary String to a base 10 integer in Java,java.lang.Integer.parseInt
-String object to Boolean,java.lang.Boolean.parseBoolean,java.lang.Boolean.valueOf
-Is there any way to find os name using java,java.lang.System.getProperties,java.lang.System.getProperty
-Get string character by index - Java,java.lang.Character.toString,java.lang.String.charAt
-How to run linux command from java code,java.lang.Runtime.exec
-Convert array to a string in java,java.lang.String.split
-First char to upper case,java.lang.String.charAt,java.lang.Character.toUpperCase
-How can I read input from the console using the Scanner class in Java,java.util.Scanner.next,java.util.Scanner.nextLine
-Load Java Image inside package from a class in a different package,java.lang.Class.getResource,java.lang.ClassLoader.getResource
-Execute shell command in Tomcat,java.lang.Runtime.exec
-How to split the string in java,java.lang.String.split
-How to force terminate all workers in ThreadPoolExecutor immediately,java.util.concurrent.ThreadPoolExecutor.shutdownNow
-How to turn uppercase to lowercase using the charAt method,java.lang.String.toLowerCase,java.lang.Character.toLowerCase
-JFileChooser change default directory in Windows,javax.swing.JFileChooser.setCurrentDirectory
-Making Thread sleep for random amount of MS,java.lang.Thread.sleep
-convert String to Array word by word in Java,java.lang.String.split
-Replacing single '\' with '\\' in Java,java.lang.String.replace,java.lang.String.replaceAll
-Cast Object to Generic Type for returning,java.lang.Class.cast
-how to convert from string to integer,java.lang.Integer.intValue
-16 bit hex string to signed int in Java,java.lang.Integer.parseInt
-Remove all characters from string which are not on whitelist,java.lang.String.replaceAll
-Java reflection get all private fields,java.lang.reflect.Field.getType
-replacing '\\' string with '\' in java,java.lang.String.replace,java.lang.String.replaceAll
-Can we call the Garbage Collector explicitly,java.lang.System.gc
-How do I print a double value without scientific notation using Java,java.util.Formatter.syntax,java.lang.Double.toString
-How to determine if a Java Class implements a particular Interface,java.lang.Class.isAssignableFrom
-Split String using regex in java,java.lang.String.split
-splitting string in java using regex,java.lang.String.split
-java explode a line/string like php explode,java.lang.String.split
-Java generating Strings with placeholders,java.lang.String.format
-How to format a 3-digit integer to a 4-digit string,java.lang.String.format
-Checking if a string contains any of the strings in an array,java.lang.String.matches
-Splitting a string in java on more than one symbol,java.lang.String.split
-How to print the address of an object if you have redefined toString method,java.lang.System.identityHashCode,java.lang.Object.toString
-How to create a generic array,java.lang.reflect.Array.newInstance
-Best approach to converting Boolean object to string in java,java.lang.String.valueOf
-Run batch file from Java code,java.lang.Runtime.exec
-Always Round UP a Double,java.lang.Math.ceil
-Check if class exists without running into ClassNotFoundException,java.lang.Class.forName
-How to measure time taken by Java code,java.lang.System.nanoTime
-Finding Integers In a String java,java.lang.String.indexOf,java.lang.String.contains
-Replace first occurrence of character in Android/Java,java.lang.String.replaceFirst
-Convert java.util.Date to java.time.LocalDate,java.time.ZonedDateTime.ofInstant,java.util.Date.toInstant
-How to round numbers to two decimal places in java,java.text.DecimalFormat.setRoundingMode,java.math.BigDecimal.setScale,java.lang.Math.round
-comparing two arrays in java,java.util.Arrays.deepEquals,java.util.Arrays.equals
-Java Split String Regex,java.lang.String.split
-how to convert string to int in Java,java.lang.Integer.intValue
-how to run batch file from java code,java.lang.Runtime.exec
-Is there any way we can execute some java code when a jvm process is killed,java.lang.Runtime.addShutdownHook
-How to round to the nearest 0.05,java.lang.Math.round
-convert Integer to int,java.lang.Integer.intValue
-How to split a string with numbers in java,java.lang.String.split
-Split a string in java,java.lang.String.split,java.lang.String.split
-Finding Substring from a String,java.lang.String.indexOf,java.lang.String.contains
-Alternative to successive String.replace,java.lang.StringBuilder.replace,java.lang.String.replace,java.lang.String.regionMatches
-Splitting string based on delimiter,java.lang.String.split
-Finding substring in a string in Java,java.lang.String.indexOf,java.lang.String.contains
-How to split a string from a file in Java,java.lang.String.split
-Java Formatting String to replace Special Character,java.lang.String.replace,java.util.regex.Pattern.quote
-LocalDate to java.util.Date and vice versa simplest conversion,java.sql.Date.toLocalDate,java.sql.Date.valueOf
-How to convert a binary String to a decimal string in Java,java.lang.Integer.parseInt
-How to check whether a class exists,java.lang.Class.forName
-Using REGEX in Java for splitting a string,java.lang.String.split
-Instantiate Object from Class,java.lang.Class.getConstructors,java.lang.Class.getConstructor,java.lang.Class.newInstance
-Java - Checking if int is empty,java.util.List.isEmpty
-Remove trailing zeros from string java,java.math.BigDecimal.stripTrailingZeros
-Split String into Array based on multiple delimiters in Java,java.lang.String.split
-How to convert a int to byte,java.lang.Integer.intValue
-Java : Splitting a String using Regex,java.lang.String.split
-How to alignments string to the right,java.lang.String.format
-How do I convert a String to array Integer,java.lang.Integer.toString
-Java: join array of primitives with separator,java.lang.String.join
-Converting digits to words in a string in Java,java.lang.String.split
-Java regex replace string with special characters,java.lang.String.replace,java.util.regex.Pattern.quote
-Signed int to 16 bit hex string in Java,java.lang.Integer.parseInt
-How to split Strings in java,java.lang.String.split
-java - How to convert Float to BigDecimal,java.math.BigDecimal.doubleValue
-Java ArrayList - check if element is empty,java.util.List.isEmpty
-How Split a string in Java,java.lang.String.split
-How i convert String to int,java.lang.Integer.toString,java.lang.Integer.intValue
-how to split a string with a condition in java,java.lang.String.split
+How do you crash a JVM,java.lang.System.exit,,,,,
+How to round a number to n decimal places in Java,java.text.DecimalFormat.setRoundingMode,java.math.BigDecimal.setScale,java.lang.Math.round,,,
+split string using regex,java.lang.String.split,,,,,
+Determine if a String is an Integer in Java,java.lang.Integer.parseInt,,,,,
+Checking if a number is an Integer in Java,java.lang.Integer.parseInt,,,,,
+How do I copy a 2 Dimensional array in Java,java.lang.System.arraycopy,java.util.Arrays.copyOf,,,,
+Convert from Radians to Degrees in Java,java.lang.Math.toDegrees,,,,,
+How to round the double value to 2 decimal points,java.lang.Math.round,,,,,
+Split a string in java,java.lang.String.split,java.lang.String.split,,,,
+Get MAC address on local machine with Java,java.net.NetworkInterface.getHardwareAddress,java.net.NetworkInterface.getNetworkInterfaces,,,,
+how to split the string in java,java.lang.String.split,,,,,
+Comparing strings by their alphabetical order,java.lang.String.compareTo,,,,,
+Measuring Download Speed Java,java.lang.System.nanoTime,,,,,
+How to find time taken to run a Java program,java.lang.System.nanoTime,,,,,
+Help typecasting a String Array of bytes to actual bytes,java.lang.Byte.parseByte,java.lang.Integer.parseInt,,,,
+How to Execute Windows Commands Using Java - Change Network Settings,java.lang.Runtime.exec,,,,,
+Java replace special characters in a string,java.lang.String.replace,java.util.regex.Pattern.quote,,,,
+How to convert binary string value to decimal,java.lang.Integer.parseInt,,,,,
+How to remove newlines from beginning and end of a string (Java),java.lang.String.trim,,,,,
+Append relative URL to java.net.URL,java.net.URL.toURI,,,,,
+How to show full stack trace on eclipse,java.lang.Throwable.printStackTrace,,,,,
+In java how to get substring from a string till a character c,java.lang.String.indexOf,java.lang.String.substring,,,,
+What is the fastest way to copy a double[] in Java,java.lang.System.arraycopy,,,,,
+How can I remove a substring from a given String,java.lang.String.replace,,,,,
+Getting unix timestamp from Date(),java.util.Date.getTime,,,,,
+Cube root of a negative number,java.lang.Math.cbrt,,,,,
+Splitting strings based on a delimiter,java.lang.String.split,,,,,
+regular expressions escape on character,java.util.regex.Pattern.quote,,,,,
+Raising a number to a power in Java,java.lang.Math.pow,,,,,
+how to find before and after sub-string in a string,java.lang.String.split,,,,,
+Java rounding to nearest 0.05,java.lang.Math.round,,,,,
+How to detect overflow when convert string to integer in java,java.math.BigInteger.BigInteger,java.lang.Integer.parseInt,,,,
+How to find the exact word using a regex in Java,java.util.regex.Matcher.find,,,,,
+Hash a double in Java,java.lang.Double.hashCode,java.lang.Double.doubleToLongBits,,,,
+How to add new System Properties in java,java.lang.System.setProperty,,,,,
+Is there a way to instantiate a class by name in Java,java.lang.Class.forName,,,,,
+how to check if string contains '+' character,java.lang.String.contains,,,,,
+Java String concatenation - nulls,java.lang.String.valueOf,,,,,
+How to convert a Binary String to a base 10 integer in Java,java.lang.Integer.parseInt,,,,,
+String object to Boolean,java.lang.Boolean.parseBoolean,java.lang.Boolean.valueOf,,,,
+Is there any way to find os name using java,java.lang.System.getProperties,java.lang.System.getProperty,,,,
+Get string character by index - Java,java.lang.Character.toString,java.lang.String.charAt,,,,
+How to run linux command from java code,java.lang.Runtime.exec,,,,,
+Convert array to a string in java,java.lang.String.split,,,,,
+First char to upper case,java.lang.String.charAt,java.lang.Character.toUpperCase,,,,
+How can I read input from the console using the Scanner class in Java,java.util.Scanner.next,java.util.Scanner.nextLine,,,,
+Load Java Image inside package from a class in a different package,java.lang.Class.getResource,java.lang.ClassLoader.getResource,,,,
+Execute shell command in Tomcat,java.lang.Runtime.exec,,,,,
+How to split the string in java,java.lang.String.split,,,,,
+How to force terminate all workers in ThreadPoolExecutor immediately,java.util.concurrent.ThreadPoolExecutor.shutdownNow,,,,,
+How to turn uppercase to lowercase using the charAt method,java.lang.String.toLowerCase,java.lang.Character.toLowerCase,,,,
+JFileChooser change default directory in Windows,javax.swing.JFileChooser.setCurrentDirectory,,,,,
+Making Thread sleep for random amount of MS,java.lang.Thread.sleep,,,,,
+convert String to Array word by word in Java,java.lang.String.split,,,,,
+Replacing single '\' with '\\' in Java,java.lang.String.replace,java.lang.String.replaceAll,,,,
+Cast Object to Generic Type for returning,java.lang.Class.cast,,,,,
+how to convert from string to integer,java.lang.Integer.intValue,,,,,
+16 bit hex string to signed int in Java,java.lang.Integer.parseInt,,,,,
+Remove all characters from string which are not on whitelist,java.lang.String.replaceAll,,,,,
+Java reflection get all private fields,java.lang.reflect.Field.getType,,,,,
+replacing '\\' string with '\' in java,java.lang.String.replace,java.lang.String.replaceAll,,,,
+Can we call the Garbage Collector explicitly,java.lang.System.gc,,,,,
+How do I print a double value without scientific notation using Java,java.util.Formatter.syntax,java.lang.Double.toString,,,,
+How to determine if a Java Class implements a particular Interface,java.lang.Class.isAssignableFrom,,,,,
+Split String using regex in java,java.lang.String.split,,,,,
+splitting string in java using regex,java.lang.String.split,,,,,
+java explode a line/string like php explode,java.lang.String.split,,,,,
+Java generating Strings with placeholders,java.lang.String.format,,,,,
+How to format a 3-digit integer to a 4-digit string,java.lang.String.format,,,,,
+Checking if a string contains any of the strings in an array,java.lang.String.matches,,,,,
+Splitting a string in java on more than one symbol,java.lang.String.split,,,,,
+How to print the address of an object if you have redefined toString method,java.lang.System.identityHashCode,java.lang.Object.toString,,,,
+How to create a generic array,java.lang.reflect.Array.newInstance,,,,,
+Best approach to converting Boolean object to string in java,java.lang.String.valueOf,,,,,
+Run batch file from Java code,java.lang.Runtime.exec,,,,,
+Always Round UP a Double,java.lang.Math.ceil,,,,,
+Check if class exists without running into ClassNotFoundException,java.lang.Class.forName,,,,,
+How to measure time taken by Java code,java.lang.System.nanoTime,,,,,
+Finding Integers In a String java,java.lang.String.indexOf,java.lang.String.contains,,,,
+Replace first occurrence of character in Android/Java,java.lang.String.replaceFirst,,,,,
+Convert java.util.Date to java.time.LocalDate,java.time.ZonedDateTime.ofInstant,java.util.Date.toInstant,,,,
+How to round numbers to two decimal places in java,java.text.DecimalFormat.setRoundingMode,java.math.BigDecimal.setScale,java.lang.Math.round,,,
+comparing two arrays in java,java.util.Arrays.deepEquals,java.util.Arrays.equals,,,,
+Java Split String Regex,java.lang.String.split,,,,,
+how to convert string to int in Java,java.lang.Integer.intValue,,,,,
+how to run batch file from java code,java.lang.Runtime.exec,,,,,
+Is there any way we can execute some java code when a jvm process is killed,java.lang.Runtime.addShutdownHook,,,,,
+How to round to the nearest 0.05,java.lang.Math.round,,,,,
+convert Integer to int,java.lang.Integer.intValue,,,,,
+How to split a string with numbers in java,java.lang.String.split,,,,,
+Split a string in java,java.lang.String.split,java.lang.String.split,,,,
+Finding Substring from a String,java.lang.String.indexOf,java.lang.String.contains,,,,
+Alternative to successive String.replace,java.lang.StringBuilder.replace,java.lang.String.replace,java.lang.String.regionMatches,,,
+Splitting string based on delimiter,java.lang.String.split,,,,,
+Finding substring in a string in Java,java.lang.String.indexOf,java.lang.String.contains,,,,
+How to split a string from a file in Java,java.lang.String.split,,,,,
+Java Formatting String to replace Special Character,java.lang.String.replace,java.util.regex.Pattern.quote,,,,
+LocalDate to java.util.Date and vice versa simplest conversion,java.sql.Date.toLocalDate,java.sql.Date.valueOf,,,,
+How to convert a binary String to a decimal string in Java,java.lang.Integer.parseInt,,,,,
+How to check whether a class exists,java.lang.Class.forName,,,,,
+Using REGEX in Java for splitting a string,java.lang.String.split,,,,,
+Instantiate Object from Class,java.lang.Class.getConstructors,java.lang.Class.getConstructor,java.lang.Class.newInstance,,,
+Java - Checking if int is empty,java.util.List.isEmpty,,,,,
+Remove trailing zeros from string java,java.math.BigDecimal.stripTrailingZeros,,,,,
+Split String into Array based on multiple delimiters in Java,java.lang.String.split,,,,,
+How to convert a int to byte,java.lang.Integer.intValue,,,,,
+Java : Splitting a String using Regex,java.lang.String.split,,,,,
+How to alignments string to the right,java.lang.String.format,,,,,
+How do I convert a String to array Integer,java.lang.Integer.toString,,,,,
+Java: join array of primitives with separator,java.lang.String.join,,,,,
+Converting digits to words in a string in Java,java.lang.String.split,,,,,
+Java regex replace string with special characters,java.lang.String.replace,java.util.regex.Pattern.quote,,,,
+Signed int to 16 bit hex string in Java,java.lang.Integer.parseInt,,,,,
+How to split Strings in java,java.lang.String.split,,,,,
+java - How to convert Float to BigDecimal,java.math.BigDecimal.doubleValue,,,,,
+Java ArrayList - check if element is empty,java.util.List.isEmpty,,,,,
+How Split a string in Java,java.lang.String.split,,,,,
+How i convert String to int,java.lang.Integer.toString,java.lang.Integer.intValue,,,,
+how to split a string with a condition in java,java.lang.String.split,,,,,
+Check if a class is type of java.lang.Enum,java.lang.Class.isEnum,,,,,
+How to use a delimiter to split a string,java.util.List.contains,java.util.Arrays.asList,,,,
+How do you escape colon in Properties file,java.util.Properties.store,,,,,
+How to iterate through a 2d ArrayList of objects,java.util.ArrayList.get,,,,,
+Problem in exchanging the first and last characters of a string in Java,java.lang.String.replace,java.lang.String.substring,,,,
+get file owner attributes in Java,java.nio.file.Files.getOwner,,,,,
+How to collect DoubleStream to List,java.util.stream.DoubleStream.boxed,java.lang.Double.parseDouble,java.lang.Double.valueOf,java.util.stream.Stream.mapToDouble,,
+find if java stream contains null,java.util.stream.Stream.findAny,,,,,
+return only files in directory,java.io.File.isFile,,,,,
+How to blur a portion of an image in java,java.awt.image.BufferedImage.getSubimage,,,,,
+use DecimalFormat to print without scientific notation,java.util.Formatter.syntax,java.lang.String.format,,,,
+how to measure time in Java,java.lang.System.nanoTime,,,,,
+execute java program,java.lang.Runtime.exec,,,,,
+get all files in a directory in Java,java.io.File.list,,,,,
+How to determine last element use an iterator,java.util.Iterator.hasNext,,,,,
+passing parameters to PreparedStatement,java.sql.PreparedStatement.setString,,,,,
+How can I iterate a string from last to first,java.util.List.listIterator,,,,,
+How to iterate over an Array fields using reflection,java.lang.reflect.Field.get,,,,,
+How to use html style in string with format parameter,java.lang.String.format,,,,,
+How to overwrite the old Xerces version that has been loaded in the parent CL,java.lang.Class.forName,,,,,
+How to modify the collection while iterating using a for-each loop ,java.util.Iterator.remove,,,,,
+How to create random permutation,java.util.Collections.shuffle,,,,,
+How to make ArrayList thread safe? Another way to solve problems by Java,java.util.Collections.synchronizedList,,,,,
+Grouping elements of a list into lists in java,java.util.stream.Collectors.groupingBy,,,,,
+How do I get localized date pattern string in java,java.text.SimpleDateFormat.toLocalizedPattern,java.time.format.DateTimeFormatter.ofLocalizedDate,,,,
+16 bit hex string to signed int,java.lang.Integer.parseInt,,,,,
+Resolve the ip address of a hostname in java,java.net.InetAddress.getHostAddress,,,,,
+toString java of an arrays in java ,java.util.Arrays.toString,,,,,
+Concatenate original arrays using separators in Java,java.lang.String.join,,,,,
+Group by map list,java.util.stream.Collectors.groupingBy,,,,,
+Declared as final in Java,java.lang.String.intern,,,,,
+The best way to exit the program,java.lang.System.exit,,,,,
+close JFrame,javax.swing.JFrame.setDefaultCloseOperation,,,,,
+instantiate a string class,java.lang.reflect.Constructor.newInstance,java.lang.Class.forName,,,,
+change to another database,java.sql.Connection.setCatalog,,,,,
+shutdown a thread implementing by runnable interface,java.lang.Thread.sleep,java.lang.Thread.interrupted,,,,
+reuse application of filter map in the Stream ,java.util.stream.Stream.flatMap,,,,,
+use lambda expression to check if element exists,java.util.stream.Stream.anyMatch,,,,,
+Instantiate a class t using a constructor that accepts string parameters,java.lang.Class.newInstance,,,,,
+JFileChooser changes the default directory in Windows,javax.swing.JFileChooser.setCurrentDirectory,,,,,
+check if  an InputStream is empty,java.io.InputStream.available,,,,,
+replace part of string using index,java.lang.String.substring,,,,,
+negative indexOf,java.lang.String.indexOf,java.lang.String.lastIndexOf,,,,
+set property,java.lang.System.setProperty,,,,,
+iterate over elements in Hashmap,java.util.HashMap.values,java.util.HashMap.keySet,,,,
+ensure order in java8 stream,java.util.stream.Stream.forEachOrdered,java.util.stream.Stream.iterate,java.util.stream.BaseStream.unordered,java.util.stream.Stream.forEach,java.util.stream.Stream.generate,java.util.stream.package-summary.Ordering
+get the Timestamp from Calendar,java.util.Calendar.getTime,,,,,
+"get the size of an array, a Collection or a String ",java.util.Collection.size,java.lang.String.length,java.util.Map.size,,,
+check if internet connection is present,java.net.InetAddress.isReachable,java.net.URL.openConnection,,,,
+Add elements to  List while iterat over it.,java.util.List.listIterator,,,,,
+fix the unchecked cast warning,java.lang.Class.cast,,,,,
+Via reflection  to get string value from a Java field,java.lang.reflect.Field.get,,,,,
+In java how to Convert a Stream to an Array,java.util.stream.Stream.toArray,,,,,
+hashmap key iteration in java,java.util.Map.keySet,java.util.Map.entrySet,java.util.Map.values,,,
+Combine stream of Collections into one Collection,java.util.stream.Stream.flatMap,,,,,
+Access non-visible classes by reflecting,java.lang.Class.forName,,,,,
+add new System Properties,java.lang.System.setProperty,,,,,
+function for arrays like PHP's join() in java,java.lang.String.join,,,,,
+Set specific precision of a BigDecimal in java,java.math.BigDecimal.setScale,,,,,
+check if string contains '+' character in java,java.lang.String.contains,,,,,
+best way to reverse bytes of int in java,java.lang.Integer.reverse,java.lang.Double.doubleToLongBits,java.lang.Float.floatToIntBits,java.lang.Integer.reverseBytes,,
+copy of Calendar in java,java.util.Calendar.getInstance,,,,,
+Get MAC address on local machine in Java,java.net.NetworkInterface.getHardwareAddress,java.net.NetworkInterface.getNetworkInterfaces,,,,
+get the name of a class without the package,java.lang.Class.getSimpleName,,,,,
+Create intermediate folders if it doesn't exist in java,java.io.File.mkdir,java.io.File.mkdirs,,,,
+how to find neighboring sub-string in a string,java.lang.String.split,,,,,
+Java Round up the Number,java.lang.Math.ceil,,,,,
+Creating a draw rectangle (filled with black color) function for a grid in java,java.awt.Graphics.fillRect,,,,,
+Alternative to successive String.replace,java.lang.StringBuilder.replace,java.lang.String.replace,java.lang.String.regionMatches,,,
+Handle passwords  in source code,javax.swing.JPasswordField.getPassword,javax.swing.JPasswordField.getText,,,,
+capture System.exit event in java,java.lang.Runtime.addShutdownHook,,,,,
+I want to know if I'm on the event dispatch thread,java.lang.Runnable.run,javax.swing.SwingWorker.doInBackground,javax.swing.SwingUtilities.invokeLater,,,
+square a double quickly in java,java.lang.Math.pow,,,,,
+find time taken to run java program in java,java.lang.System.nanoTime,,,,,
+How to get position of key/value in LinkedHashMap using its key,java.util.Map.keySet,,,,,
+How to draw a line,java.awt.Graphics.create,,,,,
+Convert an int type to bitset,java.util.BitSet.valueOf,,,,,
+Checking whether a BigDecimal is in a Set or Map,java.math.BigDecimal.stripTrailingZeros,java.math.BigDecimal.compareTo,,,,
+How to put string align to right,java.lang.String.format,,,,,
+How can I change the current date to String in Java,java.util.Date.toString,,,,,
+How to delete non-alphabetic characters from a String,java.lang.String.replaceAll,,,,,
+How do I get the current time in a different TimeZone in Java?,java.util.TimeZone.getDefault,,,,,
+Instantiate private inner class with java reflection,java.lang.Class.getDeclaredConstructor,,,,,
+How to create a directory in Java?,java.io.File.createNewFile,,,,,
+How to append text to an existing file in Java,java.nio.file.Files.write,,,,,
+How to start another Application using Java,java.lang.Runtime.exec,,,,,
+How to get values and keys from HashMap?,java.util.Map.keySet,java.util.Map.entrySet,,,,
+Getting the current date and time of the timezone,java.util.TimeZone.getDefault,,,,,
+How to sort two fields (date and boolean) comparator in Java,java.util.Collections.sort,java.lang.String.compareTo,,,,
+How to get an accessible method list of a specific class,java.lang.Class.getMethods,java.lang.Class.getDeclaredMethods,,,,
+How to parse a number to double,java.lang.Double.valueOf,,,,,
+How can I get the index of a single character in a string,java.lang.String.indexOf,,,,,
+Loading a BufferedImage ,javax.imageio.ImageIO.read,,,,,
+how to create a new file,java.io.File.createNewFile,,,,,
+How to insert values into Map,java.util.Map.put,,,,,
+How to obtain part of an array,java.util.List.subList,,,,,

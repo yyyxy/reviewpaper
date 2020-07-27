@@ -1,7 +1,7 @@
 import csv
 
 
-def re_sort(pred, rec_api_test, answer_test, n, rank_mod, rankall, rem = -10):
+def re_sort(query, pred, rec_api_test, answer_test, n, rank_mod, rankall, rem = -10):
     rec_api = rec_api_test[10*n:10*n+10]
     sort, rec = [], []
     for i in range(10):
@@ -13,10 +13,12 @@ def re_sort(pred, rec_api_test, answer_test, n, rank_mod, rankall, rem = -10):
     # 将api重新排序，输出相关结果
     rank_temp = -1
     rankall_temp = []
+    api_sort = []
     flag = 0
     for i in sort:
         api_mod = rec_api[i-1]#.lower()
         print(i, api_mod, answer_test[n])
+        api_sort.append(api_mod)
         if api_mod in answer_test[n]:
             if flag == 0:
                 rank_temp = sort.index(i) + 1
@@ -27,6 +29,12 @@ def re_sort(pred, rec_api_test, answer_test, n, rank_mod, rankall, rem = -10):
     rank_mod.append(rank_temp)
     rankall.append(rankall_temp)
     print('rank:', rank_temp, 'original', sort[rank_temp-1])
+
+    # fw = open('../data/biker_rank_2.csv', 'a+', newline='')
+    # writer = csv.writer(fw)
+    # writer.writerow((query[n], answer_test[n], api_sort, rank_temp, sort[rank_temp-1]))
+    # fw.close()
+
     return rank_mod, rankall
 
 
