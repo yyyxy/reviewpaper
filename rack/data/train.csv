@@ -1,3 +1,13 @@
+0,0.442663203,0.649805133,Converting a sentence string to a string array of words in Java,java.util.Arrays.toString
+0,0.480704432,0.587162946,Converting a sentence string to a string array of words in Java,java.lang.String.valueOf
+0,0.442936308,0.596695015,Converting a sentence string to a string array of words in Java,java.lang.Character.toString
+0,0.397124128,0.596707178,Converting a sentence string to a string array of words in Java,java.util.Arrays.deepToString
+0,0.433019965,0.565923546,Converting a sentence string to a string array of words in Java,java.lang.Integer.valueOf
+0,0.51329247,0.582620282,Converting a sentence string to a string array of words in Java,java.lang.String.format
+0,0.476225127,0.530945334,Converting a sentence string to a string array of words in Java,java.lang.String.contains
+0,0.440003779,0.577129782,Converting a sentence string to a string array of words in Java,java.lang.Integer.toString
+1,0.514893637,0.560731373,Converting a sentence string to a string array of words in Java,java.lang.String.split
+0,0.43022311,0.593975414,Converting a sentence string to a string array of words in Java,java.lang.Integer.parseInt
 0,0.489959051,0.456527715,How to convert Integer to int,java.lang.Integer.toString
 0,0.520655308,0.57849114,How to convert Integer to int,java.lang.Integer.valueOf
 0,0.422663852,0.481108237,How to convert Integer to int,java.lang.String.valueOf
@@ -38,16 +48,6 @@
 1,0.459113388,0.495885903,How do you kill a thread in Java,java.lang.Thread.interrupt
 0,0.45567004,0.042172899,How do you kill a thread in Java,java.lang.Thread.resume
 0,0.308300161,0.452375339,How do you kill a thread in Java,java.lang.Object.wait
-1,0.400031243,0.549790041,In java how to get substring from a string till a character c,java.lang.String.indexOf
-0,0.413836262,0.513632648,In java how to get substring from a string till a character c,java.lang.String.replaceAll
-0,0.419008528,0.518321749,In java how to get substring from a string till a character c,java.lang.String.charAt
-0,0.404791824,0.459359388,In java how to get substring from a string till a character c,java.lang.String.split
-0,0.338902763,0.502029841,In java how to get substring from a string till a character c,java.lang.Integer.parseInt
-0,0.366429676,0.565912196,In java how to get substring from a string till a character c,java.lang.String.toCharArray
-1,0.50079628,0.589330405,In java how to get substring from a string till a character c,java.lang.String.substring
-0,0.260531251,0.501178823,In java how to get substring from a string till a character c,java.lang.Byte.parseByte
-0,0.373046173,0.489171927,In java how to get substring from a string till a character c,java.lang.Character.getNumericValue
-0,0.174215934,0.48952585,In java how to get substring from a string till a character c,java.lang.Short.parseShort
 1,0.413861502,0.648354255,Java Wait for thread to finish,java.lang.Thread.join
 0,0.392528232,0.567802893,Java Wait for thread to finish,java.lang.Process.waitFor
 0,0.461055346,0.587945267,Java Wait for thread to finish,java.util.concurrent.CountDownLatch.await
@@ -88,36 +88,56 @@
 0,0.401180243,0.432867623,Sorting an ArrayList of Person with java collections,java.util.Arrays.asList
 0,0.447627926,0.449363285,Sorting an ArrayList of Person with java collections,java.util.ArrayList.add
 0,0.56205959,0.415250863,Sorting an ArrayList of Person with java collections,java.util.ArrayList.sort
-0,0.501373669,0.596427102,Finding Integers In a String java,java.lang.Integer.valueOf
-0,0.502752106,0.632784235,Finding Integers In a String java,java.lang.Integer.parseInt
-1,0.503259856,0.521599122,Finding Integers In a String java,java.lang.String.contains
-1,0.488824516,0.55524293,Finding Integers In a String java,java.lang.String.indexOf
-0,0.498704082,0.532182542,Finding Integers In a String java,java.lang.String.split
-0,0.433793722,0.576076105,Finding Integers In a String java,java.util.Arrays.toString
-0,0.375610805,0.42884741,Finding Integers In a String java,java.util.regex.Matcher.group
-0,0.404224086,0.507904455,Finding Integers In a String java,java.util.Arrays.asList
-0,0.505134908,0.54311603,Finding Integers In a String java,java.lang.String.equals
-0,0.494701512,0.486315019,Finding Integers In a String java,java.util.regex.Matcher.find
-0,0.465050269,0.634542434,Finding Substring from a String,java.lang.String.replaceAll
-0,0.451447605,0.541880703,Finding Substring from a String,java.lang.String.split
-1,0.450398481,0.570116076,Finding Substring from a String,java.lang.String.indexOf
-1,0.445097281,0.521196777,Finding Substring from a String,java.lang.String.contains
-0,0.453022335,0.557578125,Finding Substring from a String,java.lang.String.replace
-0,0.559630834,0.664824063,Finding Substring from a String,java.lang.String.substring
-0,0.414534675,0.571230183,Finding Substring from a String,java.lang.String.lastIndexOf
-0,0.404867357,0.447218441,Finding Substring from a String,java.util.regex.Matcher.group
-0,0.518802634,0.489161789,Finding Substring from a String,java.util.regex.Matcher.find
-0,0.328268121,0.490054992,Finding Substring from a String,java.util.Arrays.asList
-0,0.510290926,0.633145599,Finding substring in a string in Java,java.lang.String.replaceAll
-0,0.496211632,0.542677866,Finding substring in a string in Java,java.lang.String.split
-0,0.505471764,0.543376132,Finding substring in a string in Java,java.lang.String.replace
-0,0.451103426,0.584632612,Finding substring in a string in Java,java.lang.String.lastIndexOf
-0,0.599266077,0.657560802,Finding substring in a string in Java,java.lang.String.substring
-0,0.397157012,0.544504401,Finding substring in a string in Java,java.lang.Integer.valueOf
-1,0.493296205,0.518000135,Finding substring in a string in Java,java.lang.String.contains
-0,0.449106973,0.43450119,Finding substring in a string in Java,java.util.regex.Matcher.group
-0,0.399981254,0.58467708,Finding substring in a string in Java,java.lang.Integer.parseInt
-0,0.371307352,0.47845885,Finding substring in a string in Java,java.util.Arrays.asList
+0,0.608843986,0.661584845,killing a process in java,java.lang.Process.destroy
+0,0.274935586,0.628861626,killing a process in java,java.lang.Runtime.exec
+0,0.46149081,0.618414656,killing a process in java,java.lang.ProcessBuilder.start
+0,0.525901618,0.53692927,killing a process in java,java.lang.Process.waitFor
+0,0.519394421,0.063625124,killing a process in java,java.lang.Thread.suspend
+0,0.171954164,0.480124142,killing a process in java,java.lang.Runtime.addShutdownHook
+0,0.459582519,0.063625124,killing a process in java,java.lang.Thread.stop
+1,0.483649583,0.487054787,killing a process in java,java.lang.Thread.interrupt
+0,0.378804753,0.479776604,killing a process in java,java.lang.System.exit
+0,0.478998025,0.50106867,killing a process in java,java.lang.Process.exitValue
+0,0.182168847,0.736417009,How to convert string to string array in java,javax.xml.bind.DatatypeConverter.printHexBinary
+0,0.449668664,0.554129709,How to convert string to string array in java,java.util.Arrays.toString
+0,0.433036558,0.557178676,How to convert string to string array in java,java.lang.Integer.valueOf
+0,0.324875978,0.545515033,How to convert string to string array in java,java.lang.Long.valueOf
+0,0.427957339,0.563451355,How to convert string to string array in java,java.lang.Integer.parseInt
+0,0.376934423,0.570601956,How to convert string to string array in java,java.lang.Double.parseDouble
+0,0.422519568,0.453734864,How to convert string to string array in java,java.util.Arrays.asList
+0,0.199774613,0.504664627,How to convert string to string array in java,java.lang.System.arraycopy
+0,0.316423956,0.543519072,How to convert string to string array in java,java.lang.Short.valueOf
+0,0.468898755,0.521338137,How to convert string to string array in java,java.lang.String.valueOf
+1,0.433496054,0.074455095,How to kill a running thread in wait,java.lang.Thread.stop
+0,0.326404729,0.587449939,How to kill a running thread in wait,java.lang.Thread.join
+1,0.466490025,0.550800078,How to kill a running thread in wait,java.lang.Thread.interrupt
+0,0.343128058,0.444289027,How to kill a running thread in wait,java.util.concurrent.Executors.newFixedThreadPool
+0,0.328780865,0.632750177,How to kill a running thread in wait,java.util.concurrent.ThreadPoolExecutor.shutdownNow
+0,0.417375217,0.584211367,How to kill a running thread in wait,java.lang.Object.wait
+0,0.332059729,0.55445602,How to kill a running thread in wait,java.lang.Object.notify
+0,0.390076168,0.603478124,How to kill a running thread in wait,javax.swing.SwingWorker.execute
+0,0.437828075,0.479623436,How to kill a running thread in wait,java.util.concurrent.ExecutorService.shutdown
+0,0.302988996,0.527400297,How to kill a running thread in wait,java.lang.Object.notifyAll
+1,0.363050879,0.526291661,How to find if an ArrayList contains a character from a String,java.lang.String.indexOf
+0,0.484490626,0.624204359,How to find if an ArrayList contains a character from a String,java.lang.String.contains
+0,0.305115169,0.443881484,How to find if an ArrayList contains a character from a String,java.util.Arrays.binarySearch
+0,0.315985647,0.490433485,How to find if an ArrayList contains a character from a String,java.util.Arrays.asList
+0,0.325236167,0.613516397,How to find if an ArrayList contains a character from a String,java.lang.String.toCharArray
+0,0.368814042,0.475059696,How to find if an ArrayList contains a character from a String,java.lang.String.split
+0,0.360601105,0.547644143,How to find if an ArrayList contains a character from a String,java.lang.String.replaceAll
+0,0.377994704,0.483462252,How to find if an ArrayList contains a character from a String,java.lang.String.charAt
+0,0.227368757,0.452688742,How to find if an ArrayList contains a character from a String,java.util.Scanner.nextInt
+0,0.415956295,0.522767543,How to find if an ArrayList contains a character from a String,java.lang.String.matches
+0,0.361794408,0.463693777,how to convert String to boolean in java,java.util.Arrays.toString
+1,0.439645419,0.473473436,how to convert String to boolean in java,java.lang.String.valueOf
+0,0.421648974,0.506782208,how to convert String to boolean in java,java.lang.Integer.valueOf
+0,0.399904885,0.639390944,how to convert String to boolean in java,java.lang.String.toCharArray
+0,0.504532205,0.586742166,how to convert String to boolean in java,java.lang.Boolean.valueOf
+0,0.348084048,0.494075473,how to convert String to boolean in java,java.lang.Long.valueOf
+0,0.405871687,0.509701624,how to convert String to boolean in java,java.lang.Integer.parseInt
+0,0.390381261,0.542877673,how to convert String to boolean in java,java.lang.Double.parseDouble
+0,0.49525773,0.615865367,how to convert String to boolean in java,java.lang.Boolean.toString
+0,0.35016105,0.494325712,how to convert String to boolean in java,java.lang.Short.valueOf
 0,0.514576619,0.709961973,String object to Boolean,java.lang.Boolean.toString
 0,0.497396238,0.717014739,String object to Boolean,java.lang.Boolean.booleanValue
 0,0.44613205,0.582777204,String object to Boolean,java.lang.String.valueOf
@@ -128,6 +148,246 @@
 0,0.43009866,0.556491987,String object to Boolean,java.lang.Integer.valueOf
 0,0.419690459,0.494771204,String object to Boolean,java.lang.Integer.parseInt
 0,0.404984782,0.456057059,String object to Boolean,java.lang.Enum.valueOf
+0,0.590309886,0.605567545,sorting of HashMap in Java,java.util.Arrays.sort
+1,0.603741859,0.638003591,sorting of HashMap in Java,java.util.Collections.sort
+0,0.46901811,0.506623898,sorting of HashMap in Java,java.util.Arrays.binarySearch
+0,0.397973392,0.478537351,sorting of HashMap in Java,java.lang.Double.compareTo
+0,0.513652663,0.56431361,sorting of HashMap in Java,java.util.stream.Stream.sorted
+0,0.541503962,0.513800246,sorting of HashMap in Java,java.util.HashMap.entrySet
+0,0.451771773,0.505726842,sorting of HashMap in Java,java.util.Comparator.comparing
+0,0.426623708,0.398313282,sorting of HashMap in Java,java.util.Collections.synchronizedMap
+0,0.437694674,0.48020234,sorting of HashMap in Java,java.lang.String.compareTo
+0,0.433253667,0.483760385,sorting of HashMap in Java,java.util.Arrays.fill
+0,0.588864734,0.637939573,Sorting an Array List of String[] arrays,java.util.Arrays.sort
+0,0.512268471,0.570446058,Sorting an Array List of String[] arrays,java.util.Arrays.binarySearch
+0,0.483451275,0.577133979,Sorting an Array List of String[] arrays,java.util.Arrays.fill
+0,0.42836897,0.603790881,Sorting an Array List of String[] arrays,java.lang.String.toCharArray
+1,0.489555934,0.593503219,Sorting an Array List of String[] arrays,java.util.Collections.sort
+0,0.488613959,0.448041597,Sorting an Array List of String[] arrays,java.util.List.subList
+0,0.300936297,0.548308792,Sorting an Array List of String[] arrays,java.util.stream.IntStream.boxed
+0,0.477297565,0.537159121,Sorting an Array List of String[] arrays,java.util.Arrays.asList
+0,0.289344637,0.46095692,Sorting an Array List of String[] arrays,java.lang.Long.parseLong
+0,0.382129196,0.47137607,Sorting an Array List of String[] arrays,java.util.Comparator.comparing
+0,0.607259504,0.672970083,sorting of string array,java.util.Arrays.sort
+0,0.44796713,0.584144861,sorting of string array,java.util.Arrays.fill
+1,0.50146123,0.640338123,sorting of string array,java.util.Collections.sort
+0,0.425738191,0.441737301,sorting of string array,java.util.List.subList
+0,0.461728741,0.574893146,sorting of string array,java.lang.String.compareTo
+0,0.461486791,0.577451177,sorting of string array,java.lang.String.split
+0,0.378984088,0.509172534,sorting of string array,java.util.Comparator.comparing
+0,0.435399403,0.46582498,sorting of string array,java.util.Arrays.stream
+0,0.216851164,0.391266522,sorting of string array,java.nio.file.Files.write
+0,0.155078844,0.349974041,sorting of string array,java.nio.file.Files.readAllLines
+0,0.490882087,0.560114569,Convert String to int array in java,java.util.Arrays.toString
+0,0.507682896,0.516685573,Convert String to int array in java,java.lang.Integer.toString
+0,0.533104195,0.590044762,Convert String to int array in java,java.lang.Integer.valueOf
+0,0.521261546,0.600765191,Convert String to int array in java,java.lang.Integer.parseInt
+0,0.389465538,0.550200756,Convert String to int array in java,java.lang.Long.valueOf
+0,0.45235184,0.560266899,Convert String to int array in java,java.lang.Double.toString
+0,0.399859408,0.552299933,Convert String to int array in java,java.lang.Short.valueOf
+0,0.460936423,0.578012981,Convert String to int array in java,java.lang.Double.parseDouble
+0,0.443993238,0.52550224,Convert String to int array in java,java.util.Arrays.deepToString
+0,0.514358726,0.532735282,Convert String to int array in java,java.lang.String.valueOf
+0,0.21333511,0.263774394,Java Converting String to Integer,org.w3c.dom.Node.getNodeName
+0,0.557438144,0.612709171,Java Converting String to Integer,java.lang.Integer.valueOf
+0,0.551099246,0.495899197,Java Converting String to Integer,java.lang.Integer.toString
+0,0.556636374,0.600562462,Java Converting String to Integer,java.lang.Integer.parseInt
+0,0.473100575,0.550929073,Java Converting String to Integer,java.lang.Double.toString
+0,0.481222402,0.585838823,Java Converting String to Integer,java.lang.Double.valueOf
+0,0.521343501,0.593733712,Java Converting String to Integer,java.lang.Integer.toHexString
+0,0.47305695,0.574467713,Java Converting String to Integer,java.lang.Double.parseDouble
+0,0.450362235,0.515845861,Java Converting String to Integer,java.util.Arrays.toString
+0,0.519111922,0.53085097,Java Converting String to Integer,java.lang.String.valueOf
+0,0.578337866,0.599960174,Interrupt a thread in java,java.lang.Thread.isInterrupted
+0,0.707558154,0.612159523,Interrupt a thread in java,java.lang.Thread.interrupted
+1,0.707558154,0.736628498,Interrupt a thread in java,java.lang.Thread.interrupt
+0,0.515566336,0.550500718,Interrupt a thread in java,java.util.concurrent.ExecutorService.shutdownNow
+0,0.522057247,0.155909338,Interrupt a thread in java,java.lang.Thread.stop
+0,0.441367077,0.582997241,Interrupt a thread in java,java.lang.Object.wait
+0,0.504460711,0.490155165,Interrupt a thread in java,java.util.concurrent.Future.cancel
+0,0.560999188,0.533799912,Interrupt a thread in java,java.lang.Thread.currentThread
+0,0.635094993,0.155909338,Interrupt a thread in java,java.lang.Thread.suspend
+0,0.607190447,0.529423946,Interrupt a thread in java,java.lang.Thread.sleep
+0,0.471528166,0.658461806,Run methods in a thread,java.lang.Thread.start
+0,0.533189035,0.641469319,Run methods in a thread,java.lang.Thread.run
+0,0.414952895,0.06757643,Run methods in a thread,java.lang.Thread.stop
+0,0.414947989,0.749660355,Run methods in a thread,java.lang.Runnable.run
+1,0.40797242,0.4814871,Run methods in a thread,java.lang.Thread.interrupt
+0,0.359640317,0.471376216,Run methods in a thread,java.lang.Thread.join
+0,0.40797242,0.446264727,Run methods in a thread,java.lang.Thread.interrupted
+0,0.247020017,0.035210457,Run methods in a thread,javax.swing.SwingUtilities.invokeLater
+0,0.427000897,0.06757643,Run methods in a thread,java.lang.Thread.suspend
+0,0.283811861,0.496404651,Run methods in a thread,java.util.concurrent.Executors.newCachedThreadPool
+0,0.475740502,0.611427267,Convert String to array of integer in java,java.util.Arrays.toString
+0,0.516278707,0.548972024,Convert String to array of integer in java,java.lang.Integer.toString
+0,0.516160266,0.597888988,Convert String to array of integer in java,java.lang.Integer.valueOf
+0,0.429129051,0.565697848,Convert String to array of integer in java,java.util.Arrays.deepToString
+0,0.435036129,0.592614403,Convert String to array of integer in java,java.lang.Double.toString
+0,0.514993279,0.603235699,Convert String to array of integer in java,java.lang.Integer.parseInt
+0,0.476107306,0.574458261,Convert String to array of integer in java,java.lang.String.valueOf
+0,0.425961203,0.593484493,Convert String to array of integer in java,java.lang.Double.parseDouble
+0,0.195281101,0.551824172,Convert String to array of integer in java,java.lang.System.arraycopy
+0,0.432985075,0.567530941,Convert String to array of integer in java,java.lang.Double.valueOf
+0,0.493527325,0.50122301,How to Convert String to Char and Integer in Java ,java.lang.Integer.toString
+0,0.491307595,0.58015794,How to Convert String to Char and Integer in Java ,java.lang.Integer.parseInt
+0,0.49147172,0.57150028,How to Convert String to Char and Integer in Java ,java.lang.Integer.valueOf
+0,0.439632836,0.664238783,How to Convert String to Char and Integer in Java ,java.lang.String.toCharArray
+0,0.402092663,0.500854506,How to Convert String to Char and Integer in Java ,java.util.Arrays.toString
+0,0.466518127,0.511594165,How to Convert String to Char and Integer in Java ,java.lang.String.valueOf
+0,0.333486848,0.534977585,How to Convert String to Char and Integer in Java ,java.lang.Long.valueOf
+0,0.427627847,0.562689629,How to Convert String to Char and Integer in Java ,java.lang.Double.valueOf
+0,0.422292695,0.559496436,How to Convert String to Char and Integer in Java ,java.lang.Double.parseDouble
+0,0.432211285,0.540692001,How to Convert String to Char and Integer in Java ,java.lang.Character.toString
+0,0.531480014,0.555729153,converting a string to integer and integer to string in java,java.lang.Integer.toString
+0,0.528852595,0.625690242,converting a string to integer and integer to string in java,java.lang.Integer.valueOf
+1,0.528984495,0.648872202,converting a string to integer and integer to string in java,java.lang.Integer.parseInt
+0,0.333561337,0.586478575,converting a string to integer and integer to string in java,java.lang.Long.parseLong
+0,0.446759684,0.610535495,converting a string to integer and integer to string in java,java.lang.Double.parseDouble
+0,0.452440848,0.593626234,converting a string to integer and integer to string in java,java.lang.Double.toString
+0,0.314596754,0.509674593,converting a string to integer and integer to string in java,java.util.Scanner.nextInt
+0,0.354872782,0.586747066,converting a string to integer and integer to string in java,java.lang.Long.valueOf
+0,0.451596358,0.61560419,converting a string to integer and integer to string in java,java.lang.Double.valueOf
+0,0.490016241,0.553158689,converting a string to integer and integer to string in java,java.lang.String.valueOf
+0,0.448804257,0.668736832,Checking if a string contains any of the strings in an array,java.lang.String.contains
+0,0.336515684,0.550044542,Checking if a string contains any of the strings in an array,java.lang.String.split
+1,0.389718027,0.58035575,Checking if a string contains any of the strings in an array,java.lang.String.matches
+0,0.340722461,0.592674031,Checking if a string contains any of the strings in an array,java.lang.String.indexOf
+0,0.244818031,0.643742355,Checking if a string contains any of the strings in an array,java.util.List.containsAll
+0,0.290909189,0.524895442,Checking if a string contains any of the strings in an array,java.util.Arrays.binarySearch
+0,0.304959694,0.483158726,Checking if a string contains any of the strings in an array,java.lang.Object.equals
+0,0.293750423,0.600595453,Checking if a string contains any of the strings in an array,java.lang.Integer.valueOf
+0,0.258860286,0.604051621,Checking if a string contains any of the strings in an array,java.lang.Object.toString
+0,0.366918755,0.523236538,Checking if a string contains any of the strings in an array,java.lang.String.equals
+0,0.579234821,0.611099711,sort list of int[] in java,java.util.Arrays.sort
+0,0.46098911,0.529103928,sort list of int[] in java,java.util.Arrays.fill
+1,0.522992161,0.586643555,sort list of int[] in java,java.util.Collections.sort
+0,0.490488645,0.523910947,sort list of int[] in java,java.util.Arrays.binarySearch
+0,0.379745405,0.505625096,sort list of int[] in java,java.util.Collections.reverseOrder
+0,0.473850779,0.503685467,sort list of int[] in java,java.util.Arrays.equals
+0,0.494762965,0.497541908,sort list of int[] in java,java.lang.Integer.parseInt
+0,0.464324227,0.497009628,sort list of int[] in java,java.lang.String.compareTo
+0,0.49503776,0.495237149,sort list of int[] in java,java.lang.Double.compare
+0,0.295999447,0.528601837,sort list of int[] in java,java.util.Scanner.nextInt
+1,0.422260615,0.595453193,How do i check if string contains a part of a string,java.lang.String.contains
+0,0.313755927,0.468173284,How do i check if string contains a part of a string,java.lang.String.split
+0,0.314633082,0.499574795,How do i check if string contains a part of a string,java.lang.String.indexOf
+0,0.246562465,0.486126444,How do i check if string contains a part of a string,java.util.regex.Pattern.quote
+0,0.245222045,0.40666462,How do i check if string contains a part of a string,java.util.Arrays.binarySearch
+0,0.21785172,0.554290677,How do i check if string contains a part of a string,java.util.List.containsAll
+0,0.278340863,0.464441464,How do i check if string contains a part of a string,java.util.List.remove
+0,0.261827827,0.467774245,How do i check if string contains a part of a string,java.lang.Integer.valueOf
+0,0.356591115,0.50320111,How do i check if string contains a part of a string,java.lang.String.matches
+0,0.26870102,0.417254467,How do i check if string contains a part of a string,java.lang.Integer.parseInt
+0,0.436964714,0.618354624,how to convert from string to integer,java.lang.Integer.valueOf
+0,0.372078239,0.667735126,how to convert from string to integer,java.lang.String.toCharArray
+1,0.432466605,0.481864484,how to convert from string to integer,java.lang.Integer.toString
+0,0.365310557,0.521216916,how to convert from string to integer,java.lang.Double.toString
+0,0.351035786,0.487385565,how to convert from string to integer,java.util.Arrays.toString
+0,0.406375714,0.575933657,how to convert from string to integer,java.lang.Integer.toHexString
+0,0.43710384,0.572159567,how to convert from string to integer,java.lang.Integer.parseInt
+0,0.366334347,0.563206738,how to convert from string to integer,java.lang.Double.parseDouble
+0,0.258667575,0.494804211,how to convert from string to integer,java.nio.ByteBuffer.getInt
+0,0.402025562,0.498729519,how to convert from string to integer,java.lang.String.valueOf
+1,0.664330151,0.728997896,Interrupt / Kill a running thread,java.lang.Thread.interrupt
+0,0.545538657,0.207658987,Interrupt / Kill a running thread,java.lang.Thread.stop
+0,0.514819275,0.57260272,Interrupt / Kill a running thread,java.lang.Thread.isInterrupted
+0,0.473201352,0.57902374,Interrupt / Kill a running thread,java.util.concurrent.ExecutorService.shutdownNow
+0,0.664330151,0.581325292,Interrupt / Kill a running thread,java.lang.Thread.interrupted
+0,0.501260537,0.569737597,Interrupt / Kill a running thread,java.lang.Thread.currentThread
+0,0.429620352,0.53933937,Interrupt / Kill a running thread,java.lang.Object.wait
+0,0.6259357,0.207658987,Interrupt / Kill a running thread,java.lang.Thread.suspend
+0,0.438861778,0.535442965,Interrupt / Kill a running thread,java.lang.Thread.setDaemon
+0,0.571386696,0.519055244,Interrupt / Kill a running thread,java.lang.Thread.sleep
+0,0.494886615,0.124140044,Killing child thread from parent thread in java,java.lang.Thread.stop
+1,0.512076277,0.539430373,Killing child thread from parent thread in java,java.lang.Thread.interrupt
+0,0.413872805,0.451297882,Killing child thread from parent thread in java,java.lang.Thread.isInterrupted
+0,0.512076277,0.489036867,Killing child thread from parent thread in java,java.lang.Thread.interrupted
+0,0.538112409,0.124140044,Killing child thread from parent thread in java,java.lang.Thread.suspend
+0,0.37327403,0.488862558,Killing child thread from parent thread in java,java.lang.Object.wait
+0,0.379702028,0.473994117,Killing child thread from parent thread in java,java.util.concurrent.ExecutorService.shutdownNow
+0,0.483613726,0.506506803,Killing child thread from parent thread in java,java.lang.Thread.start
+0,0.509731332,0.124140044,Killing child thread from parent thread in java,java.lang.Thread.resume
+0,0.418841945,0.536404977,Killing child thread from parent thread in java,java.lang.Thread.currentThread
+0,0.19483124,0.302994313,Best approach to converting Boolean object to string in java,org.w3c.dom.Node.getNodeName
+0,0.421103061,0.536405076,Best approach to converting Boolean object to string in java,java.lang.Boolean.valueOf
+1,0.375795688,0.477219152,Best approach to converting Boolean object to string in java,java.lang.String.valueOf
+0,0.357872489,0.407874116,Best approach to converting Boolean object to string in java,java.lang.Integer.toString
+0,0.348457643,0.490448531,Best approach to converting Boolean object to string in java,java.lang.StringBuilder.append
+0,0.331723754,0.42927504,Best approach to converting Boolean object to string in java,java.util.Arrays.toString
+0,0.372775265,0.496067301,Best approach to converting Boolean object to string in java,java.lang.Object.toString
+0,0.34280698,0.551152521,Best approach to converting Boolean object to string in java,java.lang.Boolean.parseBoolean
+0,0.338929664,0.460217617,Best approach to converting Boolean object to string in java,java.lang.Double.toString
+0,0.325034473,0.455130904,Best approach to converting Boolean object to string in java,java.lang.Float.toString
+0,0.377338206,0.648482432,Extracting substrings from a string in Java,java.lang.Integer.valueOf
+0,0.483500982,0.627660568,Extracting substrings from a string in Java,java.lang.String.replaceAll
+0,0.511087027,0.576044888,Extracting substrings from a string in Java,java.lang.String.replace
+0,0.382443379,0.586741816,Extracting substrings from a string in Java,java.lang.Integer.parseInt
+0,0.494445946,0.524712393,Extracting substrings from a string in Java,java.lang.String.split
+0,0.462408269,0.621627955,Extracting substrings from a string in Java,java.lang.String.replaceFirst
+0,0.441548589,0.43881163,Extracting substrings from a string in Java,java.util.regex.Matcher.group
+1,0.470351546,0.557518843,Extracting substrings from a string in Java,java.lang.String.indexOf
+0,0.306729731,0.463512734,Extracting substrings from a string in Java,java.util.Scanner.nextInt
+0,0.569469144,0.65179209,Extracting substrings from a string in Java,java.lang.String.substring
+1,0.424832321,0.627066131,find the nth occurence of a substring in a string in java,java.lang.String.indexOf
+0,0.421440958,0.541363896,find the nth occurence of a substring in a string in java,java.lang.String.split
+0,0.378155193,0.639476038,find the nth occurence of a substring in a string in java,java.lang.String.lastIndexOf
+0,0.430879827,0.607025149,find the nth occurence of a substring in a string in java,java.lang.String.replaceAll
+1,0.408106168,0.510336839,find the nth occurence of a substring in a string in java,java.lang.String.contains
+0,0.417957261,0.520450048,find the nth occurence of a substring in a string in java,java.lang.String.replace
+0,0.422088877,0.509525583,find the nth occurence of a substring in a string in java,java.lang.String.trim
+0,0.415962681,0.551745945,find the nth occurence of a substring in a string in java,java.lang.String.length
+0,0.448932653,0.536182444,find the nth occurence of a substring in a string in java,java.util.regex.Matcher.find
+0,0.428662159,0.482345328,find the nth occurence of a substring in a string in java,java.lang.String.matches
+1,0.681997761,0.637347882,Split a string in java,java.lang.String.split
+0,0.567755959,0.567298105,Split a string in java,java.lang.String.replaceAll
+0,0.564754013,0.549549605,Split a string in java,java.util.regex.Pattern.split
+0,0.594796887,0.549296521,Split a string in java,java.lang.String.trim
+0,0.404136076,0.573367142,Split a string in java,java.util.regex.Pattern.quote
+0,0.433501874,0.590850169,Split a string in java,java.lang.Integer.parseInt
+0,0.419210575,0.54649172,Split a string in java,java.util.Arrays.toString
+0,0.371643824,0.500007684,Split a string in java,java.util.Arrays.deepToString
+0,0.482899177,0.513876112,Split a string in java,java.lang.String.valueOf
+0,0.421008281,0.536327756,Split a string in java,java.lang.Double.parseDouble
+0,0.441864221,0.553103767,list of strings to list of doubles java,java.lang.Float.valueOf
+0,0.439643195,0.602168197,list of strings to list of doubles java,java.util.Arrays.toString
+0,0.460400265,0.575394202,list of strings to list of doubles java,java.lang.String.join
+0,0.417370055,0.480301234,list of strings to list of doubles java,java.util.Arrays.asList
+0,0.472523628,0.578301148,list of strings to list of doubles java,java.lang.Double.valueOf
+1,0.446400097,0.585584393,list of strings to list of doubles java,java.util.Collections.sort
+0,0.455777506,0.497234789,list of strings to list of doubles java,java.lang.Integer.parseInt
+0,0.458559674,0.554037699,list of strings to list of doubles java,java.lang.String.toCharArray
+0,0.48699293,0.564470644,list of strings to list of doubles java,java.lang.String.split
+0,0.449388439,0.482429793,list of strings to list of doubles java,java.util.Arrays.sort
+0,0.524377254,0.580706792,converting double to integer in java,java.lang.Double.toString
+0,0.540963985,0.617240176,converting double to integer in java,java.lang.Double.valueOf
+0,0.535372273,0.578120353,converting double to integer in java,java.lang.Integer.valueOf
+0,0.518477295,0.484905416,converting double to integer in java,java.lang.Integer.toString
+1,0.469224472,0.750464691,converting double to integer in java,java.math.BigDecimal.doubleValue
+0,0.550498929,0.60038681,converting double to integer in java,java.lang.Double.parseDouble
+0,0.50306278,0.58675934,converting double to integer in java,java.lang.Float.valueOf
+0,0.533351253,0.592561297,converting double to integer in java,java.lang.Integer.parseInt
+0,0.472735773,0.702362531,converting double to integer in java,java.math.BigDecimal.intValue
+0,0.486221271,0.551320826,converting double to integer in java,java.lang.Float.toString
+0,0.255393059,0.502501648,How to check if a string is a number,java.lang.Double.valueOf
+0,0.285016267,0.485178467,How to check if a string is a number,java.lang.Integer.valueOf
+1,0.288742452,0.462583972,How to check if a string is a number,java.lang.Integer.parseInt
+0,0.193986686,0.505724215,How to check if a string is a number,java.lang.Long.valueOf
+0,0.181271129,0.441076454,How to check if a string is a number,java.lang.Long.parseLong
+0,0.191224623,0.698380349,How to check if a string is a number,java.lang.Character.isLetter
+0,0.168250325,0.662481889,How to check if a string is a number,java.lang.Character.isSpaceChar
+0,0.19557026,0.561445537,How to check if a string is a number,java.lang.Math.floor
+0,0.302626715,0.540376754,How to check if a string is a number,java.lang.String.contains
+0,0.209041278,0.704024563,How to check if a string is a number,java.lang.Character.isDigit
+0,0.467789905,0.579840148,Java regex to find a sequence of characters in a string,java.lang.String.replaceAll
+1,0.435573958,0.598239357,Java regex to find a sequence of characters in a string,java.lang.String.contains
+0,0.444409535,0.50613476,Java regex to find a sequence of characters in a string,java.lang.String.replace
+0,0.544731193,0.597277062,Java regex to find a sequence of characters in a string,java.util.regex.Matcher.find
+1,0.434241572,0.59729817,Java regex to find a sequence of characters in a string,java.lang.String.indexOf
+0,0.438232295,0.510291105,Java regex to find a sequence of characters in a string,java.lang.String.equals
+0,0.479184057,0.615762387,Java regex to find a sequence of characters in a string,java.util.regex.Matcher.replaceAll
+0,0.437108297,0.570022304,Java regex to find a sequence of characters in a string,java.lang.String.replaceFirst
+0,0.477747742,0.43016058,Java regex to find a sequence of characters in a string,java.util.regex.Matcher.group
+0,0.439166664,0.556167025,Java regex to find a sequence of characters in a string,java.lang.String.split
 0,0.256089334,0.665662214,Cube root of a negative number,java.lang.Math.sqrt
 1,0.168555616,0.78090326,Cube root of a negative number,java.lang.Math.cbrt
 0,0.252202544,0.449386136,Cube root of a negative number,java.lang.Math.pow
@@ -138,6 +398,36 @@
 0,0.244509383,0.395874741,Cube root of a negative number,java.lang.String.split
 0,0.379746703,0.363536878,Cube root of a negative number,java.awt.geom.AffineTransform.getRotateInstance
 0,0.252497161,0.449323593,Cube root of a negative number,java.lang.String.indexOf
+0,0.42449038,0.566815599,Finding characters in a string,java.lang.String.replaceAll
+1,0.422346046,0.630967714,Finding characters in a string,java.lang.String.indexOf
+0,0.474978761,0.492049344,Finding characters in a string,java.util.regex.Matcher.find
+1,0.435381238,0.548726138,Finding characters in a string,java.lang.String.contains
+0,0.398499948,0.558003763,Finding characters in a string,java.lang.String.replaceFirst
+0,0.428068811,0.5331002,Finding characters in a string,java.lang.String.equals
+0,0.441464686,0.528043036,Finding characters in a string,java.lang.String.replace
+0,0.258032624,0.576769759,Finding characters in a string,java.lang.StringBuilder.deleteCharAt
+0,0.247609994,0.449656339,Finding characters in a string,java.util.Scanner.nextInt
+0,0.34202015,0.541974062,Finding characters in a string,java.lang.Integer.valueOf
+0,0.452540991,0.530725101,How to find substring of a string with whitespaces in Java,java.lang.String.split
+1,0.45601793,0.593736783,How to find substring of a string with whitespaces in Java,java.lang.String.indexOf
+0,0.550065388,0.640017373,How to find substring of a string with whitespaces in Java,java.lang.String.substring
+0,0.45542323,0.532086437,How to find substring of a string with whitespaces in Java,java.lang.String.replace
+0,0.428281286,0.604552565,How to find substring of a string with whitespaces in Java,java.lang.String.startsWith
+1,0.443885529,0.510785057,How to find substring of a string with whitespaces in Java,java.lang.String.contains
+0,0.499068647,0.507804614,How to find substring of a string with whitespaces in Java,java.util.regex.Matcher.find
+0,0.204122647,0.488031645,How to find substring of a string with whitespaces in Java,java.io.Writer.write
+0,0.331982111,0.437098034,How to find substring of a string with whitespaces in Java,java.util.Arrays.asList
+0,0.409299077,0.459068722,How to find substring of a string with whitespaces in Java,java.util.regex.Pattern.split
+1,0.59101202,0.566084774,Splitting a string into words in Java,java.lang.String.split
+0,0.509500071,0.553538297,Splitting a string into words in Java,java.lang.String.replaceAll
+0,0.331832513,0.465420376,Splitting a string into words in Java,java.util.Arrays.deepToString
+0,0.495557671,0.494647542,Splitting a string into words in Java,java.util.regex.Pattern.split
+0,0.379257421,0.513105396,Splitting a string into words in Java,java.util.Arrays.toString
+0,0.535629652,0.514288181,Splitting a string into words in Java,java.lang.String.trim
+0,0.342186656,0.50293799,Splitting a string into words in Java,java.util.regex.Pattern.compile
+0,0.499386353,0.535556341,Splitting a string into words in Java,java.lang.String.replace
+0,0.380954207,0.531369182,Splitting a string into words in Java,java.util.regex.Pattern.quote
+0,0.384158966,0.508935154,Splitting a string into words in Java,java.text.BreakIterator.getWordInstance
 0,0.385325184,0.52127142,How to detect overflow when convert string to integer in java,java.lang.Integer.valueOf
 0,0.34540905,0.471773646,How to detect overflow when convert string to integer in java,java.lang.Double.valueOf
 1,0.393966976,0.481960028,How to detect overflow when convert string to integer in java,java.lang.Integer.parseInt
@@ -148,6 +438,36 @@
 0,0.347396865,0.438263968,How to detect overflow when convert string to integer in java,java.lang.Double.toString
 0,0.334474058,0.556324617,How to detect overflow when convert string to integer in java,java.math.BigDecimal.doubleValue
 0,0.30840739,0.440623977,How to detect overflow when convert string to integer in java,java.lang.Math.round
+0,0.183284004,0.84913183,converting a String into a String array in Java,javax.xml.bind.DatatypeConverter.printHexBinary
+0,0.444789392,0.598916266,converting a String into a String array in Java,java.util.Arrays.toString
+0,0.398417243,0.55505208,converting a String into a String array in Java,java.util.Arrays.deepToString
+0,0.424600095,0.575271941,converting a String into a String array in Java,java.lang.Integer.valueOf
+0,0.420272486,0.624337737,converting a String into a String array in Java,java.lang.Integer.parseInt
+0,0.428627048,0.575200115,converting a String into a String array in Java,java.lang.Integer.toString
+0,0.418049341,0.494408948,converting a String into a String array in Java,java.util.Arrays.asList
+1,0.490572141,0.497441023,converting a String into a String array in Java,java.lang.String.split
+0,0.195035426,0.491005355,converting a String into a String array in Java,java.lang.System.arraycopy
+0,0.260248956,0.498243724,converting a String into a String array in Java,java.lang.Class.forName
+0,0.451305071,0.595931016,find int in string,java.lang.Integer.parseInt
+1,0.462769171,0.540492721,find int in string,java.lang.String.contains
+1,0.446193609,0.552405997,find int in string,java.lang.String.indexOf
+0,0.264642029,0.545566352,find int in string,java.util.Scanner.nextInt
+0,0.331822772,0.509161729,find int in string,java.lang.Object.toString
+0,0.305095919,0.567328405,find int in string,java.lang.Character.getNumericValue
+0,0.444615461,0.50970061,find int in string,java.lang.String.valueOf
+0,0.316281241,0.425244555,find int in string,java.lang.Character.toUpperCase
+0,0.360974966,0.466802606,find int in string,java.util.Arrays.asList
+0,0.402696101,0.474568646,find int in string,java.util.Arrays.equals
+1,0.586845107,0.564598906,How to stop a Callable submitted to ExecutorService,java.util.concurrent.ExecutorService.submit
+0,0.487229483,0.559624838,How to stop a Callable submitted to ExecutorService,java.util.concurrent.ExecutorService.shutdownNow
+0,0.509329539,0.479250146,How to stop a Callable submitted to ExecutorService,java.util.concurrent.ExecutorService.shutdown
+1,0.459159213,0.493159422,How to stop a Callable submitted to ExecutorService,java.util.concurrent.Future.cancel
+0,0.440212694,0.085661024,How to stop a Callable submitted to ExecutorService,java.lang.Thread.stop
+0,0.472971812,0.479250146,How to stop a Callable submitted to ExecutorService,java.util.concurrent.ThreadPoolExecutor.shutdown
+0,0.446124582,0.559624838,How to stop a Callable submitted to ExecutorService,java.util.concurrent.ThreadPoolExecutor.shutdownNow
+0,0.436217644,0.411623537,How to stop a Callable submitted to ExecutorService,java.util.concurrent.Executors.newFixedThreadPool
+0,0.306566374,0.46725557,How to stop a Callable submitted to ExecutorService,java.lang.Thread.currentThread
+0,0.433045131,0.444395471,How to stop a Callable submitted to ExecutorService,java.util.concurrent.ThreadPoolExecutor.afterExecute
 0,0.434467175,0.529637536,How to force terminate all workers in ThreadPoolExecutor immediately,java.util.concurrent.ExecutorService.shutdownNow
 0,0.431998955,0.474484856,How to force terminate all workers in ThreadPoolExecutor immediately,java.util.concurrent.ExecutorService.invokeAll
 0,0.388340272,0.436106891,How to force terminate all workers in ThreadPoolExecutor immediately,java.util.concurrent.ExecutorService.submit
@@ -158,6 +478,36 @@
 0,0.351213161,0.074091672,How to force terminate all workers in ThreadPoolExecutor immediately,java.lang.Thread.stop
 0,0.304300313,0.364533578,How to force terminate all workers in ThreadPoolExecutor immediately,java.util.concurrent.Executors.defaultThreadFactory
 0,0.468546872,0.430348551,How to force terminate all workers in ThreadPoolExecutor immediately,java.util.concurrent.ScheduledThreadPoolExecutor.shutdown
+0,0.402640531,0.626002904,Finding all uppercase letters of a string in java,java.lang.Character.isLetter
+0,0.321516641,0.649564638,Finding all uppercase letters of a string in java,java.lang.Character.isUpperCase
+0,0.413024698,0.588393275,Finding all uppercase letters of a string in java,java.lang.Character.toUpperCase
+0,0.437996763,0.568914357,Finding all uppercase letters of a string in java,java.lang.String.replaceAll
+1,0.439749885,0.537082391,Finding all uppercase letters of a string in java,java.lang.String.contains
+0,0.395036723,0.566878597,Finding all uppercase letters of a string in java,java.lang.Character.toLowerCase
+0,0.291538406,0.479649957,Finding all uppercase letters of a string in java,java.util.Scanner.nextInt
+0,0.442825829,0.529356686,Finding all uppercase letters of a string in java,java.lang.String.split
+1,0.438514589,0.60651539,Finding all uppercase letters of a string in java,java.lang.String.indexOf
+0,0.461719212,0.485758176,Finding all uppercase letters of a string in java,java.util.regex.Matcher.find
+0,0.466263898,0.632483452,Word in a word java,java.text.BreakIterator.getWordInstance
+0,0.306893071,0.594832484,Word in a word java,java.io.BufferedReader.read
+0,0.434025481,0.560932925,Word in a word java,java.lang.String.replaceAll
+1,0.447517224,0.469963098,Word in a word java,java.lang.String.split
+0,0.359137743,0.491309023,Word in a word java,java.util.Arrays.toString
+0,0.421126944,0.569917003,Word in a word java,java.lang.String.indexOf
+0,0.443652911,0.50046655,Word in a word java,java.lang.String.replace
+0,0.40840443,0.357824207,Word in a word java,java.util.regex.Matcher.find
+0,0.415868621,0.438587876,Word in a word java,java.lang.String.equals
+0,0.404863978,0.418614736,Word in a word java,java.lang.String.equalsIgnoreCase
+0,0.357048874,0.620288292,How to extract substrings from a string in java,java.lang.Integer.valueOf
+0,0.362359608,0.562901026,How to extract substrings from a string in java,java.lang.Integer.parseInt
+0,0.420233688,0.431538751,How to extract substrings from a string in java,java.util.regex.Matcher.group
+0,0.45871441,0.601773691,How to extract substrings from a string in java,java.lang.String.replaceAll
+0,0.292503384,0.449489329,How to extract substrings from a string in java,java.util.Scanner.nextInt
+1,0.445946994,0.53841076,How to extract substrings from a string in java,java.lang.String.indexOf
+1,0.466151358,0.503904943,How to extract substrings from a string in java,java.lang.String.split
+1,0.540815021,0.627564286,How to extract substrings from a string in java,java.lang.String.substring
+0,0.432305998,0.444527733,How to extract substrings from a string in java,java.util.regex.Matcher.find
+0,0.454282957,0.477315518,How to extract substrings from a string in java,java.lang.String.charAt
 1,0.301417404,0.711830187,Can we call the Garbage Collector explicitly,java.lang.System.gc
 0,0.293885434,0.711830187,Can we call the Garbage Collector explicitly,java.lang.Runtime.gc
 0,0.301957141,0.360522769,Can we call the Garbage Collector explicitly,java.util.stream.Stream.collect
@@ -168,13 +518,563 @@
 0,0.417046018,0.469055997,Can we call the Garbage Collector explicitly,java.util.stream.Collectors.toList
 0,0.23451836,0.376555209,Can we call the Garbage Collector explicitly,java.lang.Object.wait
 0,0.137868381,0.317277119,Can we call the Garbage Collector explicitly,java.lang.Runtime.getRuntime
-0,0.275082326,0.448548781,Checking whether a BigDecimal is in a Set or Map,java.lang.Integer.parseInt
-0,0.282780213,0.458977997,Checking whether a BigDecimal is in a Set or Map,java.lang.Double.valueOf
-1,0.313006841,0.55637806,Checking whether a BigDecimal is in a Set or Map,java.math.BigDecimal.stripTrailingZeros
-0,0.423211226,0.57044109,Checking whether a BigDecimal is in a Set or Map,java.math.BigDecimal.divide
-1,0.406768872,0.55419807,Checking whether a BigDecimal is in a Set or Map,java.math.BigDecimal.compareTo
-0,0.115061072,0.451044058,Checking whether a BigDecimal is in a Set or Map,java.lang.Class.forName
-0,0.279437447,0.438577727,Checking whether a BigDecimal is in a Set or Map,java.lang.Integer.valueOf
-0,0.418865308,0.601055103,Checking whether a BigDecimal is in a Set or Map,java.math.BigDecimal.setScale
-0,0.159374854,0.370498009,Checking whether a BigDecimal is in a Set or Map,java.sql.ResultSet.getObject
-0,0.205450879,0.511088582,Checking whether a BigDecimal is in a Set or Map,java.util.EnumMap.keySet
+1,0.395441942,0.576613496,How to find occurences of substring in a string,java.lang.String.indexOf
+0,0.393355082,0.519899902,How to find occurences of substring in a string,java.lang.String.split
+0,0.408265329,0.59447641,How to find occurences of substring in a string,java.lang.String.replaceAll
+0,0.396426965,0.505174073,How to find occurences of substring in a string,java.lang.String.replace
+1,0.385874933,0.493262283,How to find occurences of substring in a string,java.lang.String.contains
+0,0.442210299,0.513875937,How to find occurences of substring in a string,java.util.regex.Matcher.find
+0,0.501954615,0.635377515,How to find occurences of substring in a string,java.lang.String.substring
+0,0.321033316,0.501245375,How to find occurences of substring in a string,java.lang.Integer.parseInt
+0,0.154248083,0.451546974,How to find occurences of substring in a string,java.io.Writer.write
+0,0.287582271,0.435034237,How to find occurences of substring in a string,java.util.Arrays.asList
+1,0.445811551,0.527111394,Substring of a phrase in a sentence in Java,java.lang.String.split
+0,0.569759306,0.668542913,Substring of a phrase in a sentence in Java,java.lang.String.substring
+0,0.45725244,0.57977662,Substring of a phrase in a sentence in Java,java.lang.String.indexOf
+0,0.402717593,0.558668994,Substring of a phrase in a sentence in Java,java.text.BreakIterator.getWordInstance
+0,0.188990946,0.500918331,Substring of a phrase in a sentence in Java,java.io.Writer.write
+0,0.46623032,0.621613573,Substring of a phrase in a sentence in Java,java.lang.String.replaceAll
+0,0.436877066,0.53065981,Substring of a phrase in a sentence in Java,java.lang.String.replace
+0,0.420294561,0.487868542,Substring of a phrase in a sentence in Java,java.lang.String.contains
+0,0.438030687,0.528487589,Substring of a phrase in a sentence in Java,java.lang.String.length
+0,0.437361188,0.43759319,Substring of a phrase in a sentence in Java,java.lang.String.matches
+1,0.494121627,0.510095882,convert string to int in java,java.lang.Integer.toString
+0,0.425820683,0.507986848,convert string to int in java,java.util.Arrays.toString
+0,0.521772223,0.58664827,convert string to int in java,java.lang.Integer.valueOf
+0,0.508775477,0.599386359,convert string to int in java,java.lang.Integer.parseInt
+0,0.404312874,0.547357207,convert string to int in java,java.lang.Long.valueOf
+0,0.409175473,0.549561864,convert string to int in java,java.lang.Short.valueOf
+0,0.456216043,0.5530007,convert string to int in java,java.lang.Double.toString
+0,0.365721535,0.556773731,convert string to int in java,java.lang.Long.parseLong
+0,0.484399809,0.582652821,convert string to int in java,java.lang.Double.valueOf
+0,0.465086538,0.582033456,convert string to int in java,java.lang.Double.parseDouble
+0,0.486072086,0.599770922,separating substrings from a string in java,java.lang.String.replaceAll
+0,0.500279162,0.531010352,separating substrings from a string in java,java.lang.String.split
+0,0.470287729,0.556030713,separating substrings from a string in java,java.lang.String.replace
+0,0.332196172,0.494342305,separating substrings from a string in java,java.util.Arrays.deepToString
+0,0.392532986,0.539737316,separating substrings from a string in java,java.util.Arrays.toString
+0,0.392669794,0.552643079,separating substrings from a string in java,java.lang.Integer.parseInt
+1,0.476955694,0.53775614,separating substrings from a string in java,java.lang.String.indexOf
+0,0.268519095,0.542950221,separating substrings from a string in java,java.lang.Long.parseLong
+0,0.271683339,0.547981749,separating substrings from a string in java,java.util.stream.Collectors.joining
+0,0.575652635,0.657811154,separating substrings from a string in java,java.lang.String.substring
+0,0.406452383,0.506289308,How to get a substring from a string,java.lang.String.charAt
+0,0.396058628,0.502432646,How to get a substring from a string,java.lang.String.split
+0,0.32255772,0.553864317,How to get a substring from a string,java.lang.Integer.parseInt
+1,0.396279844,0.555943139,How to get a substring from a string,java.lang.String.indexOf
+1,0.49682782,0.686881388,How to get a substring from a string,java.lang.String.substring
+1,0.387384615,0.560733873,How to get a substring from a string,java.lang.String.replace
+0,0.371041836,0.446540423,How to get a substring from a string,java.util.regex.Matcher.group
+0,0.404819954,0.587351292,How to get a substring from a string,java.lang.String.replaceAll
+0,0.365080074,0.557020313,How to get a substring from a string,java.lang.String.lastIndexOf
+0,0.379565554,0.452384097,How to get a substring from a string,java.util.regex.Matcher.find
+0,0.381910329,0.528244078,Finding a repeated character in a string,java.lang.String.replaceAll
+0,0.30392853,0.489036872,Finding a repeated character in a string,java.util.Arrays.fill
+1,0.383016401,0.503680482,Finding a repeated character in a string,java.lang.String.contains
+1,0.381956203,0.584872668,Finding a repeated character in a string,java.lang.String.indexOf
+0,0.403705677,0.499579471,Finding a repeated character in a string,java.lang.String.replace
+0,0.418488244,0.471065367,Finding a repeated character in a string,java.util.regex.Matcher.find
+0,0.322848764,0.500754163,Finding a repeated character in a string,java.lang.Integer.valueOf
+0,0.381382481,0.541814992,Finding a repeated character in a string,java.lang.Character.compareTo
+0,0.384243043,0.487674903,Finding a repeated character in a string,java.lang.String.equals
+0,0.362055651,0.521747593,Finding a repeated character in a string,java.lang.String.replaceFirst
+1,0.483513154,0.606336129,Finding all 3 character length substrings in a string,java.lang.String.indexOf
+0,0.48237634,0.517739499,Finding all 3 character length substrings in a string,java.lang.String.split
+0,0.57965917,0.61647973,Finding all 3 character length substrings in a string,java.lang.String.substring
+0,0.443018691,0.608371648,Finding all 3 character length substrings in a string,java.lang.String.lastIndexOf
+0,0.579888311,0.614621269,Finding all 3 character length substrings in a string,java.lang.String.length
+0,0.496351303,0.590182801,Finding all 3 character length substrings in a string,java.lang.String.replaceAll
+0,0.402110345,0.694615439,Finding all 3 character length substrings in a string,java.lang.StringBuilder.replace
+1,0.465657743,0.523146903,Finding all 3 character length substrings in a string,java.lang.String.contains
+0,0.490833401,0.474409037,Finding all 3 character length substrings in a string,java.util.regex.Matcher.find
+0,0.479065848,0.528469144,Finding all 3 character length substrings in a string,java.lang.String.replace
+0,0.291152295,0.514275313,Case insensitive matching in Java switch-case statement,java.lang.String.toLowerCase
+0,0.273523714,0.494110629,Case insensitive matching in Java switch-case statement,java.lang.String.compareToIgnoreCase
+0,0.148686859,0.280873048,Case insensitive matching in Java switch-case statement,java.nio.file.Path.toRealPath
+0,0.284058924,0.461554017,Case insensitive matching in Java switch-case statement,java.lang.String.equalsIgnoreCase
+1,0.432039289,0.366864575,Case insensitive matching in Java switch-case statement,java.lang.String.matches
+0,0.276588234,0.355356581,Case insensitive matching in Java switch-case statement,java.lang.String.compareTo
+0,0.330382115,0.442085075,Case insensitive matching in Java switch-case statement,java.lang.String.replaceAll
+0,0.34802337,0.365723563,Case insensitive matching in Java switch-case statement,java.util.regex.Pattern.quote
+0,0.306480905,0.442103142,Case insensitive matching in Java switch-case statement,java.lang.String.replaceFirst
+0,0.157973305,0.303354989,Case insensitive matching in Java switch-case statement,java.text.DateFormatSymbols.getMonths
+1,0.387204591,0.64731684,Find Positions of a Character in a String,java.lang.String.indexOf
+0,0.39119614,0.490298378,Find Positions of a Character in a String,java.lang.String.equals
+0,0.347331056,0.650458685,Find Positions of a Character in a String,java.lang.String.lastIndexOf
+0,0.386884421,0.563241555,Find Positions of a Character in a String,java.lang.String.replaceAll
+1,0.389727208,0.552499011,Find Positions of a Character in a String,java.lang.String.contains
+0,0.390331371,0.531153914,Find Positions of a Character in a String,java.lang.String.split
+0,0.393959136,0.498630325,Find Positions of a Character in a String,java.util.regex.Matcher.find
+0,0.371339294,0.433409314,Find Positions of a Character in a String,java.lang.String.equalsIgnoreCase
+0,0.214857177,0.500840905,Find Positions of a Character in a String,java.lang.StringBuilder.setCharAt
+0,0.403266001,0.545269873,Find Positions of a Character in a String,java.lang.String.length
+0,0.288665371,0.681696617,Cannot get square root of negative number,java.lang.Math.sqrt
+1,0.198014917,0.655719385,Cannot get square root of negative number,java.lang.Math.cbrt
+0,0.28649974,0.454702304,Cannot get square root of negative number,java.lang.Math.pow
+0,0.279220189,0.47906906,Cannot get square root of negative number,java.lang.Math.abs
+0,0.358896106,0.408434223,Cannot get square root of negative number,java.lang.Integer.parseInt
+0,0.274992297,0.446763418,Cannot get square root of negative number,java.util.Random.nextInt
+0,0.335346543,0.431590317,Cannot get square root of negative number,java.lang.Math.round
+0,0.349826038,0.479512025,Cannot get square root of negative number,java.lang.String.length
+0,0.30095051,0.421538383,Cannot get square root of negative number,java.lang.Character.getNumericValue
+0,0.312109373,0.469545666,Cannot get square root of negative number,java.lang.String.indexOf
+1,0.458408472,0.614366007,find number of string sequence in a string in java,java.lang.String.contains
+1,0.450253698,0.590489789,find number of string sequence in a string in java,java.lang.String.indexOf
+0,0.455275397,0.532130685,find number of string sequence in a string in java,java.lang.String.split
+0,0.399347188,0.531292889,find number of string sequence in a string in java,java.lang.Integer.valueOf
+0,0.467064526,0.556015145,find number of string sequence in a string in java,java.lang.String.length
+0,0.456351214,0.49914726,find number of string sequence in a string in java,java.lang.String.equals
+0,0.449622783,0.569995138,find number of string sequence in a string in java,java.lang.String.replaceAll
+0,0.403490423,0.555462502,find number of string sequence in a string in java,java.lang.Integer.parseInt
+0,0.456073278,0.519625352,find number of string sequence in a string in java,java.lang.String.trim
+0,0.440512473,0.586113616,find number of string sequence in a string in java,java.util.regex.Matcher.find
+0,0.496132817,0.48200493,Find Character in String,java.util.regex.Matcher.find
+1,0.450221738,0.548529763,Find Character in String,java.lang.String.contains
+1,0.432848581,0.627953315,Find Character in String,java.lang.String.indexOf
+0,0.435786504,0.553594437,Find Character in String,java.lang.String.replaceAll
+0,0.391294514,0.602724712,Find Character in String,java.lang.String.toCharArray
+0,0.407573654,0.550613587,Find Character in String,java.lang.String.replaceFirst
+0,0.247718347,0.431241561,Find Character in String,java.util.Scanner.nextInt
+0,0.440492126,0.521707981,Find Character in String,java.lang.String.equals
+0,0.350841525,0.527837399,Find Character in String,java.util.regex.Matcher.replaceAll
+0,0.409797757,0.44792023,Find Character in String,java.lang.String.equalsIgnoreCase
+0,0.523681051,0.683218037,Replacing words in a String java,java.lang.String.replaceAll
+0,0.643705464,0.622628883,Replacing words in a String java,java.lang.String.replace
+0,0.483639813,0.674632536,Replacing words in a String java,java.lang.String.replaceFirst
+0,0.362062928,0.7083518,Replacing words in a String java,java.util.regex.Matcher.quoteReplacement
+0,0.455291659,0.636504952,Replacing words in a String java,java.util.regex.Matcher.replaceAll
+0,0.388370596,0.513827878,Replacing words in a String java,java.util.regex.Matcher.appendReplacement
+1,0.52776001,0.53989152,Replacing words in a String java,java.lang.String.split
+0,0.452656378,0.592624488,Replacing words in a String java,java.lang.String.toCharArray
+0,0.407038975,0.538538153,Replacing words in a String java,java.text.BreakIterator.getWordInstance
+0,0.518889513,0.520947208,Replacing words in a String java,java.lang.String.contains
+0,0.501373669,0.596427102,Finding Integers In a String java,java.lang.Integer.valueOf
+0,0.502752106,0.632784235,Finding Integers In a String java,java.lang.Integer.parseInt
+1,0.503259856,0.521599122,Finding Integers In a String java,java.lang.String.contains
+1,0.488824516,0.55524293,Finding Integers In a String java,java.lang.String.indexOf
+0,0.498704082,0.532182542,Finding Integers In a String java,java.lang.String.split
+0,0.433793722,0.576076105,Finding Integers In a String java,java.util.Arrays.toString
+0,0.375610805,0.42884741,Finding Integers In a String java,java.util.regex.Matcher.group
+0,0.404224086,0.507904455,Finding Integers In a String java,java.util.Arrays.asList
+0,0.505134908,0.54311603,Finding Integers In a String java,java.lang.String.equals
+0,0.494701512,0.486315019,Finding Integers In a String java,java.util.regex.Matcher.find
+0,0.407365348,0.587561801,Finding the number of words in a string,java.lang.String.split
+1,0.403528266,0.582678443,Finding the number of words in a string,java.lang.String.contains
+0,0.354807671,0.580539199,Finding the number of words in a string,java.lang.Integer.valueOf
+0,0.418900076,0.624479273,Finding the number of words in a string,java.lang.String.length
+0,0.42504964,0.569131801,Finding the number of words in a string,java.util.regex.Matcher.find
+1,0.400574014,0.674317159,Finding the number of words in a string,java.lang.String.indexOf
+0,0.408391109,0.562519035,Finding the number of words in a string,java.lang.String.equals
+0,0.325797207,0.662362709,Finding the number of words in a string,java.util.List.size
+0,0.330855158,0.646631849,Finding the number of words in a string,java.util.Arrays.toString
+0,0.188729523,0.463599543,Finding the number of words in a string,java.util.Set.retainAll
+0,0.390260318,0.577684787,Getting substring from a given string in Java,java.lang.Integer.parseInt
+0,0.477272066,0.604825288,Getting substring from a given string in Java,java.lang.String.split
+0,0.483502948,0.690609088,Getting substring from a given string in Java,java.lang.String.replaceAll
+0,0.383408559,0.662100112,Getting substring from a given string in Java,java.lang.Integer.valueOf
+1,0.474359241,0.603854651,Getting substring from a given string in Java,java.lang.String.indexOf
+1,0.472447114,0.55552721,Getting substring from a given string in Java,java.lang.String.replace
+0,0.436285257,0.607170323,Getting substring from a given string in Java,java.lang.String.lastIndexOf
+0,0.401514479,0.618258543,Getting substring from a given string in Java,java.util.regex.Pattern.quote
+0,0.571710735,0.66683291,Getting substring from a given string in Java,java.lang.String.substring
+1,0.466570651,0.541937165,Getting substring from a given string in Java,java.lang.String.contains
+0,0.396870023,0.548316627,How to find different occurrences of a substring in a string using regex,java.lang.String.split
+1,0.400230646,0.630109727,How to find different occurrences of a substring in a string using regex,java.lang.String.indexOf
+0,0.392685518,0.616652423,How to find different occurrences of a substring in a string using regex,java.lang.String.replaceFirst
+0,0.415264957,0.623797949,How to find different occurrences of a substring in a string using regex,java.lang.String.replaceAll
+0,0.172737636,0.513482893,How to find different occurrences of a substring in a string using regex,java.io.Writer.write
+1,0.379559089,0.501212914,How to find different occurrences of a substring in a string using regex,java.lang.String.contains
+0,0.496315107,0.522788365,How to find different occurrences of a substring in a string using regex,java.util.regex.Matcher.find
+0,0.394855153,0.502110105,How to find different occurrences of a substring in a string using regex,java.lang.String.trim
+0,0.385596926,0.515429883,How to find different occurrences of a substring in a string using regex,java.util.regex.Pattern.compile
+0,0.401287446,0.488130147,How to find different occurrences of a substring in a string using regex,java.lang.String.matches
+0,0.479792366,0.517947432,String to find A character,java.util.regex.Matcher.find
+1,0.424322453,0.601184065,String to find A character,java.lang.String.indexOf
+0,0.427053059,0.547896321,String to find A character,java.lang.String.replaceAll
+1,0.429166428,0.539938145,String to find A character,java.lang.String.contains
+0,0.428789456,0.574672408,String to find A character,java.lang.String.equals
+0,0.353391376,0.624940868,String to find A character,java.lang.Character.isUpperCase
+0,0.403901839,0.539313526,String to find A character,java.lang.String.replaceFirst
+0,0.450123113,0.614713354,String to find A character,java.lang.Character.toString
+0,0.322828113,0.565945181,String to find A character,java.util.regex.Matcher.end
+0,0.385956856,0.602337294,String to find A character,java.lang.String.lastIndexOf
+1,0.427898776,0.52331092,Android - How to check the existence of a string value in another comma separated string,java.lang.String.split
+0,0.432623213,0.53831354,Android - How to check the existence of a string value in another comma separated string,java.lang.String.contains
+0,0.397482853,0.561937648,Android - How to check the existence of a string value in another comma separated string,java.lang.String.indexOf
+0,0.26956759,0.535310869,Android - How to check the existence of a string value in another comma separated string,java.util.Arrays.deepToString
+1,0.312562584,0.493831901,Android - How to check the existence of a string value in another comma separated string,java.util.Arrays.asList
+0,0.33472769,0.583440298,Android - How to check the existence of a string value in another comma separated string,java.util.Arrays.toString
+0,0.338152833,0.521933629,Android - How to check the existence of a string value in another comma separated string,java.lang.Character.toString
+0,0.317664982,0.530880995,Android - How to check the existence of a string value in another comma separated string,java.lang.String.contentEquals
+0,0.409471819,0.469071388,Android - How to check the existence of a string value in another comma separated string,java.lang.String.matches
+0,0.414028662,0.524509324,Android - How to check the existence of a string value in another comma separated string,java.lang.String.charAt
+1,0.482694943,0.553724447,how to convert string to int in Java,java.lang.Integer.valueOf
+0,0.398653408,0.483467057,how to convert string to int in Java,java.util.Arrays.toString
+0,0.377076193,0.519931374,how to convert string to int in Java,java.lang.Long.valueOf
+0,0.470679145,0.565120142,how to convert string to int in Java,java.lang.Integer.parseInt
+0,0.42125943,0.658916505,how to convert string to int in Java,java.lang.String.toCharArray
+0,0.382453985,0.52213603,how to convert string to int in Java,java.lang.Short.valueOf
+1,0.456939182,0.485136257,how to convert string to int in Java,java.lang.Integer.toString
+0,0.431220758,0.569777384,how to convert string to int in Java,java.lang.Double.parseDouble
+0,0.42259328,0.527469474,how to convert string to int in Java,java.lang.Double.toString
+0,0.440196176,0.570146148,how to convert string to int in Java,java.lang.Integer.toHexString
+0,0.285839462,0.532643168,Finding the index of an array,java.lang.String.valueOf
+1,0.331416105,0.62281295,Finding the index of an array,java.util.List.indexOf
+0,0.37283831,0.59837501,Finding the index of an array,java.util.Arrays.fill
+0,0.368410107,0.62281295,Finding the index of an array,java.util.ArrayList.indexOf
+0,0.265414855,0.543470579,Finding the index of an array,java.util.stream.IntStream.filter
+0,0.388201326,0.547845548,Finding the index of an array,java.util.Arrays.equals
+0,0.382115573,0.5234855,Finding the index of an array,java.util.Arrays.sort
+0,0.353782977,0.499521108,Finding the index of an array,java.util.Arrays.stream
+0,0.132729257,0.582914272,Finding the index of an array,java.lang.Class.isArray
+1,0.316185117,0.663177669,Finding the index of an array,java.lang.String.indexOf
+1,0.421462338,0.434091414,Find and Delete a Sub-String in Java,java.lang.String.split
+0,0.45218297,0.617430146,Find and Delete a Sub-String in Java,java.nio.file.Files.delete
+0,0.46008901,0.435870455,Find and Delete a Sub-String in Java,java.io.File.delete
+0,0.326057829,0.476524762,Find and Delete a Sub-String in Java,java.util.Arrays.asList
+0,0.349514269,0.454822121,Find and Delete a Sub-String in Java,java.util.regex.Matcher.replaceAll
+0,0.413416282,0.453881621,Find and Delete a Sub-String in Java,java.lang.String.contains
+0,0.365489094,0.483400721,Find and Delete a Sub-String in Java,java.nio.file.Files.move
+0,0.398867583,0.450361746,Find and Delete a Sub-String in Java,java.lang.String.indexOf
+0,0.303222717,0.49982874,Find and Delete a Sub-String in Java,java.util.Arrays.copyOfRange
+0,0.335907982,0.465031286,Find and Delete a Sub-String in Java,java.lang.Integer.valueOf
+0,0.508746149,0.579490532,Remove word from a String in Java,java.lang.String.replace
+1,0.433406508,0.578595778,Remove word from a String in Java,java.lang.String.replaceAll
+0,0.30128854,0.608629294,Remove word from a String in Java,java.lang.StringBuilder.deleteCharAt
+0,0.402799837,0.570327711,Remove word from a String in Java,java.lang.String.toCharArray
+1,0.458558177,0.477405801,Remove word from a String in Java,java.lang.String.split
+0,0.435890593,0.55313023,Remove word from a String in Java,java.lang.String.indexOf
+0,0.335197704,0.551818182,Remove word from a String in Java,java.io.BufferedReader.read
+0,0.172838624,0.457646016,Remove word from a String in Java,java.lang.System.arraycopy
+0,0.452804009,0.480416406,Remove word from a String in Java,java.lang.String.charAt
+0,0.375417931,0.511014553,Remove word from a String in Java,java.text.BreakIterator.getWordInstance
+0,0.557042334,0.742084482,Replacing substrings in a string Java,java.lang.String.replaceAll
+0,0.658282235,0.629211978,Replacing substrings in a string Java,java.lang.String.replace
+0,0.522007205,0.735058998,Replacing substrings in a string Java,java.lang.String.replaceFirst
+0,0.444840986,0.505641553,Replacing substrings in a string Java,java.util.regex.Matcher.appendReplacement
+1,0.53201869,0.587037629,Replacing substrings in a string Java,java.lang.String.indexOf
+0,0.498571787,0.592826296,Replacing substrings in a string Java,java.lang.String.startsWith
+0,0.546792126,0.569488279,Replacing substrings in a string Java,java.lang.String.split
+0,0.640770281,0.68705839,Replacing substrings in a string Java,java.lang.String.substring
+0,0.458654189,0.591667404,Replacing substrings in a string Java,java.util.regex.Pattern.quote
+1,0.537992656,0.538619955,Replacing substrings in a string Java,java.lang.String.contains
+0,0.428843554,0.599068187,How to remove a substring in java,java.lang.String.replaceAll
+1,0.469700187,0.499192387,How to remove a substring in java,java.lang.String.replace
+0,0.424040166,0.459059282,How to remove a substring in java,java.lang.String.split
+0,0.297644582,0.575656761,How to remove a substring in java,java.lang.StringBuilder.deleteCharAt
+0,0.524679306,0.598491981,How to remove a substring in java,java.lang.String.substring
+0,0.378457808,0.538624757,How to remove a substring in java,java.lang.String.toCharArray
+0,0.417666512,0.500183922,How to remove a substring in java,java.lang.String.indexOf
+0,0.510568718,0.528441251,How to remove a substring in java,java.util.LinkedList.remove
+0,0.532417405,0.545397557,How to remove a substring in java,java.util.ArrayList.remove
+0,0.395295509,0.498242969,How to remove a substring in java,java.lang.String.startsWith
+1,0.307302,0.565006621,Pick a random element from a string array,java.util.Collections.shuffle
+1,0.360121473,0.534020105,Pick a random element from a string array,java.util.Random.nextInt
+0,0.36079676,0.428692519,Pick a random element from a string array,java.lang.Math.random
+0,0.358344918,0.537426772,Pick a random element from a string array,java.util.Arrays.toString
+0,0.337571581,0.473921107,Pick a random element from a string array,java.util.Arrays.asList
+0,0.288413828,0.469470785,Pick a random element from a string array,java.lang.Character.toString
+0,0.223308558,0.480236632,Pick a random element from a string array,java.util.Collections.addAll
+0,0.243820039,0.40138005,Pick a random element from a string array,java.util.Iterator.hasNext
+0,0.17026162,0.510086395,Pick a random element from a string array,java.util.stream.Collectors.toList
+0,0.164966376,0.0,Pick a random element from a string array,null
+1,0.406725536,0.637636777,Find indexs in a List containing a string,java.util.List.indexOf
+1,0.384055396,0.607898419,Find indexs in a List containing a string,java.lang.String.indexOf
+0,0.320664689,0.554139554,Find indexs in a List containing a string,java.util.Arrays.asList
+0,0.529178691,0.560202882,Find indexs in a List containing a string,java.lang.String.contains
+0,0.376091339,0.482557424,Find indexs in a List containing a string,java.util.Arrays.equals
+0,0.426094343,0.562555399,Find indexs in a List containing a string,java.util.List.get
+0,0.380497156,0.637636777,Find indexs in a List containing a string,java.util.ArrayList.indexOf
+0,0.396904351,0.45524388,Find indexs in a List containing a string,java.util.regex.Matcher.find
+0,0.342679928,0.48877146,Find indexs in a List containing a string,java.lang.String.valueOf
+0,0.304907179,0.503113934,Find indexs in a List containing a string,java.util.Collections.indexOfSubList
+1,0.681997761,0.637347882,Split a string in java,java.lang.String.split
+0,0.567755959,0.567298105,Split a string in java,java.lang.String.replaceAll
+0,0.564754013,0.549549605,Split a string in java,java.util.regex.Pattern.split
+0,0.594796887,0.549296521,Split a string in java,java.lang.String.trim
+0,0.404136076,0.573367142,Split a string in java,java.util.regex.Pattern.quote
+0,0.433501874,0.590850169,Split a string in java,java.lang.Integer.parseInt
+0,0.419210575,0.54649172,Split a string in java,java.util.Arrays.toString
+0,0.371643824,0.500007684,Split a string in java,java.util.Arrays.deepToString
+0,0.482899177,0.513876112,Split a string in java,java.lang.String.valueOf
+0,0.421008281,0.536327756,Split a string in java,java.lang.Double.parseDouble
+0,0.674802216,0.625060807,Alphabetize a string array without using Array.sort() or compareTo(),java.util.Arrays.sort
+1,0.594130291,0.557410185,Alphabetize a string array without using Array.sort() or compareTo(),java.util.Collections.sort
+0,0.694224003,0.586311471,Alphabetize a string array without using Array.sort() or compareTo(),java.lang.String.compareTo
+1,0.631825674,0.50426421,Alphabetize a string array without using Array.sort() or compareTo(),java.lang.Comparable.compareTo
+0,0.519637348,0.4040531,Alphabetize a string array without using Array.sort() or compareTo(),java.util.List.subList
+1,0.493855262,0.520896432,Alphabetize a string array without using Array.sort() or compareTo(),java.lang.String.compareToIgnoreCase
+0,0.624008303,0.523021461,Alphabetize a string array without using Array.sort() or compareTo(),java.util.Arrays.toString
+0,0.611697131,0.575416088,Alphabetize a string array without using Array.sort() or compareTo(),java.lang.String.toCharArray
+0,0.610523443,0.482896686,Alphabetize a string array without using Array.sort() or compareTo(),java.lang.String.valueOf
+0,0.558231236,0.445709775,Alphabetize a string array without using Array.sort() or compareTo(),java.util.List.toArray
+1,0.640877332,0.602437134,How Split a string in Java,java.lang.String.split
+0,0.530874716,0.522173077,How Split a string in Java,java.util.regex.Pattern.split
+0,0.535459001,0.544295251,How Split a string in Java,java.lang.String.replaceAll
+0,0.463874328,0.55918221,How Split a string in Java,java.lang.String.toCharArray
+0,0.383563642,0.550214273,How Split a string in Java,java.util.regex.Pattern.quote
+0,0.560600959,0.525115704,How Split a string in Java,java.lang.String.trim
+0,0.352092176,0.477725983,How Split a string in Java,java.util.Arrays.deepToString
+0,0.4092365,0.5630382,How Split a string in Java,java.lang.Integer.parseInt
+0,0.39962086,0.523805207,How Split a string in Java,java.util.Arrays.toString
+0,0.463762593,0.463127736,How Split a string in Java,java.lang.String.contains
+0,0.453057594,0.674782938,Matches in a string in Java,java.lang.String.replaceAll
+0,0.45683769,0.626546251,Matches in a string in Java,java.lang.String.split
+0,0.382785948,0.418694054,Matches in a string in Java,java.util.regex.Matcher.appendReplacement
+0,0.519541381,0.571752191,Matches in a string in Java,java.lang.String.replace
+0,0.393560789,0.604465286,Matches in a string in Java,java.util.regex.Pattern.quote
+0,0.419348603,0.665760732,Matches in a string in Java,java.lang.String.replaceFirst
+0,0.628785901,0.562943019,Matches in a string in Java,java.lang.String.matches
+1,0.520224887,0.531906095,Matches in a string in Java,java.lang.String.contains
+0,0.420047343,0.499816338,Matches in a string in Java,java.util.regex.Matcher.find
+0,0.356397981,0.487796354,Matches in a string in Java,java.text.MessageFormat.format
+0,0.50703985,0.724806604,Replace a substring in Java,java.lang.String.replaceAll
+0,0.618923048,0.603727605,Replace a substring in Java,java.lang.String.replace
+0,0.469921632,0.717940038,Replace a substring in Java,java.lang.String.replaceFirst
+0,0.4418644,0.530617755,Replace a substring in Java,java.util.regex.Matcher.appendReplacement
+0,0.496011717,0.52983406,Replace a substring in Java,java.lang.String.split
+1,0.47938967,0.54702412,Replace a substring in Java,java.lang.String.indexOf
+0,0.445080392,0.561657155,Replace a substring in Java,java.lang.String.startsWith
+0,0.596386661,0.641065278,Replace a substring in Java,java.lang.String.substring
+0,0.456605274,0.531371213,Replace a substring in Java,java.util.regex.Pattern.quote
+1,0.486545915,0.488770117,Replace a substring in Java,java.lang.String.contains
+1,0.603264776,0.621476689,Splitting a string to a list of integers in java,java.lang.String.split
+0,0.483936846,0.562262868,Splitting a string to a list of integers in java,java.lang.Integer.valueOf
+0,0.486244954,0.616618031,Splitting a string to a list of integers in java,java.lang.Integer.parseInt
+0,0.52857764,0.590048144,Splitting a string to a list of integers in java,java.lang.String.replaceAll
+0,0.417018845,0.522085263,Splitting a string to a list of integers in java,java.util.Arrays.asList
+0,0.391388904,0.571550377,Splitting a string to a list of integers in java,java.util.Arrays.deepToString
+0,0.460025456,0.545761702,Splitting a string to a list of integers in java,java.util.regex.Pattern.split
+0,0.420518827,0.593394932,Splitting a string to a list of integers in java,java.lang.Double.parseDouble
+0,0.465019837,0.623986945,Splitting a string to a list of integers in java,java.lang.String.join
+1,0.432140507,0.495635878,Splitting a string to a list of integers in java,java.util.Arrays.stream
+0,0.510290926,0.633145599,Finding substring in a string in Java,java.lang.String.replaceAll
+0,0.496211632,0.542677866,Finding substring in a string in Java,java.lang.String.split
+0,0.505471764,0.543376132,Finding substring in a string in Java,java.lang.String.replace
+0,0.451103426,0.584632612,Finding substring in a string in Java,java.lang.String.lastIndexOf
+0,0.599266077,0.657560802,Finding substring in a string in Java,java.lang.String.substring
+0,0.397157012,0.544504401,Finding substring in a string in Java,java.lang.Integer.valueOf
+1,0.493296205,0.518000135,Finding substring in a string in Java,java.lang.String.contains
+0,0.449106973,0.43450119,Finding substring in a string in Java,java.util.regex.Matcher.group
+0,0.399981254,0.58467708,Finding substring in a string in Java,java.lang.Integer.parseInt
+0,0.371307352,0.47845885,Finding substring in a string in Java,java.util.Arrays.asList
+0,0.608708137,0.489803453,Closing Database Connections in Java Swing,java.sql.Connection.close
+1,0.334417575,0.511222092,Closing Database Connections in Java Swing,java.sql.DriverManager.getConnection
+0,0.47033527,0.474516521,Closing Database Connections in Java Swing,java.sql.Statement.close
+0,0.263685608,0.271361687,Closing Database Connections in Java Swing,java.awt.Frame.getFrames
+0,0.302493072,0.358016915,Closing Database Connections in Java Swing,java.lang.System.exit
+0,0.332412592,0.374117811,Closing Database Connections in Java Swing,java.sql.ResultSet.setFetchSize
+0,0.176035098,0.219281473,Closing Database Connections in Java Swing,java.lang.Class.forName
+0,0.193091074,0.0,Closing Database Connections in Java Swing,null
+0,0.193091074,0.0,Closing Database Connections in Java Swing,null
+0,0.193091074,0.0,Closing Database Connections in Java Swing,null
+0,0.496695477,0.619412628,Finding substring from a string using regex java,java.lang.String.replaceAll
+1,0.485828,0.54870609,Finding substring from a string using regex java,java.lang.String.split
+1,0.477748376,0.543160881,Finding substring from a string using regex java,java.lang.String.indexOf
+1,0.474882033,0.4958699,Finding substring from a string using regex java,java.lang.String.contains
+0,0.469101139,0.516606409,Finding substring from a string using regex java,java.util.regex.Pattern.compile
+0,0.492791285,0.508770774,Finding substring from a string using regex java,java.lang.String.matches
+0,0.600266213,0.470144941,Finding substring from a string using regex java,java.util.regex.Matcher.find
+0,0.443883681,0.586350768,Finding substring from a string using regex java,java.lang.String.format
+0,0.323391927,0.628839737,Finding substring from a string using regex java,java.util.Scanner.findWithinHorizon
+0,0.514179458,0.440958327,Finding substring from a string using regex java,java.util.regex.Matcher.group
+0,0.465050269,0.634542434,Finding Substring from a String,java.lang.String.replaceAll
+0,0.451447605,0.541880703,Finding Substring from a String,java.lang.String.split
+1,0.450398481,0.570116076,Finding Substring from a String,java.lang.String.indexOf
+1,0.445097281,0.521196777,Finding Substring from a String,java.lang.String.contains
+0,0.453022335,0.557578125,Finding Substring from a String,java.lang.String.replace
+0,0.559630834,0.664824063,Finding Substring from a String,java.lang.String.substring
+0,0.414534675,0.571230183,Finding Substring from a String,java.lang.String.lastIndexOf
+0,0.404867357,0.447218441,Finding Substring from a String,java.util.regex.Matcher.group
+0,0.518802634,0.489161789,Finding Substring from a String,java.util.regex.Matcher.find
+0,0.328268121,0.490054992,Finding Substring from a String,java.util.Arrays.asList
+0,0.364209086,0.600222835,Extract substring in Java,java.lang.Integer.valueOf
+0,0.465441231,0.614364456,Extract substring in Java,java.lang.String.replaceAll
+0,0.443140877,0.613920953,Extract substring in Java,java.lang.String.replaceFirst
+0,0.36161137,0.527094346,Extract substring in Java,java.lang.Integer.parseInt
+0,0.483319248,0.494168488,Extract substring in Java,java.lang.String.split
+1,0.450511751,0.514712452,Extract substring in Java,java.lang.String.indexOf
+0,0.508353306,0.49019168,Extract substring in Java,java.lang.String.replace
+0,0.56634862,0.570022078,Extract substring in Java,java.lang.String.substring
+0,0.319231809,0.425059649,Extract substring in Java,java.util.Scanner.nextInt
+0,0.458197821,0.525733736,Extract substring in Java,java.util.regex.Matcher.replaceFirst
+1,0.441239348,0.553549105,Using substring to find a string,java.lang.String.indexOf
+0,0.548219706,0.653756587,Using substring to find a string,java.lang.String.substring
+0,0.456233134,0.616867478,Using substring to find a string,java.lang.String.replaceAll
+1,0.433914544,0.514218442,Using substring to find a string,java.lang.String.contains
+0,0.405636763,0.554699674,Using substring to find a string,java.lang.String.lastIndexOf
+0,0.509012324,0.500322379,Using substring to find a string,java.util.regex.Matcher.find
+0,0.310758304,0.514612279,Using substring to find a string,java.util.Arrays.binarySearch
+0,0.403053879,0.440491388,Using substring to find a string,java.util.regex.Matcher.group
+0,0.357964699,0.537743462,Using substring to find a string,java.lang.Character.toUpperCase
+0,0.319985655,0.477796115,Using substring to find a string,java.util.Arrays.asList
+0,0.432758139,0.629822974,Use Java Regex to find multiple matching words in a sentence,java.lang.String.replaceAll
+1,0.555026384,0.505395339,Use Java Regex to find multiple matching words in a sentence,java.util.regex.Matcher.find
+0,0.411306303,0.565133899,Use Java Regex to find multiple matching words in a sentence,java.lang.String.split
+0,0.440183416,0.524270827,Use Java Regex to find multiple matching words in a sentence,java.util.regex.Pattern.compile
+0,0.463353813,0.537200215,Use Java Regex to find multiple matching words in a sentence,java.util.regex.Pattern.quote
+0,0.442497346,0.475083849,Use Java Regex to find multiple matching words in a sentence,java.lang.String.contains
+0,0.383193457,0.51867349,Use Java Regex to find multiple matching words in a sentence,java.text.BreakIterator.getWordInstance
+0,0.521799763,0.522779041,Use Java Regex to find multiple matching words in a sentence,java.lang.String.matches
+0,0.573552292,0.450638495,Use Java Regex to find multiple matching words in a sentence,java.util.regex.Matcher.matches
+0,0.379232906,0.458415946,Use Java Regex to find multiple matching words in a sentence,java.lang.String.equalsIgnoreCase
+0,0.45823461,0.570667645,how to convert String into Integer in java,java.lang.Integer.valueOf
+0,0.379888632,0.470194441,how to convert String into Integer in java,java.util.Arrays.toString
+0,0.458370191,0.499992102,how to convert String into Integer in java,java.lang.Integer.toString
+0,0.457076497,0.585706732,how to convert String into Integer in java,java.lang.Integer.parseInt
+0,0.319881433,0.528435533,how to convert String into Integer in java,java.lang.Long.valueOf
+0,0.394833885,0.52705915,how to convert String into Integer in java,java.lang.Double.valueOf
+0,0.176329938,0.453869703,how to convert String into Integer in java,java.lang.System.arraycopy
+0,0.39504924,0.502261129,how to convert String into Integer in java,java.lang.Double.toString
+0,0.287013096,0.485695176,how to convert String into Integer in java,java.nio.ByteBuffer.getInt
+0,0.525159267,0.747497321,how to convert String into Integer in java,java.lang.Integer.decode
+0,0.546775157,0.574944866,Find String Pattern in Java,java.util.regex.Matcher.find
+0,0.475962449,0.425137117,Find String Pattern in Java,java.lang.String.matches
+0,0.428326247,0.463397604,Find String Pattern in Java,java.lang.String.split
+0,0.44038449,0.480865047,Find String Pattern in Java,java.lang.String.replaceAll
+0,0.383630572,0.283436715,Find String Pattern in Java,java.util.regex.Matcher.appendReplacement
+0,0.504841303,0.531929627,Find String Pattern in Java,java.util.regex.Pattern.compile
+0,0.404490093,0.368448544,Find String Pattern in Java,java.util.regex.Matcher.group
+0,0.383049657,0.3860294,Find String Pattern in Java,java.util.regex.Matcher.end
+0,0.455534661,0.454866986,Find String Pattern in Java,java.util.regex.Matcher.matches
+1,0.436088297,0.429967748,Find String Pattern in Java,java.lang.String.contains
+0,0.441413459,0.628840152,How to replace part of a String in Java,java.lang.String.replaceAll
+0,0.305552707,0.444719581,How to replace part of a String in Java,java.util.regex.Matcher.appendReplacement
+0,0.544652718,0.579985777,How to replace part of a String in Java,java.lang.String.replace
+0,0.367578892,0.590202517,How to replace part of a String in Java,java.util.regex.Matcher.replaceAll
+0,0.444010281,0.517071024,How to replace part of a String in Java,java.lang.String.split
+0,0.469179909,0.681613745,How to replace part of a String in Java,java.lang.StringBuffer.replace
+0,0.406403132,0.622206237,How to replace part of a String in Java,java.lang.String.replaceFirst
+0,0.278790281,0.45196099,How to replace part of a String in Java,java.util.regex.Matcher.appendTail
+0,0.324230074,0.500671379,How to replace part of a String in Java,java.lang.StringBuilder.toString
+0,0.377544871,0.527096753,How to replace part of a String in Java,java.lang.String.valueOf
+0,0.451502591,0.660555262,Replacing a line in java from a substring using regex,java.lang.String.replaceAll
+0,0.421274058,0.653249153,Replacing a line in java from a substring using regex,java.lang.String.replaceFirst
+1,0.441475536,0.526558784,Replacing a line in java from a substring using regex,java.lang.String.split
+0,0.53145001,0.561321932,Replacing a line in java from a substring using regex,java.lang.String.replace
+0,0.514226873,0.575617534,Replacing a line in java from a substring using regex,java.util.regex.Matcher.replaceAll
+0,0.447208336,0.522003065,Replacing a line in java from a substring using regex,java.util.regex.Pattern.compile
+0,0.530831816,0.603375693,Replacing a line in java from a substring using regex,java.lang.String.substring
+0,0.4284716,0.526460586,Replacing a line in java from a substring using regex,java.lang.String.indexOf
+0,0.438417805,0.464534348,Replacing a line in java from a substring using regex,java.lang.String.contains
+0,0.385572607,0.5238572,Replacing a line in java from a substring using regex,java.lang.String.format
+0,0.487953241,0.57751167,java - find an int digit in a string,java.lang.Integer.parseInt
+0,0.49483719,0.580409386,java - find an int digit in a string,java.lang.Integer.valueOf
+0,0.323155763,0.548885834,java - find an int digit in a string,java.util.Scanner.nextInt
+0,0.470111203,0.665899442,java - find an int digit in a string,java.lang.Integer.decode
+1,0.477902661,0.536587771,java - find an int digit in a string,java.lang.String.indexOf
+0,0.362520961,0.52588449,java - find an int digit in a string,java.lang.Long.valueOf
+0,0.486239595,0.486625687,java - find an int digit in a string,java.lang.String.split
+0,0.386906037,0.538084975,java - find an int digit in a string,java.lang.Character.getNumericValue
+0,0.380486612,0.527732865,java - find an int digit in a string,java.lang.Short.valueOf
+0,0.538903274,0.474602502,java - find an int digit in a string,java.lang.Character.digit
+1,0.474507101,0.626968859,how to check if arraylist contains a string,java.lang.String.contains
+0,0.371605955,0.567736788,how to check if arraylist contains a string,java.util.Arrays.equals
+0,0.341665557,0.464905285,how to check if arraylist contains a string,java.lang.String.split
+0,0.305744369,0.463966685,how to check if arraylist contains a string,java.util.Arrays.asList
+0,0.270627791,0.596149165,how to check if arraylist contains a string,java.util.List.containsAll
+0,0.338115783,0.460193316,how to check if arraylist contains a string,java.lang.String.indexOf
+0,0.365173376,0.494555743,how to check if arraylist contains a string,java.lang.String.equals
+0,0.454071233,0.596356578,how to check if arraylist contains a string,java.util.List.contains
+0,0.507819543,0.596356578,how to check if arraylist contains a string,java.util.ArrayList.contains
+0,0.331228795,0.486958733,how to check if arraylist contains a string,java.util.List.remove
+0,0.493443345,0.559899637,How to convert string array to int array in java,java.util.Arrays.toString
+0,0.177186695,0.728159845,How to convert string array to int array in java,javax.xml.bind.DatatypeConverter.printHexBinary
+0,0.510222714,0.565141885,How to convert string array to int array in java,java.lang.Integer.valueOf
+1,0.487350592,0.498262719,How to convert string array to int array in java,java.lang.Integer.toString
+0,0.499699763,0.573394414,How to convert string array to int array in java,java.lang.Integer.parseInt
+0,0.188942582,0.540261791,How to convert string array to int array in java,java.lang.System.arraycopy
+0,0.361732867,0.528460038,How to convert string array to int array in java,java.lang.Long.valueOf
+0,0.375371525,0.530559215,How to convert string array to int array in java,java.lang.Short.valueOf
+0,0.478090535,0.493747298,How to convert string array to int array in java,java.util.Arrays.asList
+0,0.47164249,0.58363824,How to convert string array to int array in java,java.lang.Integer.toHexString
+1,0.394826767,0.62105559,How to find the count of substring in java,java.lang.String.indexOf
+0,0.484199789,0.59972375,How to find the count of substring in java,java.util.regex.Matcher.find
+0,0.401087068,0.542403753,How to find the count of substring in java,java.lang.String.split
+0,0.388113808,0.548493835,How to find the count of substring in java,java.lang.String.length
+0,0.276207068,0.497439974,How to find the count of substring in java,java.util.regex.Pattern.splitAsStream
+1,0.377364833,0.519933137,How to find the count of substring in java,java.lang.String.contains
+0,0.505217494,0.579951638,How to find the count of substring in java,java.lang.String.substring
+0,0.327043159,0.448848515,How to find the count of substring in java,java.util.Arrays.stream
+0,0.395809809,0.459685855,How to find the count of substring in java,java.lang.String.trim
+0,0.411754327,0.474092978,How to find the count of substring in java,java.lang.String.matches
+1,0.412005712,0.573919831,Find the longest substring match of the a string in a given base string,java.lang.String.contains
+0,0.495696003,0.612312388,Find the longest substring match of the a string in a given base string,java.lang.String.matches
+1,0.40977935,0.654028929,Find the longest substring match of the a string in a given base string,java.lang.String.indexOf
+0,0.367639119,0.655852692,Find the longest substring match of the a string in a given base string,java.lang.String.lastIndexOf
+0,0.417836682,0.748694738,Find the longest substring match of the a string in a given base string,java.lang.String.replaceAll
+0,0.317760252,0.599904687,Find the longest substring match of the a string in a given base string,java.lang.Integer.valueOf
+0,0.392924585,0.694282229,Find the longest substring match of the a string in a given base string,java.util.regex.Matcher.replaceAll
+0,0.396567313,0.667042567,Find the longest substring match of the a string in a given base string,java.lang.String.split
+0,0.433661965,0.594321538,Find the longest substring match of the a string in a given base string,java.util.regex.Matcher.find
+0,0.233924989,0.633639102,Find the longest substring match of the a string in a given base string,java.util.stream.Stream.filter
+0,0.478612092,0.589141004,Remove trailing substring from String in Java,java.lang.String.replaceAll
+0,0.471976119,0.496308234,Remove trailing substring from String in Java,java.lang.String.split
+1,0.26725553,0.614644239,Remove trailing substring from String in Java,java.math.BigDecimal.stripTrailingZeros
+0,0.506828818,0.518221857,Remove trailing substring from String in Java,java.lang.String.replace
+0,0.278819934,0.480470195,Remove trailing substring from String in Java,java.math.BigDecimal.toPlainString
+0,0.43185558,0.64255907,Remove trailing substring from String in Java,java.lang.StringBuffer.replace
+0,0.424148357,0.682546854,Remove trailing substring from String in Java,java.lang.StringBuffer.delete
+0,0.467929275,0.535078703,Remove trailing substring from String in Java,java.lang.String.indexOf
+0,0.332293686,0.567976535,Remove trailing substring from String in Java,java.lang.StringBuilder.deleteCharAt
+0,0.427757387,0.507865169,Remove trailing substring from String in Java,java.lang.String.toCharArray
+1,0.407464276,0.665485915,Find index of a string array,java.lang.String.indexOf
+0,0.434004019,0.512807716,Find index of a string array,java.util.Arrays.sort
+0,0.369794222,0.668201627,Find index of a string array,java.lang.String.lastIndexOf
+0,0.438136279,0.548220402,Find index of a string array,java.util.Arrays.equals
+0,0.389085956,0.565215742,Find index of a string array,java.util.Arrays.binarySearch
+1,0.370063484,0.572788154,Find index of a string array,java.util.List.indexOf
+0,0.468027926,0.623116738,Find index of a string array,java.lang.String.substring
+0,0.40533209,0.500440102,Find index of a string array,java.util.Arrays.stream
+0,0.393758793,0.526846432,Find index of a string array,java.util.Arrays.asList
+0,0.409554249,0.532396949,Find index of a string array,java.lang.String.contains
+0,0.483906888,0.568624489,Java find value in a string using regex,java.lang.String.replaceAll
+1,0.462945828,0.542430484,Java find value in a string using regex,java.lang.String.split
+1,0.464027348,0.528595037,Java find value in a string using regex,java.lang.String.contains
+0,0.488587513,0.503504049,Java find value in a string using regex,java.lang.String.matches
+0,0.434387146,0.51070269,Java find value in a string using regex,java.util.regex.Pattern.compile
+0,0.496614064,0.439955171,Java find value in a string using regex,java.util.regex.Pattern.matches
+0,0.427177345,0.589033023,Java find value in a string using regex,java.lang.String.format
+0,0.445973026,0.371641679,Java find value in a string using regex,java.util.regex.Matcher.appendReplacement
+0,0.306164576,0.582622182,Java find value in a string using regex,java.util.Scanner.findWithinHorizon
+1,0.44667169,0.522501289,Java find value in a string using regex,java.lang.String.indexOf
+0,0.242587863,0.321158692,Convert numbers in substring to words in java,org.w3c.dom.Node.getNodeName
+0,0.355947673,0.51007868,Convert numbers in substring to words in java,java.lang.Double.valueOf
+0,0.371342194,0.482633827,Convert numbers in substring to words in java,java.util.Arrays.toString
+1,0.4752202,0.493802141,Convert numbers in substring to words in java,java.lang.String.split
+0,0.418262465,0.541956212,Convert numbers in substring to words in java,java.lang.Integer.parseInt
+0,0.33549936,0.515234916,Convert numbers in substring to words in java,java.lang.Double.parseDouble
+0,0.472603544,0.583046618,Convert numbers in substring to words in java,java.lang.String.replaceAll
+0,0.456285211,0.280436058,Convert numbers in substring to words in java,java.text.NumberFormat.parse
+0,0.320682425,0.48723018,Convert numbers in substring to words in java,java.lang.Object.toString
+0,0.441476834,0.501747689,Convert numbers in substring to words in java,java.util.regex.Matcher.replaceFirst
+1,0.389224264,0.538737759,How would I check if a part of a string equals another string of unknown length,java.lang.String.contains
+0,0.356478015,0.465973103,How would I check if a part of a string equals another string of unknown length,java.lang.Double.valueOf
+0,0.41892208,0.506041242,How would I check if a part of a string equals another string of unknown length,java.lang.String.indexOf
+0,0.383874485,0.445940803,How would I check if a part of a string equals another string of unknown length,java.lang.Integer.valueOf
+0,0.363127831,0.433712105,How would I check if a part of a string equals another string of unknown length,java.lang.Integer.parseInt
+0,0.392345345,0.454248643,How would I check if a part of a string equals another string of unknown length,java.lang.String.split
+0,0.392858003,0.494785292,How would I check if a part of a string equals another string of unknown length,java.lang.String.startsWith
+0,0.353806846,0.54227619,How would I check if a part of a string equals another string of unknown length,java.lang.Object.toString
+0,0.50023496,0.472808473,How would I check if a part of a string equals another string of unknown length,java.lang.String.equals
+0,0.288031674,0.502137838,How would I check if a part of a string equals another string of unknown length,java.lang.Math.ceil
+1,0.3752496,0.704803105,Finding the indexes of multiple words in a string,java.lang.String.indexOf
+0,0.397584066,0.513975272,Finding the indexes of multiple words in a string,java.util.regex.Matcher.find
+0,0.336002898,0.706520741,Finding the indexes of multiple words in a string,java.lang.String.lastIndexOf
+1,0.374221057,0.548800357,Finding the indexes of multiple words in a string,java.lang.String.contains
+0,0.302608851,0.612648971,Finding the indexes of multiple words in a string,java.util.regex.Matcher.start
+0,0.333914058,0.531035699,Finding the indexes of multiple words in a string,java.util.Arrays.equals
+0,0.380874681,0.54708088,Finding the indexes of multiple words in a string,java.lang.String.split
+0,0.447895701,0.629469426,Finding the indexes of multiple words in a string,java.lang.String.substring
+0,0.324962155,0.604615689,Finding the indexes of multiple words in a string,java.util.List.indexOf
+0,0.380220081,0.529198549,Finding the indexes of multiple words in a string,java.lang.String.equals
+0,0.342892382,0.496497196,Case-insensitive string matching in Java without anchors,java.lang.String.toLowerCase
+0,0.354209979,0.514459728,Case-insensitive string matching in Java without anchors,java.lang.String.toUpperCase
+0,0.24215375,0.523992677,Case-insensitive string matching in Java without anchors,java.time.format.DateTimeFormatterBuilder.parseCaseInsensitive
+0,0.383886241,0.492136668,Case-insensitive string matching in Java without anchors,java.lang.String.replaceAll
+0,0.356409752,0.447171377,Case-insensitive string matching in Java without anchors,java.util.regex.Pattern.quote
+0,0.181915017,0.308397579,Case-insensitive string matching in Java without anchors,java.nio.file.Path.toRealPath
+1,0.497230557,0.42680748,Case-insensitive string matching in Java without anchors,java.lang.String.matches
+0,0.361015514,0.490004555,Case-insensitive string matching in Java without anchors,java.lang.String.replaceFirst
+0,0.323463244,0.446541486,Case-insensitive string matching in Java without anchors,java.lang.String.compareToIgnoreCase
+0,0.333796315,0.439064553,Case-insensitive string matching in Java without anchors,java.lang.Character.toUpperCase

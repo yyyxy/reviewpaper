@@ -66,8 +66,8 @@ def get_feedback_inf(test, question, answer, rec_api_test, w2v, idf):
             while len(feed_label) < 5:
                 feed_label.append(0)
             feed_label.append(round(label/15, 2))
-            # print('feed_label', feed_label)
-            # print(round(label/15, 2))
+            # # print('feed_label', feed_label)
+            # # print(round(label/15, 2))
             # if feedbacks_inf[0:5] != [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]]:
             #     feed_label.append(1)
             # else:

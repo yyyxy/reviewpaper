@@ -4,13 +4,13 @@ from os import path
 
 # 第一步，给feedback数据标上索引
 def index_feedback_data():
-    fr = open('../data/feedback_all_original_nlp.csv', 'r')
+    fr = open('../data/feedback_all_original_biker.csv', 'r')
     reader = csv.reader(fr)
     row = []
     for r in reader:
         row.append(r)
 
-    fw = open('../data/feedback_all_new_nlp_idx.csv', 'w', newline='')
+    fw = open('../data/feedback_all_new_biker_idx.csv', 'w', newline='')
     writer = csv.writer(fw)
     for i in range(len(row)):
         writer.writerow([i+1]+row[i])
@@ -28,26 +28,26 @@ def get_new_order():
     idx = del_index()
 
     # get_rec
-    fr = open('../data/get_rec_nlp.csv', 'r')
+    fr = open('../data/get_rec_biker.csv', 'r')
     reader = csv.reader(fr)
     rec = []
     for r in reader:
         rec.append(r)
 
-    fw = open('../data/get_rec_new_nlp.csv', 'w', newline='')
+    fw = open('../data/get_rec_new_biker.csv', 'w', newline='')
     writer = csv.writer(fw)
     for i in idx:
         for n in range(10):
             writer.writerow(rec[(i-1)*10+n])
 
     # get_feature
-    fr = open('../data/get_feature_nlp.csv', 'r')
+    fr = open('../data/get_feature_biker.csv', 'r')
     reader = csv.reader(fr)
     rec = []
     for r in reader:
         rec.append(r)
 
-    fw = open('../data/get_feature_new_nlp.csv', 'w', newline='')
+    fw = open('../data/get_feature_new_biker.csv', 'w', newline='')
     writer = csv.writer(fw)
     for i in idx:
         for n in range(10):
@@ -55,13 +55,13 @@ def get_new_order():
 
 
 def get_index():
-    fr = open('../data/feedback_all_original_nlp.csv', 'r')
+    fr = open('../data/feedback_all_original_biker.csv', 'r')
     reader = csv.reader(fr)
     row = []
     for r in reader:
         row.append(r[0])
 
-    fr = open('../data/feedback_all_new_rack.csv', 'r')
+    fr = open('../data/feedback_all_new_biker.csv', 'r')
     reader = csv.reader(fr)
     idx = []
     for r in reader:
@@ -70,7 +70,7 @@ def get_index():
                 idx.append(row.index(q)+1)
     print(idx)
 
-    for i in range(1, 151):
+    for i in range(1, 414):
         if i not in idx:
             print(i)
 
@@ -78,7 +78,7 @@ def get_index():
 
 
 def del_index():
-    fr = open('../data/feedback_all_new_nlp_idx.csv', 'r')
+    fr = open('../data/feedback_all_new_biker_idx.csv', 'r')
     reader = csv.reader(fr)
     row = []
     idx = []
@@ -87,7 +87,7 @@ def del_index():
         row.append(r[1:])
     print(idx)
 
-    fw = open('../data/feedback_all_new_nlp.csv', 'w', newline='')
+    fw = open('../data/feedback_all_new_biker.csv', 'w', newline='')
     writer = csv.writer(fw)
     for i in row:
         writer.writerow(i)
