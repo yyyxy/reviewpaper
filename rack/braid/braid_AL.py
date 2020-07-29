@@ -126,7 +126,7 @@ def get_AL_predict(pct, test_feature, choose_feature, unlabel_feature, test_quer
     fw = open('../data/train.csv', 'w', newline='')
     writer = csv.writer(fw)
     for i in range(len(new_y_feedback)):
-        writer.writerow((new_y_feedback[i], new_X_feedback[i][0], new_X_feedback[i][1], choose_query[int(i/10)], rec_api_choose[i]))
+        writer.writerow((new_y_feedback[i], new_X_feedback[i][0], new_X_feedback[i][1], new_X_feedback[i][2], new_X_feedback[i][3], new_X_feedback[i][4], new_X_feedback[i][5], new_X_feedback[i][6], rec_api_choose[i]))
 
     # 测试集特征向量
     fw = open('../data/test.csv', 'w', newline='')
@@ -145,6 +145,7 @@ def get_AL_predict(pct, test_feature, choose_feature, unlabel_feature, test_quer
     # print('new_choose', len(choose_query), len(choose_answer))
 
     return predict, X, new_X_feedback, new_y_feedback
+    # return predict, choose_query, choose_answer, rec_api_choose, choose_feature
 
 
 if __name__ == "__main__":

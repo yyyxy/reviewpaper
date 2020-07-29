@@ -5,7 +5,7 @@ import split_data
 # split_data.split_test()
 
 # test preprocessing
-fr = open('../data/feedback_all_original_biker.csv', 'r')
+fr = open('../data/feedback_all_original_biker_filter.csv', 'r')
 reader = csv.reader(fr)
 test_query = []
 test_answer = []
@@ -16,7 +16,7 @@ for row in reader:
 print(test_query)
 print(test_answer)
 
-fr = open('../data/get_rec_biker.csv', 'r')
+fr = open('../data/get_rec_biker_filter.csv', 'r')
 reader = csv.reader(fr)
 
 queries = []
@@ -88,7 +88,7 @@ for n in sort_all:
     map += temp
 
 print(top1/len(test_query), top3/len(test_query), top5/len(test_query), map/len(test_query), mrr/len(test_query), ndcg/len(test_query))
-fw = open('../data/metric_biker.csv', 'a+', newline='')
-writer = csv.writer(fw)
-writer.writerow(('original', top1/len(test_query), top3/len(test_query), top5/len(test_query), map/len(test_query), mrr/len(test_query)))
-fw.close()
+# fw = open('../data/metric_biker.csv', 'a+', newline='')
+# writer = csv.writer(fw)
+# writer.writerow(('original', top1/len(test_query), top3/len(test_query), top5/len(test_query), map/len(test_query), mrr/len(test_query)))
+# fw.close()

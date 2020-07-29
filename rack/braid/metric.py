@@ -1,8 +1,17 @@
 import csv
 
 
-def re_sort(query, pred, rec_api_test, answer_test, n, rank_mod, rankall, rem = -10):
+def re_sort(query, pred, rec_api_test, answer_test, n, rank_mod, rankall, fr_rec_score, fr_rec_api, rem=-10):
     rec_api = rec_api_test[10*n:10*n+10]
+    if len(fr_rec_api) > 0:
+        print(11111, fr_rec_api)
+        for i, ap in enumerate(fr_rec_api):
+            if ap in rec_api:
+                pred[rec_api.index(ap)] += fr_rec_score[i]
+            else:
+                rec_api.append(fr_rec_api[i])
+                pred.append(fr_rec_score[i])
+    print(pred)
     sort, rec = [], []
     for i in range(10):
         sort.append(pred.index(max(pred)) + 1)
@@ -93,7 +102,7 @@ def metric_val(rank_mod, rankall, len_n):
         else:
             count_miss += 1
         map += temp
-    print('top1', 10*top1/len_n)
+    print('top1', 10*top1/len_n, 'top5', 10*top5/len_n)
 
     return 10*top1/len_n, 10*top3/len_n, 10*top5/len_n, 10*map/len_n, 10*mrr/len_n
 
