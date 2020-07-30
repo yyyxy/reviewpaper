@@ -144,7 +144,7 @@ def get_AL_predict(pct, test_feature, choose_feature, unlabel_feature, test_quer
     # print(predict)
     # print('new_choose', len(choose_query), len(choose_answer))
 
-    return predict, X, new_X_feedback, new_y_feedback
+    return predict, X, new_X_feedback, new_y_feedback#, choose_query, choose_answer
     # return predict, choose_query, choose_answer, rec_api_choose, choose_feature
 
 

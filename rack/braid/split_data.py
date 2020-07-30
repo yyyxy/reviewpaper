@@ -122,37 +122,22 @@ def get_choose(train_feature, choose):
     return choose_feature, unlabel_feature
 
 
-def get_fr_cal_sim(query, q_matrix, q_idf_vector, answers, w2v, idf):
-    # # 索引转化为数据
-    # fr = open('../data/feedback_repository_biker_sim8.csv', 'r')
-    # reader = csv.reader(fr)
-    # queries, answers = [], []
-    # q_matrix, q_idf_vector = [], []
-    # for row in reader:
-    #     queries.append(row[0])
-    #     answers.append(row[1])
-    #
-    #     q1_matrix, q1_idf_vector = feedback.load_matrix(row[0], w2v, idf)
-    #     q_matrix.append(q1_matrix)
-    #     q_idf_vector.append(q1_idf_vector)
-
-    rec_api, rec_score = [], []
-    query_matrix, query_idf_vector = feedback.load_matrix(query, w2v, idf)
-
-    tmp_rec, tmp_sco = [], []
-    for n in range(len(q_matrix)):
-        q_sim = similarity.sim_doc_pair(query_matrix, q_matrix[n], query_idf_vector, q_idf_vector[n])
-        if q_sim > 0.8:
-            if answers[n] not in tmp_rec:
-                tmp_rec.append(answers[n])
-                tmp_sco.append(q_sim)
-            else:
-                tmp_sco[tmp_rec.index(answers[n])] += q_sim
-    # rec_api.append(tmp_rec)
-    # rec_score.append(tmp_sco)
-    # print(rec_score)
-    # print(rec_api)
-    return tmp_sco, tmp_rec
+# def get_fr_cal_sim(query, q_matrix, q_idf_vector, answers, pct, w2v, idf):
+#     query_matrix, query_idf_vector = feedback.load_matrix(query, w2v, idf)
+#
+#     tmp_rec, tmp_sco = [], []
+#     for n in range(len(q_matrix)):
+#         q_sim = similarity.sim_doc_pair(query_matrix, q_matrix[n], query_idf_vector, q_idf_vector[n])
+#         # rack
+#         if q_sim > 0.95:
+#         # # biker
+#         # if q_sim > 0.95-round(pct, 2)*0.15:
+#             if answers[n] not in tmp_rec:
+#                 tmp_rec.append(answers[n])
+#                 tmp_sco.append(q_sim)
+#             else:
+#                 tmp_sco[tmp_rec.index(answers[n])] += q_sim
+#     return tmp_sco, tmp_rec
 
 
 def idx_to_data(idx):
@@ -224,7 +209,7 @@ def get_unlabel_data(test_query, w2v, idf):
         q1_matrix, q1_idf_vector = feedback.load_matrix(row[0], w2v, idf)
         for n in range(len(matrix)):
             q_sim = similarity.sim_doc_pair(q1_matrix, matrix[n], q1_idf_vector, idf_vector[n])
-            if q_sim > 0.75:
+            if q_sim > 0.8:
                 query.append(row[0])
                 answer.append(row[1:])
                 idx.append(i)

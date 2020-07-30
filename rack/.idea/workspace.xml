@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/braid/split_data.py" line="193" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="7f9a61c8-6b06-427e-8b48-7f4104a237fd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/braid/braid.py" beforeDir="false" afterPath="$PROJECT_DIR$/braid/braid.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/braid/braid_AL.py" beforeDir="false" afterPath="$PROJECT_DIR$/braid/braid_AL.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/braid/braid_LTR.py" beforeDir="false" afterPath="$PROJECT_DIR$/braid/braid_LTR.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/braid/metric.py" beforeDir="false" afterPath="$PROJECT_DIR$/braid/metric.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/braid/origin_result.py" beforeDir="false" afterPath="$PROJECT_DIR$/braid/origin_result.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/braid/split_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/braid/split_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/get_feature_biker.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/get_feature_biker.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/metric_biker.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/metric_biker.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/metric_rack.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/metric_rack.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/test.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/test.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/train.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/train.csv" afterDir="false" />
     </list>
@@ -31,7 +26,7 @@
     <SUITE FILE_PATH="coverage/rack$braid_AL.coverage" NAME="braid_AL Coverage Results" MODIFIED="1595061313294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/braid" />
     <SUITE FILE_PATH="coverage/rack$change_order.coverage" NAME="change_order Coverage Results" MODIFIED="1595836368677" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/braid" />
     <SUITE FILE_PATH="coverage/rack$fr_sim_add_to_api.coverage" NAME="fr_sim_add_to_api Coverage Results" MODIFIED="1595932921730" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/braid" />
-    <SUITE FILE_PATH="coverage/rack$braid.coverage" NAME="braid Coverage Results" MODIFIED="1595991009070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/braid" />
+    <SUITE FILE_PATH="coverage/rack$braid.coverage" NAME="braid Coverage Results" MODIFIED="1596073814493" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/braid" />
     <SUITE FILE_PATH="coverage/rack$repository_so_data_format.coverage" NAME="repository_so_data_format Coverage Results" MODIFIED="1595321411905" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/braid" />
     <SUITE FILE_PATH="coverage/rack$biker_filter_cannt_rec_data.coverage" NAME="biker_filter_cannt_rec_data Coverage Results" MODIFIED="1595921917887" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/braid" />
     <SUITE FILE_PATH="coverage/rack$biker_extension_so.coverage" NAME="biker_extension_so Coverage Results" MODIFIED="1595749333467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/braid" />
@@ -48,45 +43,46 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="45" />
+          <entry key="py" value="46" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="45" />
+          <entry key="Python" value="46" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="8738" />
+          <entry key="py" value="9110" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="8738" />
+          <entry key="Python" value="9110" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/braid/braid.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
+            <state relative-caret-position="203">
+              <caret line="185" column="16" lean-forward="true" selection-start-line="185" selection-start-column="16" selection-end-line="185" selection-end-column="16" />
               <folding>
                 <element signature="e#0#56#0" expanded="true" />
+                <element signature="e#860#894#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/braid/metric.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="6" column="32" lean-forward="true" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+            <state relative-caret-position="-1242">
+              <caret line="56" column="31" selection-start-line="56" selection-start-column="31" selection-end-line="56" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -94,8 +90,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/braid/split_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="166" lean-forward="true" selection-start-line="166" selection-end-line="166" />
+            <state relative-caret-position="648">
+              <caret line="212" column="36" lean-forward="true" selection-start-line="212" selection-start-column="36" selection-end-line="212" selection-end-column="36" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
                 <element signature="e#1468#1506#0" />
@@ -107,8 +103,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/braid/braid_LTR.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1566">
-              <caret line="127" lean-forward="true" selection-start-line="127" selection-end-line="127" />
+            <state relative-caret-position="81">
+              <caret line="101" column="25" lean-forward="true" selection-start-line="101" selection-start-column="25" selection-end-line="101" selection-end-column="25" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -119,8 +115,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/braid/braid_AL.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="148" selection-start-line="148" selection-end-line="148" />
+            <state relative-caret-position="450">
+              <caret line="149" lean-forward="true" selection-start-line="149" selection-end-line="149" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -129,10 +125,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://E:/python/Lib/site-packages/sklearn/linear_model/_logistic.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="1250" column="8" selection-start-line="1250" selection-start-column="8" selection-end-line="1250" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/braid/origin_result.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="317">
-              <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
+              <caret line="88" selection-start-line="88" selection-end-line="88" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -162,7 +167,6 @@
       <find>queries</find>
       <find>len</find>
       <find>n_queries</find>
-      <find>ground_truth_training</find>
       <find>choose_idx</find>
       <find>TimeZone.getDefault</find>
       <find>re_sort</find>
@@ -170,6 +174,8 @@
       <find>top1</find>
       <find>java.net.URL.toURI</find>
       <find>11111</find>
+      <find>get_fr_cal_sim</find>
+      <find>ground_truth_training</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -184,13 +190,13 @@
         <option value="$PROJECT_DIR$/braid/biker_extension_so.py" />
         <option value="$PROJECT_DIR$/braid/feedback.py" />
         <option value="$PROJECT_DIR$/braid/change_order.py" />
-        <option value="$PROJECT_DIR$/braid/braid_AL.py" />
-        <option value="$PROJECT_DIR$/braid/braid_LTR.py" />
         <option value="$PROJECT_DIR$/braid/biker_filter_cannt_rec_data.py" />
         <option value="$PROJECT_DIR$/braid/origin_result.py" />
         <option value="$PROJECT_DIR$/braid/fr_sim_add_to_api.py" />
         <option value="$PROJECT_DIR$/braid/metric.py" />
         <option value="$PROJECT_DIR$/braid/split_data.py" />
+        <option value="$PROJECT_DIR$/braid/braid_AL.py" />
+        <option value="$PROJECT_DIR$/braid/braid_LTR.py" />
         <option value="$PROJECT_DIR$/braid/braid.py" />
       </list>
     </option>
@@ -402,7 +408,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3583062" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32899022" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3984799" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -438,13 +444,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1242">
           <caret line="68" column="31" lean-forward="true" selection-start-line="68" selection-start-column="31" selection-end-line="68" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/python/Lib/site-packages/sklearn/linear_model/_logistic.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="1432" lean-forward="true" selection-start-line="1432" selection-end-line="1432" />
         </state>
       </provider>
     </entry>
@@ -538,7 +537,7 @@
     <entry file="file://$PROJECT_DIR$/braid/origin_result.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="317">
-          <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
@@ -566,16 +565,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/braid/braid_AL.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="148" selection-start-line="148" selection-end-line="148" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/braid/fr_sim_add_to_api.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="560">
@@ -597,20 +586,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/braid/braid_LTR.py">
+    <entry file="file://E:/python/Lib/site-packages/sklearn/linear_model/_logistic.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1566">
-          <caret line="127" lean-forward="true" selection-start-line="127" selection-end-line="127" />
+        <state relative-caret-position="315">
+          <caret line="1250" column="8" selection-start-line="1250" selection-start-column="8" selection-end-line="1250" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/braid/braid.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="185" column="16" lean-forward="true" selection-start-line="185" selection-start-column="16" selection-end-line="185" selection-end-column="16" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#0#56#0" expanded="true" />
+            <element signature="e#860#894#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/braid/split_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="166" lean-forward="true" selection-start-line="166" selection-end-line="166" />
+        <state relative-caret-position="648">
+          <caret line="212" column="36" lean-forward="true" selection-start-line="212" selection-start-column="36" selection-end-line="212" selection-end-column="36" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
             <element signature="e#1468#1506#0" />
@@ -618,20 +615,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/braid/metric.py">
+    <entry file="file://$PROJECT_DIR$/braid/braid_AL.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="32" lean-forward="true" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+        <state relative-caret-position="450">
+          <caret line="149" lean-forward="true" selection-start-line="149" selection-end-line="149" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/braid/braid.py">
+    <entry file="file://$PROJECT_DIR$/braid/braid_LTR.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
+        <state relative-caret-position="81">
+          <caret line="101" column="25" lean-forward="true" selection-start-line="101" selection-start-column="25" selection-end-line="101" selection-end-column="25" />
           <folding>
-            <element signature="e#0#56#0" expanded="true" />
+            <element signature="e#0#35#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/braid/metric.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1242">
+          <caret line="56" column="31" selection-start-line="56" selection-start-column="31" selection-end-line="56" selection-end-column="31" />
         </state>
       </provider>
     </entry>

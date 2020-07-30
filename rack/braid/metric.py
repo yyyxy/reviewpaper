@@ -1,17 +1,19 @@
 import csv
 
 
-def re_sort(query, pred, rec_api_test, answer_test, n, rank_mod, rankall, fr_rec_score, fr_rec_api, rem=-10):
+def re_sort(query, pred, rec_api_test, answer_test, n, rank_mod, rankall, rem=-10):
     rec_api = rec_api_test[10*n:10*n+10]
-    if len(fr_rec_api) > 0:
-        print(11111, fr_rec_api)
-        for i, ap in enumerate(fr_rec_api):
-            if ap in rec_api:
-                pred[rec_api.index(ap)] += fr_rec_score[i]
-            else:
-                rec_api.append(fr_rec_api[i])
-                pred.append(fr_rec_score[i])
-    print(pred)
+
+    # if len(fr_rec_api) > 0:
+    #     # print(11111, fr_rec_api)
+    #     for i, ap in enumerate(fr_rec_api):
+    #         if ap in rec_api:
+    #             pred[rec_api.index(ap)] += fr_rec_score[i]
+    #         else:
+    #             rec_api.append(fr_rec_api[i])
+    #             pred.append(fr_rec_score[i])
+    # # print(pred)
+
     sort, rec = [], []
     for i in range(10):
         sort.append(pred.index(max(pred)) + 1)
@@ -47,8 +49,17 @@ def re_sort(query, pred, rec_api_test, answer_test, n, rank_mod, rankall, fr_rec
     return rank_mod, rankall
 
 
-def ALTR_re_sort(pred, rec_api_test, answer_test, n, rank_mod, rankall, rem = -10):
+def ALTR_re_sort(pred, rec_api_test, answer_test, n, rank_mod, rankall, rem=-10):
     rec_api = rec_api_test[10*n:10*n+10]
+
+    # if len(fr_rec_api) > 0:
+    #     for i, ap in enumerate(fr_rec_api):
+    #         if ap in rec_api:
+    #             pred[rec_api.index(ap)] += fr_rec_score[i]
+    #         else:
+    #             rec_api.append(fr_rec_api[i])
+    #             pred.append(fr_rec_score[i])
+
     sort, rec = [], []
     for i in range(10):
         sort.append(pred.index(max(pred)) + 1)

@@ -21,7 +21,7 @@ top1, top3, top5, map, mrr = 0, 0, 0, 0, 0
 LTR_top1, LTR_top3, LTR_top5, LTR_map, LTR_mrr = 0, 0, 0, 0, 0
 AL_top1, AL_top3, AL_top5, AL_map, AL_mrr = 0, 0, 0, 0, 0
 
-num_choose = 37
+num_choose = 371
 
 queries = []
 fr = open('../data/feedback_all_original_biker.csv', 'r')
@@ -29,18 +29,19 @@ reader = csv.reader(fr)
 for row in reader:
     queries.append(row[0])
 
-# 索引转化为数据
-fr = open('../data/feedback_repository_biker_sim8.csv', 'r')
-reader = csv.reader(fr)
-fr_queries, fr_answers = [], []
-fr_matrix, fr_idf_vector = [], []
-for row in reader:
-    fr_queries.append(row[0])
-    fr_answers.append(row[1])
-
-    q1_matrix, q1_idf_vector = feedback.load_matrix(row[0], w2v, idf)
-    fr_matrix.append(q1_matrix)
-    fr_idf_vector.append(q1_idf_vector)
+# # 增加query和so query的相似度计算作为分数组成部分
+# # 索引转化为数据
+# fr = open('../data/feedback_repository_rack_sim7.csv', 'r')
+# reader = csv.reader(fr)
+# fr_queries, fr_answers = [], []
+# fr_matrix, fr_idf_vector = [], []
+# for row in reader:
+#     fr_queries.append(row[0])
+#     fr_answers.append(row[1])
+#
+#     q1_matrix, q1_idf_vector = feedback.load_matrix(row[0], w2v, idf)
+#     fr_matrix.append(q1_matrix)
+#     fr_idf_vector.append(q1_idf_vector)
 
 # fw = open('../data/biker_rank.csv', 'w', newline='')
 # writer = csv.writer(fw)
@@ -71,8 +72,8 @@ for round in range(1):
         test_query, test_answer, test_rec_api, test_feature = split_data.idx_to_data(test_idx)
 
         # 获取AL初始训练数据，即反馈数据
-        choose_query, choose_answer, choose_rec_api, choose_feature = split_data.idx_to_data(choose_idx)
-        # choose_query, choose_answer, choose_rec_api, choose_feature = split_data.get_choose_data(choose_idx, test_query, pct, w2v, idf)
+        # choose_query, choose_answer, choose_rec_api, choose_feature = split_data.idx_to_data(choose_idx)
+        choose_query, choose_answer, choose_rec_api, choose_feature = split_data.get_choose_data(choose_idx, test_query, pct, w2v, idf)
         AL_choose_feature = braid_AL.get_AL_feature(choose_answer, choose_rec_api, choose_feature)
 
         # 获取初始未标记数据，从stack overflow获取
@@ -87,6 +88,15 @@ for round in range(1):
 
         AL_predict, add_x_FV, add_x_FR, add_y_FR = braid_AL.get_AL_predict(pct, test_feature, AL_choose_feature, AL_unlabel_feature, test_query, choose_query, choose_answer, unlabel_query, unlabel_answer, test_rec_api, choose_rec_api, unlabel_rec_api, w2v, idf)
         LTR_predict = braid_LTR.get_LTR_predict(add_x_FV, add_x_FR, add_y_FR)
+
+        # # 增加query和fr query的相似度计算作为分数组成部分
+        # fr_matrix, fr_idf_vector = [], []
+        # for q in fr_queries:
+        #     q1_matrix, q1_idf_vector = feedback.load_matrix(q, w2v, idf)
+        #     fr_matrix.append(q1_matrix)
+        #     fr_idf_vector.append(q1_idf_vector)
+
+
         # # LTR 用全部的反馈数据（在AL的基础上，把剩下未加入的反馈数据加入）
         # AL_predict, add_choose_query, add_choose_answer, add_choose_rec_api, add_choose_feature = braid_AL.get_AL_predict(pct, test_feature, AL_choose_feature, AL_unlabel_feature, test_query, choose_query, choose_answer, unlabel_query, unlabel_answer, test_rec_api, choose_rec_api, unlabel_rec_api, w2v, idf)
         # choose_query, choose_answer, choose_rec_api, choose_feature = split_data.idx_to_data(choose_idx)
@@ -141,10 +151,9 @@ for round in range(1):
                 AL_pred.append(AL_sum)
             print(LTR_pred)
             print(AL_pred)
-            print(pred)
             print(test_rec_api[10*n:10*n+10])
-            fr_rec_score, fr_rec_api = split_data.get_fr_cal_sim(test_query[n], fr_matrix, fr_idf_vector, fr_answers, w2v, idf)
-            rank_mod, rankall = metric.re_sort(test_query, pred, test_rec_api, test_answer, n, rank_mod, rankall, fr_rec_score, fr_rec_api)
+            # fr_rec_score, fr_rec_api = split_data.get_fr_cal_sim(test_query[n], fr_matrix, fr_idf_vector, fr_answers, pct, w2v, idf)
+            rank_mod, rankall = metric.re_sort(test_query, pred, test_rec_api, test_answer, n, rank_mod, rankall)
             LTR_rank_mod, LTR_rankall = metric.ALTR_re_sort(LTR_pred, test_rec_api, test_answer, n, LTR_rank_mod, LTR_rankall)
             AL_rank_mod, AL_rankall = metric.ALTR_re_sort(AL_pred, test_rec_api, test_answer, n, AL_rank_mod, AL_rankall)
         temp_top1, temp_top3, temp_top5, temp_map, temp_mrr = metric.metric_val(rank_mod, rankall, len(test_rec_api))
@@ -171,10 +180,10 @@ for round in range(1):
         AL_map += AL_temp_map
         AL_mrr += AL_temp_mrr
 
-    fw = open('../data/metric_biker.csv', 'a+', newline='')
-    writer = csv.writer(fw)
-    writer.writerow((round+1, num_choose, round_top1/10, round_top3/10, round_top5/10, round_map/10, round_mrr/10))
-    fw.close()
+    # fw = open('../data/metric_biker.csv', 'a+', newline='')
+    # writer = csv.writer(fw)
+    # writer.writerow((round+1, num_choose, round_top1/10, round_top3/10, round_top5/10, round_map/10, round_mrr/10))
+    # fw.close()
 
 print(top1/100, top3/100, top5/100, map/100, mrr/100)
 print(LTR_top1/100, LTR_top3/100, LTR_top5/100, LTR_map/100, LTR_mrr/100)
@@ -183,8 +192,8 @@ print(AL_top1/100, AL_top3/100, AL_top5/100, AL_map/100, AL_mrr/100)
 # fw = open('../data/metric_biker.csv', 'a+', newline='')
 # writer = csv.writer(fw)
 # writer.writerow(('BRAID', num_choose, top1/100, top3/100, top5/100, map/100, mrr/100))
-# # writer.writerow(('LTR', num_choose, LTR_top1/10, LTR_top3/10, LTR_top5/10, LTR_map/10, LTR_mrr/10))
-# # writer.writerow(('AL', num_choose, AL_top1/10, AL_top3/10, AL_top5/10, AL_map/10, AL_mrr/10))
+# writer.writerow(('LTR', num_choose, LTR_top1/10, LTR_top3/10, LTR_top5/10, LTR_map/10, LTR_mrr/10))
+# writer.writerow(('AL', num_choose, AL_top1/10, AL_top3/10, AL_top5/10, AL_map/10, AL_mrr/10))
 # # writer.writerow(('BRAID', '10_query', top1, top3, top5, map, mrr))
 # fw.close()
 
