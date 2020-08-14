@@ -1,0 +1,352 @@
+How do I format a number in Java,GZipOutputStream,FileInputStream,FileOutputStream,DecimalFormatSymbols,DecimalFormat,Number,Locale,NumberFormat
+How do I clone a generic List in Java,ArrayUtils,String
+How can I concatenate two arrays in Java,List,Array,Object,Class,Arrays,System
+How do I remove objects from an array in Java,String,System
+How do you compare two version Strings in Java,SimpleDateFormat,Calendar
+How do I count the number of occurrences of a char in a String,CharacterIterator,StringCharacterIterator
+How do I read / convert an InputStream into a String in Java,Scanner
+How do I get the last character of a string,SeekableByteChannel,FileChannel
+Executing Shell script from Java code,Process,Runtime
+Run commands on mac with java code,Runtime
+Load a resource in Jar,ResourceBundle,Enumeration
+How to add numbers in an editText,String,Character
+Get MD5 String from Message Digest,String,BigInteger,MessageDigest,Random,Throwable
+How do you remove the first instance of an element value in an array,System
+How do I convert a String to an int in Java,String,Integer
+Java Programming: call an exe from Java and passing parameters,ProcessBuilder
+How can I convert a String to a char array,String
+Insert a character in a string at a certain position,List,ArrayList
+How can I parse the string to Double,Double
+Running a Command Prompt from a Java program in Windows,Process,Runtime
+How do I remove a character from a String,SeekableByteChannel,FileChannel
+How can I iterate over a string in Java,String
+Get all methods of an Interface or Abstract class using Reflection,Class,Method
+Run command prompt from java,Runtime,ProcessBuilder,Process
+Executing a Command from Java and Waiting for the Command to Finish,Process,Runtime
+executing runtime cmd from java program,Runtime
+how to delete a particular character at particular position from a character array ,String
+How can I pass a parameter from a Java application to a Cygwin command,Runtime
+Execute a command from Java and NOT wait for the result,Desktop
+How can I calculate the SHA-256 hash of a string in Android,DigestUtils,InputStream
+How can I convert string to double,Double
+How do I get generate an IP address range given start and end IP address,InetAddress,UnknownHostException
+How to remove the last character from a string,String
+How can I get multiple characters from a string,Integer,String
+Implementing the equals method in java,HashCodeBuilder,EqualsBuilder
+Calling Unix command from Java,ProcessBuilder
+how can i calculate the number of specific chars in a string,String
+How can I find the number of years between two dates,String,Integer
+How can i get the Created Date and Time of a file in java,Runtime
+How can I format a number to the fixed locale,Number,Locale,NumberFormat
+How to execute commands using java,Runtime
+How to randomly pick an element from an array,Math
+Parse String into Number,Long,Float,Double,Integer
+how do I count the number of brackets in a string in a Java regex,String
+How to read properties from xml file with java,Properties,FileOutputStream
+access protected class using reflection,Class
+How to compress text file to rar format using java program,Runtime
+How can I break the string on Java,System
+How do I utilize text in a string as a method,Method,Class
+How to add Properties to an Application Context,System
+How do I get the name of the WAR file,Object,Class,ClassLoader
+build and execute a bash script from a java script with spaces,Runtime
+How to run a mvn command from a java program,Process,Runtime
+firing a command in terminal from java program,Process,Runtime
+How to rotate a polygon around a point with Java,Math
+converting an IP address to host name,InetAddress
+How do I count the number of words in a string,CharacterIterator,StringCharacterIterator
+How do I convert a number to a letter in Java,Number,Locale,NumberFormat
+Issue with arguments passed to a perl script using Java,Runtime
+execute java button in a jar from command line,Runtime
+Java executing Linux commands,Runtime
+How to run linux command from java code,Process,Runtime
+How to add new element to Varargs,System
+Java reflection - invoke method inside thread,Class
+How do I run command line from Java code in the background,Runtime
+Executing multiple command shell from java,Process,Runtime
+How to add an element to Array and shift indexes,Document,Element,DocumentBuilder
+How do I convert a large string into hex and then into byte,String,Character
+How to create an array of the methods of a class in Java,Class,Object
+How do I compare the output with a string in java,String
+Execute a linux terminal command in java,Process,Runtime
+run cmd command from project in Eclipse,Runtime
+Uncompress a GZIP string in Java,FileInputStream,FileOutputStream,GZipOutputStream,GZipInputStream
+How to Compare Two Numbers in Java,Number,Double
+How do I reverse the numbers in a string,Collections,List,Arrays
+Insert at a specific index in array,List,ArrayList
+How to run Different commands from Java Code,Process,Runtime
+How to change value of ArrayList element in java,Integer
+Running shell script from java code and pass arguments,ScriptEngineManager,ScriptEngine,Object
+convert a Class attribute to Field,Class
+Running cmd command with Java,ProcessBuilder
+How can I sort an ArrayList of Strings in Java,Arrays
+How to monitor folders using a service,Thread
+How to sort a String array,Map,Comparator,HashMap
+How can I assign an int to a String variable,String
+how to add an integer value associated with an array,String
+Running a bash shell script in java,Runtime,ProcessBuilder
+How can I find the index of an array element,Object
+Sorting an array of strings in reverse alphabetical order in Java,String
+How can I get a char array in reverse order,Collections,List,Arrays
+Can I execute a cmd command through java,Runtime,Throwable
+How to execute cmd command in Java class,Runtime
+Parse a number with Java,Long,String
+How do I check if a string contains a list of characters,String
+How to write contents of an array list to a text file,String
+How do I add an element to the end of my array,System
+Time to read an xml file,System
+Converting Dynamic ArrayList to Json,StringBuilder
+How do I read and remove a number from a string,String
+Pass arguments to VBS from Java,Runtime
+How to delete an element from an array,Document,Element,DocumentBuilder
+Java- How do i convert a string of numbers to an Array of letters,String
+Execute a shell script in runtime of Java code from Eclipse,Runtime
+How can I convert a datetime string into an integer datatype,String,Integer
+Executing a vbs script command by command in java,Runtime
+how to run a command at terminal from java program,Process,Runtime
+How to Map a double value to a float one In Java,Double,Float
+How to change the colors of text and background for cmd in Java,ProcessBuilder,Process
+Run cmd commands through Java,Runtime,System
+How to list the files in current directory,Files,FindTextFilesVisitor,SimpleFileVisitor
+How do I format a list of Strings in Java from a TreeMap to print this way,String
+How to execute a cmd command using java program,Process,Runtime
+Add Array elements to String,Document,Element,DocumentBuilder,Document,Element,DocumentBuilder
+Run Bash from Java Program to Capture Webcam Image on Raspberry Pi,MediaLocator,Player,Manager
+how to pass parameters from java to a python script,ScriptEngineManager,ScriptEngine,Object
+Drawing Sierpinski's Triangle in Java,Math
+How to extract Date and from a String in java,String
+passing arguments to a c code from java,ScriptEngineManager,ScriptEngine,Object,ScriptEngineManager,ScriptEngine,ScriptException
+How do I get a random word from a string,String
+How to add or remove a value on an array,System
+how to output file lists to text file using java,System
+Get the corners of a rotating rectangle,Math
+How to get ping time of an IP address,Runtime,Process
+Running perl script within Java,Runtime
+How do i get the elements form an Object array to a String array,Object
+Get root domain from request,String
+Casting a class using reflection in java,Class,Method
+How do you reverse a string character by character in java,String,StringBuffer
+How do I multiply two String variables,SimpleDateFormat,Calendar
+Unable to run UNIX command from Java program,Runtime
+Converting a Java ArrayList of strings to a JavaScript array,StringBuffer
+Convert hexadecimal string to IP Address,InetAddress,UnknownHostException
+Creating a Java program that locks a file,Runtime
+How i can convert this String Value into a Integer Value,String,Integer
+Object position in array,Object
+How to get fields of parent class using reflection,Class
+How can I append a word in between an array of strings,StringBuilder
+How can i parse a String to BigDecimal,String
+How to read from properties file,System
+how to convert char to string,Character,String
+Execute source command from Java,Process,Runtime
+Instantiating a class in Java with reflection,Class
+Dynamically insert an XML Element into a text node,Document,Element,DocumentBuilder
+How do I find the second to last character of a string,String
+How do you compare characters,SimpleDateFormat,Calendar
+How to simulate a real mouse click using java,Robot,InputEvent
+How to execute terminal command in specific directory from java,ProcessBuilder
+how do i convert int to date in specific form,System
+how do u get the last character of the last string in java,String
+Executing a native DOS command from a Java application,Process,Runtime
+How do I delete an element from an array of objects,EntityManager,EntityManagerFactory
+How to convert int Array to JSON String in Android,Arrays
+How do i run a Linux terminal cmd from a java program,Runtime
+How can I get the value of a field by its name,Class
+How to draw a pyramid,String
+How can I use a method to return the index of an array element,String
+Maven - Load resources from JAR,Object,Class
+How can I get an address of a List,InetAddress,NetworkInterface,InetAddress,UnknownHostException
+Execute Command not work in Java,Runtime
+Execute ADB command from Java program,Process,Runtime
+execute shell command from android,Process,Runtime
+How do I convert int into char[] to display time,Integer,String
+How to reverse the String,StringBuilder,String
+How do I replace multiple value in a word,String
+java capturing webcam images macbook,MediaLocator,Player,Manager
+Execute a command using ProcessBuilder from windows,Process,Runtime
+How do I split a paragraph into sentences,BreakIterator
+Running command in Java,Runtime
+How to convert String to String Array,String
+How to extract date and time from a String Timestamp in java,LocalDate,LocalTime,LocalDateTime
+Passing parameter to sh file from java class,Runtime
+How to connect ORACLE DB,Class
+How do I find the max from a list of integers,Math
+How to break a string into many variables,String,Integer
+Reversing the order of a string,Collections,List,Arrays
+Executing terminal command from java,Process,Runtime
+how do i make a scanner variable become an array,String
+Executing perl script from java,Runtime
+How to store each sentence of a paragraph in a string in java,String
+How do I parse numbers in a string,LocalDate,LocalTime,LocalDateTime,Number,Locale,NumberFormat
+How do I grab the numbers in a String array and place them into an int array,String
+how do I convert text to integer in Java,Integer
+Reading from a file to compare characters,String
+Pass parameters to bash file in the middle of a java code,Runtime
+How to open Terminal and execute command using java code in OSX,Runtime
+Creating triangle in java,Math
+Do you have to parse a string to a double every time you want to use it,Double
+Get type of array of class using Java reflection,Class,Method
+How can i convert timestamp value into date in java,LocalDate,LocalTime,LocalDateTime
+Rotating Rectangle and calculating corner,Math
+Java CDATA extract xml,String
+How to execute shell script and save in text file command through java in linux,Runtime
+Unable to execute Unix command through Java code,Process,Runtime
+Split parsed text to seperate date and time android,String
+How can I format in java,String
+Launch and interact with a command line program from a Java program,Runtime
+Calling a ruby script from a java code,Runtime,Process,Throwable
+How to sort a string list according to equality to a string,Collections
+Remove request parameter from query string,String
+How do you parse a string that consists of a list of coordinates,String
+How would I go about splitting a sentence in Java,String
+How to hide harded coded password in Java source code,String
+How to concatenate elements of an array into an integer,StringBuilder,Long
+Get concrete class of interface field using Java reflection,Class,Field,Throwable
+How can I store substrings generated from a String into a String array,String
+Java How do I merge all char from an array of String into a new String,String,StringBuilder
+Remove all characters except last n characters from a string,String
+Removing a sentence from a paragraph,String
+Java establish connection to jdbc with code,Class
+Can an Static Method call an Instance Method in Java,String
+Unable to send parameters to bash script from java,ScriptEngineManager,ScriptEngine,Object
+How to Insert a character at certain point java,String
+How do you convert a java String to a mailing address object,InetAddress,UnknownHostException
+Executing terminal commands from java,Process,Runtime
+How can I set the program time in seconds,System
+Load font file from resources folder,InputStream,Font
+Running a Bash Command in different directory from a java program,Process,Runtime
+How do I reverse a String array,Collections,List,Arrays
+Convert array elements from string to an integer,Integer,Throwable
+How can I store the biggest value of a set of many values in a variable,Math
+How do I parse a hex-int from a string to an Integer,Integer
+Using reflection in Java,Class,Thread
+How do I run a file using Java,ProcessBuilder
+How to Sort a HashTable,Map,Comparator,HashMap
+Execute Jar from Java code,Process,Runtime
+Split a string in java and map to value with another string,String
+execute multiple commands in cmd using java,ProcessBuilder,Throwable,Process
+dynamically loading class in osgi bundle,Thread,Class,Object
+How do I split a string into an array the length,String
+How to call Python script from a Java JAR file,Runtime
+Running CMD from Java,ProcessBuilder,Process,Throwable
+How do I use a properties file in Java,Object,ClassLoader,Class
+Adding elements to an array java,Document,Element,DocumentBuilder,Document,Element,DocumentBuilder
+How do you get the numerical value from a string of digits,Character,String
+Running a shell script from Java,Process,Throwable,ProcessBuilder
+Where to save uploaded files in server,System
+How to pass argument to shell script file from servlet,ScriptEngineManager,ScriptEngine,Object
+How do I run execute commands from a file,Process,Runtime
+Run windows command from eclipse,Runtime
+How can I split a String of dots,String
+Executing PowerShell Commands in Java Program,Process,Runtime
+How do I put a String into an array and then into an array of double,String,Double
+How to split a sentence into two parts,String
+How do i search in a String for a multiple word,String
+How do I get only integers from a string,String
+How can I connect to MongoDB server using JAVA from OpenShift,System
+Loading resource files within a jar,ResourceBundle,Enumeration
+How do I convert a char string to an integer in Java,String,Integer,Long
+Calling Bash script from Java changing arguments,Runtime
+How do I reverse the order of only the digits in a string,Collections,List,Arrays
+Using Objects as keys in Java HashMap,Object
+How to execute cmd commands through java,Runtime
+How to rotate an array,Arrays
+how do I split email from a String,String
+How to use an if function to call elements of an array,Math
+Collect all Classes with Reflection,Class
+Execute bash script and pass arguments with spaces from java,Runtime
+How can i move in string array item to the end of the array,String,System
+How to change directory in java,WatchService,Path,WatchKey
+adding elements of one array to another at a particular place in java,System
+How to reverse character elements in array using java,String
+How to create a File object with a String,System
+How do i check if string contains a part of a string,String
+How can you return the number of times an item is saved to a specific array index,Character
+How can I override toString in java using an integer array,StringBuilder
+i am trying to find the reverse of the string,StringBuilder
+How do you make a byte into a binary number and not to a string in java,StringBuilder
+load resource directory in jar file,Class
+how to pass parameter to shell script to use as part of variable filename,String
+How do I print certain parts of my 2D array in a certain order,String
+How do I split a string into parts in Java,String
+How to invoke cmd commands in from a Java program in Windows,Process,Runtime
+Java - How to remove all elements of an Array from an Arraylist,PrintStream,String
+From Javascript Int to a Java String,String
+Execute a shell command line in Java,ProcessBuilder
+Do adding objects to an ArrayList clone,ArrayUtils,String
+How can I get one part from a response in java,String
+How to add java typing text,Thread,String
+How do i sort an array of strings by the second char of each string,Arrays,Collections,String
+How do I compare two numeric string in Java,SimpleDateFormat,Calendar
+Java Reflection on an Integer Object,Array,Integer
+using double arrays to draw a triangle,Math
+Copy data from text file and paste in browser using selenium,Runtime
+How to add Icon Image on JButton,Object,System,Class
+Parse a date from a string,LocalDate,LocalTime,LocalDateTime
+How do I convert a JTextField string to a double,Double
+Run Python script from Java,Runtime
+How do I split the paragraph using empty lines,String
+java How to get chars after chars in a string in a http request,String
+Class array in constructor with reflection,Class,Method
+Computer Graphics: Rotating a polygon,AffineTransform,Rectangle,Shape
+Executing Python script from Java - Issues with parameter passing,ScriptEngineManager,ScriptEngine,Object
+How to open a text file in Java,Desktop
+How do I convert a String to array Integer,String
+java code to execute commands,Process,Runtime
+How do I parse multiple integers from a string,LocalDate,LocalTime,LocalDateTime,Number,Locale,NumberFormat
+How to call a Python script with arguments from Java class,Runtime
+How to parse date string into integer variables,LocalDate,LocalTime,LocalDateTime
+Java Copying to Clipboard,Clipboard,TextTransfer,FormData
+How do I compare strings representation of integers,Integer
+How to break a string with no spaces into words,String
+How can I format int numbers in java,String,StringBuilder,Float
+How to get an integer at a specified position in a string of integers,List,ArrayList
+How do I convert a String of digits into separate digits and add them together in Java,String
+How to instantiate a class created at runtime with javassist,Class
+How to run maven command from java,Runtime,Process
+how to add integer elements in char array in java,Integer
+Copy a file to clipboard,Clipboard,TextTransfer,FormData
+How do I change a string array into an int array,Integer
+Execute commands in CMD on Windows with Java code,Process,Runtime
+How do you remove duplicates from an array,Math
+Drawing multiple ovals in java,Math
+Execute windows command in Java,ProcessBuilder
+How do i print palindrome words in a string,StringBuilder,String
+How can I print the elements of 3 different String Arrays in a certain order,Collections,List,Arrays
+Running a script from a folder on a Tomcat Server,System
+How do you split a word in Java,BreakIterator
+POST a txt file to remote HTTP server,ProcessBuilder
+How do I assign multiple objects a part of a split string in java,String
+How do I write a code for random intervals between a range using numbers in double format,Thread,Math
+Convert integer time to String time without Date,String
+Executing R file from bash script,ProcessBuilder
+How can I store characters of string variable in an integer array in Java,String
+Reverse the characters of a string,StringBuffer
+SED Command not executing through JAVA code,Process,Runtime
+Issues in executing FFmpeg command in Java code in Linux,Runtime
+How to draw Isosceles Triangle in Java using only two for loops,Math
+How to compare two dates without the use of objects,String
+How to convert String containing date and time to LocalTime variable,String
+Calling method in an element of a object array,Class,Method,Object
+Load resource in a jar file Java Spring,ResourceBundle,Enumeration
+Trying to rotate 3D vector in java,Math
+How do i reverse each character in a string,String,StringBuilder
+How do I append characters in Java,StringBuilder,String
+Removing the last character from a string,String
+Call external script to execute,Runtime,URL,Class,Object
+How to create a treemap from a text file,String
+How to iterate through a 2D Array with a string of permutations,String,Integer
+How i convert String to int,String
+Permission to Read a File,String
+How do I remove an empty index from an array list,String
+How do i concatenate two BigInteger variables together,StringBuffer,String
+Format Words Into A Sentence,StringBuilder
+How do I store a int in a String,Integer
+Java ArrayList to Javascript Array,ScriptEngineManager,ScriptEngine
+"Java formatting, how do I get a symbol to stick to an int",Integer,PrintStream
+Opening PDF to a specific page,Runtime
+How do I create a BLOB object by Java without connection to database,MongoClient,ServerAddress,DBCollection
+How do I replace nth character in a String with a new character,String,StringBuffer
+How to change number length format,DecimalFormatSymbols,DecimalFormat
+Run the Linux commands from java code ( remote operating system),Runtime
+How to copy all files inside a remote directory,Runtime

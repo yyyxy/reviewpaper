@@ -77,7 +77,7 @@ def get_AL_predict(pct, test_feature, choose_feature, unlabel_feature, test_quer
         if len(unlabel_query) > 0:
             # pool-based sampling
             n_queries = int(pct*100)
-            print('n_queries', n_queries)
+            print('n_queries', n_queries, len(unlabel_query))
             for idx in range(n_queries):
                 query_idx, query_instance = uncertainty_sampling(classifier=learner, X=X_train)
                 # print('uncertain', query_idx, X_train[query_idx], y_train[query_idx])

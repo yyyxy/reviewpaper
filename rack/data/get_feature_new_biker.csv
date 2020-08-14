@@ -278,12 +278,12 @@
 1,0.252065404,0.253699469,0,0,0,0,0,java.nio.ByteBuffer.put
 1,0.332386374,0.434858791,0,0,0,0,0,java.util.ArrayList.add
 0,0.294995399,0.529608619,0,0,0,0,0,java.util.Arrays.asList
-10,0.260453452,0.403048121,1,0.739051567,0,0.698441225,0,java.lang.System.0oTime
+10,0.260453452,0.403048121,1,0.739051567,0,0.698441225,0,java.lang.System.nanoTime
 8,0.259771085,0.430759924,0,0,0.698441225,0,0.666126952,java.lang.System.currentTimeMillis
 4,0.338891959,0.332922085,0,0,0,0,0,java.time.Instant.now
 3,0.382017885,0.426464937,0,0,0,0,0,java.time.Duration.toMillis
 3,0.224122238,0.360354972,0,0,0,0,0,java.lang.Thread.sleep
-2,0.485607647,0.403631691,0,0,0,0,0,java.time.Duration.to0os
+2,0.485607647,0.403631691,0,0,0,0,0,java.time.Duration.tonanos
 2,0.201847601,0.339736652,0,0,0,0,0,java.lang.Process.waitFor
 1,0.249004786,0.203669766,0,0,0,0,0,java.lang.System.gc
 1,0.195670201,0.271797216,0,0,0,0,0,java.util.Arrays.sort
@@ -735,7 +735,7 @@
 3,0.352038318,0.37673816,0,0,0,0,0,java.lang.Runtime.addShutdownHook
 2,0.419512364,0.49558645,0,0,0,0,0,java.lang.Thread.sleep
 2,0.395783476,0.358022785,0,0,0,0,0,java.lang.System.runFinalization
-1,0.518339956,0.343826904,0,0,0,0,0,java.lang.System.0oTime
+1,0.518339956,0.343826904,0,0,0,0,0,java.lang.System.nanoTime
 1,0.393288115,0.319408411,0,0,0,0,0,java.lang.Runtime.getRuntime
 0,0.358622769,0.295167216,0,0,0,0,0,java.io.File.createTempFile
 10,0.48557898,0.587915692,1,0,0.832792474,0,0,java.util.Arrays.equals
@@ -1169,7 +1169,7 @@
 9,0.465622216,0.341772155,0,0.64014685,0,0,0,java.lang.reflect.Field.get
 0,0.339221506,0.36709581,0,0,0,0,0,java.lang.Object.clone
 10,0.303833433,0.507402247,1,0,0.707514524,0,0,java.lang.System.currentTimeMillis
-9,0.311180304,0.515007949,0,1,0,0.707514524,0.666126952,java.lang.System.0oTime
+9,0.311180304,0.515007949,0,1,0,0.707514524,0.666126952,java.lang.System.nanoTime
 4,0.579616765,0.539649639,0,0,0,0,0,java.math.BigDecimal.precision
 3,0.255358179,0.49869982,0,0,0,0,0,java.lang.Thread.sleep
 3,0.406015886,0.464535692,0,0,0,0,0,java.time.ZonedDateTime.now
@@ -1298,7 +1298,7 @@
 1,0.200952291,0.465408062,0,0,0,0,0,java.lang.Byte.parseByte
 1,0.358525641,0.439523137,0,0,0,0,0,java.lang.String.split
 0,0.14553885,0.458442448,0,0,0,0,0,java.lang.Short.parseShort
-9,0.242118306,0.394931764,0,0.612109691,0,0.606190681,0,java.lang.System.0oTime
+9,0.242118306,0.394931764,0,0.612109691,0,0.606190681,0,java.lang.System.nanoTime
 10,0.235357534,0.341389228,1,0,0.606190681,0,0,java.lang.System.currentTimeMillis
 4,0.250244762,0.324800191,0,0,0,0,0,java.util.Arrays.sort
 3,0.214959757,0.434732428,0,0,0,0,0,java.lang.Thread.sleep
@@ -1598,7 +1598,7 @@
 1,0.427668966,0.338381597,0,0,0,0,0,java.lang.reflect.Modifier.isPublic
 1,0.299279366,0.311938793,0,0,0,0,0,java.lang.Thread.sleep
 0,0.155861951,0.155861951,0,0,0,0,0,null
-10,0.228772768,0.428781914,1,0.739051567,0,0,0,java.lang.System.0oTime
+10,0.228772768,0.428781914,1,0.739051567,0,0,0,java.lang.System.nanoTime
 4,0.177387466,0.297432658,0,0,0,0,0,java.lang.Runtime.addShutdownHook
 4,0.245447637,0.420413964,0,0,0,0,0,java.lang.System.currentTimeMillis
 3,0.289250378,0.427142594,0,0,0,0,0,java.lang.System.exit
@@ -1717,7 +1717,7 @@
 2,0.321999197,0.425992396,0,0,0,0,0,java.lang.String.compareTo
 1,0.301219056,0.508782739,0,0,0,0,0,java.lang.Comparable.compareTo
 1,0.254264648,0.391966024,0,0,0,0,0,java.lang.Long.compare
-0,0.1537976,0.339169218,0,0,0,0,0,java.lang.System.0oTime
+0,0.1537976,0.339169218,0,0,0,0,0,java.lang.System.nanoTime
 10,0.312724213,0.444938543,1,0,0,0,0,java.util.Set.retainAll
 4,0.305853381,0.559932359,0,0,0,0,0,java.lang.Double.toString
 4,0.301005034,0.579349413,0,0,0,0,0,java.util.List.size
@@ -1742,7 +1742,7 @@
 4,0.272778427,0.529151588,0,0,0,0,0,java.lang.Object.wait
 4,0.286741377,0.44087826,0,0,0,0,0,java.lang.Thread.join
 3,0.384197826,0.398477025,0,0,0,0,0,java.util.concurrent.TimeUnit.sleep
-3,0.276930333,0.400466418,0,0,0,0,0,java.util.concurrent.locks.LockSupport.park0os
+3,0.276930333,0.400466418,0,0,0,0,0,java.util.concurrent.locks.LockSupport.parknanos
 2,0.398940397,0.456461317,0,0,0,0,0,java.lang.Thread.interrupt
 2,0.243989683,0.444900081,0,0,0,0,0,java.util.Collections.shuffle
 1,0.242218112,0.476955513,0,0,0,0,0,java.util.concurrent.ThreadPoolExecutor.setCorePoolSize
@@ -1778,9 +1778,9 @@
 1,0.524268742,0.542656368,0,0,0,0,0,java.lang.Class.forName
 1,0.549427379,0.46402813,0,0,0,0,0,java.lang.Class.toString
 0,0.493861846,0.515431115,0,0,0,0,0,java.lang.Class.isAssignableFrom
-9,0.302428905,0.466981027,0,1,0,0.707514524,0.698441225,java.lang.System.0oTime
+9,0.302428905,0.466981027,0,1,0,0.707514524,0.698441225,java.lang.System.nanoTime
 10,0.315253105,0.467797476,1,0,0.707514524,0,0,java.lang.System.currentTimeMillis
-4,0.562582119,0.48136427,0,0,0,0,0,java.time.Duration.to0os
+4,0.562582119,0.48136427,0,0,0,0,0,java.time.Duration.tonanos
 3,0.447241603,0.488577149,0,0,0,0,0,java.time.Duration.toMillis
 3,0.269487219,0.412866456,0,0,0,0,0,java.util.Calendar.getTimeInMillis
 2,0.459439633,0.411196471,0,0,0,0,0,java.time.Instant.now
@@ -2612,7 +2612,7 @@
 10,0.230716957,0.357963938,1,0,0,0.642748647,0,java.lang.Runtime.exec
 4,0.273988033,0.385930136,0,0,0,0,0,java.lang.System.exit
 3,0.249625166,0.276428347,0,0,0,0,0,java.sql.CallableStatement.registerOutParameter
-3,0.192802182,0.352249201,0,0,0,0,0,java.lang.System.0oTime
+3,0.192802182,0.352249201,0,0,0,0,0,java.lang.System.nanoTime
 2,0.206011668,0.354856307,0,0,0,0,0,java.lang.Process.getOutputStream
 9,0.205695887,0.354856307,0,0.642748647,0,0,0,java.lang.Process.getInputStream
 6,0.219930434,0.375916803,0,0,0,0,0.642748647,java.lang.Process.exitValue
@@ -2939,7 +2939,7 @@
 6,0.368885305,0.420226479,0,0,0,0,0.65552189,javax.swing.JTextArea.setLineWrap
 0,0.203754306,-0.03108763,0,0,0,0,0,javax.swing.SwingUtilities.invokeLater
 9,0.260529321,0.253442902,0,0.612109691,0,0,0,java.lang.System.currentTimeMillis
-10,0.272773898,0.364311752,1,0,0,0,0,java.lang.System.0oTime
+10,0.272773898,0.364311752,1,0,0,0,0,java.lang.System.nanoTime
 4,0.208435946,0.324991723,0,0,0,0,0,java.lang.Thread.sleep
 3,0.175606344,0.188776127,0,0,0,0,0,java.util.Arrays.sort
 3,0.249844614,0.203904533,0,0,0,0,0,java.lang.System.gc
@@ -3399,7 +3399,7 @@
 1,0.215612949,0.465865956,0,0,0,0,0,java.util.stream.Collectors.joining
 0,0.361955738,0.487654481,0,0,0,0,0,java.math.BigInteger.toString
 6,0.17629162,0.391273984,0,0,0,0,1,java.lang.System.currentTimeMillis
-7,0.183214782,0.349793259,0,0,0,1,0,java.lang.System.0oTime
+7,0.183214782,0.349793259,0,0,0,1,0,java.lang.System.nanoTime
 4,0.134659247,0.375407186,0,0,0,0,0,java.lang.Object.wait
 3,0.158063491,0.348314153,0,0,0,0,0,java.lang.Thread.sleep
 3,0.172904776,0.228116442,0,0,0,0,0,java.util.concurrent.ExecutorService.shutdownNow
@@ -3691,13 +3691,13 @@
 5,0.31746968,0.424385401,0,0,0,0,0,java.lang.System.currentTimeMillis
 4,0.274292559,0.50486835,0,0,0,0,0,java.lang.Thread.sleep
 4,0.419665401,0.362218904,0,0,0,0,0,java.util.Timer.schedule
-10,0.312786942,0.396319125,1,0,0,0,0,java.lang.System.0oTime
+10,0.312786942,0.396319125,1,0,0,0,0,java.lang.System.nanoTime
 3,0.343701868,0.440546792,0,0,0,0,0,java.util.TimerTask.scheduledExecutionTime
 2,0.356823805,0.355223568,0,0,0,0,0,javax.swing.Timer.stop
 2,0.287932427,0.372349539,0,0,0,0,0,java.util.concurrent.Executors.newSingleThreadScheduledExecutor
 1,0.351915774,0.349968631,0,0,0,0,0,javax.swing.Timer.start
 1,0.241597727,0.363304959,0,0,0,0,0,java.util.Calendar.getInstance
-0,0.233231488,0.386512065,0,0,0,0,0,java.util.concurrent.locks.LockSupport.park0os
+0,0.233231488,0.386512065,0,0,0,0,0,java.util.concurrent.locks.LockSupport.parknanos
 10,0.431199641,0.415648874,1,0,0,0,0,java.util.Collections.shuffle
 4,0.317132931,0.38983373,0,0,0,0,0,java.util.Arrays.sort
 4,0.39527739,0.485141066,0,0,0,0,0,java.util.Collections.swap
@@ -3945,7 +3945,7 @@
 3,0.25215452,0.381153573,0,0,0,0,0,java.lang.Math.pow
 2,0.237429274,0.42084441,0,0,0,0,0,java.util.Arrays.toString
 2,0.127525111,0.355519521,0,0,0,0,0,java.lang.System.currentTimeMillis
-1,0.123078597,0.327348468,0,0,0,0,0,java.lang.System.0oTime
+1,0.123078597,0.327348468,0,0,0,0,0,java.lang.System.nanoTime
 1,0.158064091,0.403564997,0,0,0,0,0,java.lang.Long.parseLong
 0,0.201721946,0.413463664,0,0,0,0,0,java.lang.Object.toString
 5,0.50768759,0.621509307,0,0,0,0,0,org.omg.CORBA.portable.InputStream.read

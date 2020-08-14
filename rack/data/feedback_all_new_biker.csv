@@ -229,7 +229,7 @@ How to obtain the start time and end time of a day,java.time.LocalDate.atStartOf
 Checking if a number is an Integer in Java,java.lang.Integer.parseInt,,,,,
 Reading a plain text file in Java,java.nio.file.Files.readAllBytes,java.nio.file.Files.readAllLines,java.io.BufferedReader.readLine,java.nio.file.Files.lines,,
 How to insert NULL in mysql especially INT dataType,java.sql.PreparedStatement.setNull,,,,,
-How do I schedule a task to run once,index.java,java.util.concurrent.ScheduledExecutorService.schedule,java.util.concurrent.Future.cancel,,,
+How do I schedule a task to run once,java.util.concurrent.ScheduledExecutorService.schedule,java.util.concurrent.Future.cancel,,,,
 How to change JFrame icon,java.awt.Window.setIconImages,javax.swing.JFrame.setIconImage,,,,
 How do I print a double value without scientific notation using Java,java.util.Formatter.syntax,java.lang.Double.toString,,,,
 Java Wait for thread to finish,java.lang.Thread.join,,,,,

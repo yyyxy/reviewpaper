@@ -21,10 +21,10 @@ top1, top3, top5, map, mrr = 0, 0, 0, 0, 0
 LTR_top1, LTR_top3, LTR_top5, LTR_map, LTR_mrr = 0, 0, 0, 0, 0
 AL_top1, AL_top3, AL_top5, AL_map, AL_mrr = 0, 0, 0, 0, 0
 
-num_choose = 371
+num_choose = 37
 
 queries = []
-fr = open('../data/feedback_all_original_biker.csv', 'r')
+fr = open('../data/feedback_all_new_biker.csv', 'r')
 reader = csv.reader(fr)
 for row in reader:
     queries.append(row[0])
@@ -77,7 +77,7 @@ for round in range(1):
         AL_choose_feature = braid_AL.get_AL_feature(choose_answer, choose_rec_api, choose_feature)
 
         # 获取初始未标记数据，从stack overflow获取
-        # unlabel_query, unlabel_answer, unlabel_rec_api, unlabele_feature = split_data.idx_to_data(train_idx)
+        # unlabel_query, unlabel_answer, unlabel_rec_api, unlabele_feature = split_data.get_choose_data(train_idx, test_query, pct, w2v, idf)
         unlabel_query, unlabel_answer, unlabel_rec_api, unlabele_feature = split_data.get_unlabel_data(test_query, w2v, idf)
         AL_unlabel_feature = braid_AL.get_AL_feature(unlabel_answer, unlabel_rec_api, unlabele_feature)
 
@@ -96,33 +96,6 @@ for round in range(1):
         #     fr_matrix.append(q1_matrix)
         #     fr_idf_vector.append(q1_idf_vector)
 
-
-        # # LTR 用全部的反馈数据（在AL的基础上，把剩下未加入的反馈数据加入）
-        # AL_predict, add_choose_query, add_choose_answer, add_choose_rec_api, add_choose_feature = braid_AL.get_AL_predict(pct, test_feature, AL_choose_feature, AL_unlabel_feature, test_query, choose_query, choose_answer, unlabel_query, unlabel_answer, test_rec_api, choose_rec_api, unlabel_rec_api, w2v, idf)
-        # choose_query, choose_answer, choose_rec_api, choose_feature = split_data.idx_to_data(choose_idx)
-        # for i, q in enumerate(choose_query):
-        #     if q not in add_choose_query:
-        #         add_choose_query.append(q)
-        #         add_choose_answer.append(choose_answer[i])
-        #         add_choose_rec_api.extend(choose_rec_api[10*i:10*i+10])
-        #         add_choose_feature.extend(choose_feature[10*i:10*i+10])
-        #
-        # label_feedback_info = feedback.get_feedback_inf(add_choose_query, add_choose_query, add_choose_answer, add_choose_rec_api, w2v, idf)
-        # X_feedback, y_feedback = braid_AL.get_active_data(label_feedback_info, add_choose_feature)
-        #
-        # feedback_info = feedback.get_feedback_inf(test_query, add_choose_query, add_choose_answer, test_rec_api, w2v, idf)
-        # X = split_data.get_test_feature_matrix(feedback_info, test_feature)
-        # add_x_FV = np.array(X)
-        # print('len_LTR', len(add_choose_query), len(X_feedback), len(add_x_FV))
-        # LTR_predict = braid_LTR.get_LTR_predict(add_x_FV, X_feedback, y_feedback)
-
-
-        # feedback_info = feedback.get_feedback_inf(test_query, choose_query, choose_answer, test_rec_api, w2v, idf)
-        # X = split_data.get_test_feature_matrix(feedback_info, test_feature)
-        # X_test = np.array(X)
-        # label_feedback_info = feedback.get_feedback_inf(choose_query, choose_query, choose_answer, choose_rec_api, w2v, idf)
-        # X_feedback, y_feedback = braid_AL.get_active_data(label_feedback_info, choose_feature)
-        # LTR_predict = braid_LTR.get_LTR_predict(X_test, X_feedback, y_feedback)
 
         rank_mod, rankall, LTR_rank_mod, LTR_rankall, AL_rank_mod, AL_rankall = [], [], [], [], [], []
         m = 0.6
@@ -180,10 +153,10 @@ for round in range(1):
         AL_map += AL_temp_map
         AL_mrr += AL_temp_mrr
 
-    # fw = open('../data/metric_biker.csv', 'a+', newline='')
-    # writer = csv.writer(fw)
-    # writer.writerow((round+1, num_choose, round_top1/10, round_top3/10, round_top5/10, round_map/10, round_mrr/10))
-    # fw.close()
+    fw = open('../data/metric_nlp.csv', 'a+', newline='')
+    writer = csv.writer(fw)
+    writer.writerow((round+1, num_choose, round_top1/10, round_top3/10, round_top5/10, round_map/10, round_mrr/10))
+    fw.close()
 
 print(top1/100, top3/100, top5/100, map/100, mrr/100)
 print(LTR_top1/100, LTR_top3/100, LTR_top5/100, LTR_map/100, LTR_mrr/100)

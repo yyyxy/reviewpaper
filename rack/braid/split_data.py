@@ -122,27 +122,9 @@ def get_choose(train_feature, choose):
     return choose_feature, unlabel_feature
 
 
-# def get_fr_cal_sim(query, q_matrix, q_idf_vector, answers, pct, w2v, idf):
-#     query_matrix, query_idf_vector = feedback.load_matrix(query, w2v, idf)
-#
-#     tmp_rec, tmp_sco = [], []
-#     for n in range(len(q_matrix)):
-#         q_sim = similarity.sim_doc_pair(query_matrix, q_matrix[n], query_idf_vector, q_idf_vector[n])
-#         # rack
-#         if q_sim > 0.95:
-#         # # biker
-#         # if q_sim > 0.95-round(pct, 2)*0.15:
-#             if answers[n] not in tmp_rec:
-#                 tmp_rec.append(answers[n])
-#                 tmp_sco.append(q_sim)
-#             else:
-#                 tmp_sco[tmp_rec.index(answers[n])] += q_sim
-#     return tmp_sco, tmp_rec
-
-
 def idx_to_data(idx):
     # 索引转化为数据
-    fr = open('../data/feedback_all_original_biker.csv', 'r')
+    fr = open('../data/feedback_all_new_biker.csv', 'r')
     reader = csv.reader(fr)
     idx_query, idx_answer = [], []
     for i, row in enumerate(reader):
@@ -150,7 +132,7 @@ def idx_to_data(idx):
             idx_query.append(row[0])
             idx_answer.append(row[1:])
 
-    fr = open('../data/get_feature_biker.csv', 'r')
+    fr = open('../data/get_feature_new_biker.csv', 'r')
     reader = csv.reader(fr)
     idx_rec_api, idx_feature = [], []
     for i, row in enumerate(reader):
@@ -176,7 +158,8 @@ def get_choose_data(choose_idx, test_query, pct, w2v, idf):
         q1_matrix, q1_idf_vector = feedback.load_matrix(choose_query[i], w2v, idf)
         for n in range(len(matrix)):
             q_sim = similarity.sim_doc_pair(q1_matrix, matrix[n], q1_idf_vector, idf_vector[n])
-            if q_sim > 0.65+round(pct, 2)*0.1:
+            # if q_sim > 0.65-round(pct, 2)*0.1:
+            if q_sim > 0.75:
                 # print(i, q_sim)
                 idx.append(i)
                 break
@@ -200,8 +183,9 @@ def get_unlabel_data(test_query, w2v, idf):
         matrix.append(query_matrix)
         idf_vector.append(query_idf_vector)
 
+    # so相关数据
     # 索引转化为数据
-    fr = open('../data/feedback_repository_biker_sim8.csv', 'r')
+    fr = open('../data/feedback_repository_biker_sim9.csv', 'r')
     reader = csv.reader(fr)
     idx = []
     query, answer = [], []
@@ -209,7 +193,9 @@ def get_unlabel_data(test_query, w2v, idf):
         q1_matrix, q1_idf_vector = feedback.load_matrix(row[0], w2v, idf)
         for n in range(len(matrix)):
             q_sim = similarity.sim_doc_pair(q1_matrix, matrix[n], q1_idf_vector, idf_vector[n])
-            if q_sim > 0.8:
+            if q_sim > 0.7 and q_sim < 1:
+                # if q_sim > 0.8:
+                # print(1111111, row[0])
                 query.append(row[0])
                 answer.append(row[1:])
                 idx.append(i)
@@ -217,13 +203,15 @@ def get_unlabel_data(test_query, w2v, idf):
                 break
     print('ground_truth_training', len(idx), idx)
 
-    fr = open('../data/get_feature_biker_sim8.csv', 'r')
+    fr = open('../data/get_feature_biker_sim9.csv', 'r')
     reader = csv.reader(fr)
     rec_api, feature = [], []
     for i, row in enumerate(reader):
         if int(i/10) in idx:
             feature.append(row[:-1])
             rec_api.append(row[-1])
+
+    # training data除反馈数据之外的其他数据
 
     return query, answer, rec_api, feature
 
