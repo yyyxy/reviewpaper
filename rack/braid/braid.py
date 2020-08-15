@@ -21,10 +21,10 @@ top1, top3, top5, map, mrr = 0, 0, 0, 0, 0
 LTR_top1, LTR_top3, LTR_top5, LTR_map, LTR_mrr = 0, 0, 0, 0, 0
 AL_top1, AL_top3, AL_top5, AL_map, AL_mrr = 0, 0, 0, 0, 0
 
-num_choose = 37
+num_choose = 15
 
 queries = []
-fr = open('../data/feedback_all_new_biker.csv', 'r')
+fr = open('../data/feedback_all_new_rack.csv', 'r')
 reader = csv.reader(fr)
 for row in reader:
     queries.append(row[0])
