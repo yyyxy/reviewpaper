@@ -1,0 +1,34 @@
+How to print out text from a string
+PrintText LineBreakMeasurer PrintStream String AttributedString System Set PrinterJob CommonTree Scanner
+How do I print only text?
+String System Text PrinterJob PrintService Print PrintJobWatcher PrintStream CommonTree DocFlavor
+Need to save the frame as an image in the specified folder during save
+BufferedImage File MeSmaller String JFrame System ImageIcon Image JMenuItem JFileChooser
+Converting PNG into JPEG
+BufferedImage ByteArrayOutputStream String File ImageWriter IIOImage System ImageWriteParam JPEGImageReader Bitmap
+Mutipage TIFF creation with different compressions
+BufferedImage String File PackBits ImageWriteParam IIOMetadataNode Image TiffImage TiffTagConstants TiffImageParser
+Java calculate MD5 hash
+HashMap String System ActionClass MessageDigest Map TrieNode Hashing Object ParseHexString
+How can I generate an MD5 hash?
+GenerateHash MessageDigest String System JsonSerializer LinkedHashSet HashSet SecureRandom Random HashCode
+Write chinese characters from one file to another
+BaseFont FileOutputStream String BytedString System TitleBox ClassField OutputStreamWriter BufferedWriter GenerateString
+Writing strings to a file in Java and reading them back
+FileOutputStream FileInputStream String ListMultimap System IOException File ObjectOutputStream BufferedWriter PrintWriter
+Calculating the difference between two Java date instances
+Date Calendar LocalDate SimpleDateFormat String System Period Difference Population USPopulation
+Calculating date difference between two dates in string format
+Date LocalDate SimpleDateFormat String Calendar System ZonedDateTime GregorianCalendar Europe ParseException
+Drawing Transparent Images In Java Graphics2D
+BufferedImage Graphics AlphaComposite Color JFrame Override JPanel AsciiCharacterData String ColorFilters
+GZIP compression to a byte array
+GZIPOutputStream CompressionStrategy GZIPInputStream String ByteArrayOutputStream GZipStream File ReadByte Content GZipCodec
+Swing scrollbar for scaled image
+BufferedImage JPanel PanPanel JFrame ScaledImageIcon Image String RenderingHints GraphicsOnly Override
+how to add tooltip(image )in javafx
+Tooltip Scene String Button Stage PieChart Label GridPane BufferedImage VBox
+How to set a 3D border for a JDialog with rounded corners?
+Graphics Override Color RoundedPanel RoundRectangle Insets Bitmap TileMode BitmapShader Shader
+Java - Image Rotation
+AffineTransform BufferedImage Rotation Math Graphics Override Image AffineTransformOp String Rotate

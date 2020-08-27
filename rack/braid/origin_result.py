@@ -5,18 +5,18 @@ import split_data
 # split_data.split_test()
 
 # test preprocessing
-fr = open('../data/feedback_all_original_biker_filter.csv', 'r')
+fr = open('../data/feedback_all_new_biker.csv', 'r')
 reader = csv.reader(fr)
 test_query = []
 test_answer = []
 for row in reader:
     test_query.append(row[0])
-    temp_api = [n.lower() for n in row[1:]]
+    temp_api = [n.lower() for n in row[1:] if len(n) > 1]
     test_answer.append(temp_api)
 print(test_query)
 print(test_answer)
 
-fr = open('../data/get_rec_biker_filter.csv', 'r')
+fr = open('../data/get_feature_new_biker.csv', 'r')
 reader = csv.reader(fr)
 
 queries = []
@@ -25,9 +25,9 @@ count = 0
 for row in reader:
     if count%10 == 0:
         queries.append(row[0])
-        temp_api = [row[1].lower()]
+        temp_api = [row[-1].lower()]
     else:
-        temp_api.append(row[1].lower())
+        temp_api.append(row[-1].lower())
         if count%10 == 9:
             rec_api.append(temp_api)
     count += 1
@@ -41,7 +41,7 @@ for i in range(len(test_query)):
         temp_all = []
         for api in rec_api[queries.index(test_query[i])]:
             if api.lower() in test_answer[i]:
-                # print(i, index, temp_all)
+                print(i, index, temp_all)
                 temp_all.append(index)
                 if len(temp_all) > 0 and flag == 0:
                     sort.append(temp_all[0])

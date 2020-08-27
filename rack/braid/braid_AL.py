@@ -2,8 +2,6 @@ import split_data, feedback, metric
 import gensim
 import _pickle as pickle
 import numpy as np
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.ensemble import RandomForestClassifier
 from modAL.models import ActiveLearner
 from modAL.uncertainty import uncertainty_sampling
 from sklearn.linear_model import LogisticRegression
@@ -68,15 +66,12 @@ def get_AL_predict(pct, test_feature, choose_feature, unlabel_feature, test_quer
         # initializing the active learner
         learner = ActiveLearner(
             estimator=LogisticRegression(penalty='l1', solver='liblinear'),
-            # estimator=KNeighborsClassifier(n_neighbors=5),
-            # estimator=RandomForestClassifier(criterion="entropy"),
             X_training=X_feedback, y_training=y_feedback
         )
 
-        sel_query, add_unlabel_feature = [], []
         if len(unlabel_query) > 0:
             # pool-based sampling
-            n_queries = int(pct*100)
+            n_queries = int(pct*150)
             print('n_queries', n_queries, len(unlabel_query))
             for idx in range(n_queries):
                 query_idx, query_instance = uncertainty_sampling(classifier=learner, X=X_train)
@@ -115,24 +110,22 @@ def get_AL_predict(pct, test_feature, choose_feature, unlabel_feature, test_quer
     new_X_feedback, new_y_feedback = get_active_data(add_label_feedback_info, choose_feature)
     learner = ActiveLearner(
         estimator=LogisticRegression(penalty='l1', solver='liblinear'),
-        # estimator=KNeighborsClassifier(n_neighbors=5),
-        # estimator=RandomForestClassifier(criterion="entropy"),
         X_training=new_X_feedback, y_training=new_y_feedback
     )
     feedback_info = feedback.get_feedback_inf(test_query, choose_query, choose_answer, rec_api_test, w2v, idf)
     X = split_data.get_test_feature_matrix(feedback_info, test_feature)
     print('new_X_feedback', len(new_X_feedback), len(new_y_feedback))
-    # 扩展的标记集（feedback repository数据）特征向量
-    fw = open('../data/train.csv', 'w', newline='')
-    writer = csv.writer(fw)
-    for i in range(len(new_y_feedback)):
-        writer.writerow((new_y_feedback[i], new_X_feedback[i][0], new_X_feedback[i][1], new_X_feedback[i][2], new_X_feedback[i][3], new_X_feedback[i][4], new_X_feedback[i][5], new_X_feedback[i][6], rec_api_choose[i]))
-
-    # 测试集特征向量
-    fw = open('../data/test.csv', 'w', newline='')
-    writer = csv.writer(fw)
-    for i, x in enumerate(X):
-        writer.writerow(x+[rec_api_test[i]])
+    # # 扩展的标记集（feedback repository数据）特征向量
+    # fw = open('../data/train.csv', 'w', newline='')
+    # writer = csv.writer(fw)
+    # for i in range(len(new_y_feedback)):
+    #     writer.writerow((new_y_feedback[i], new_X_feedback[i][0], new_X_feedback[i][1], new_X_feedback[i][2], new_X_feedback[i][3], new_X_feedback[i][4], new_X_feedback[i][5], new_X_feedback[i][6], rec_api_choose[i]))
+    #
+    # # 测试集特征向量
+    # fw = open('../data/test.csv', 'w', newline='')
+    # writer = csv.writer(fw)
+    # for i, x in enumerate(X):
+    #     writer.writerow(x+[rec_api_test[i]])
 
     X_test = np.array(X)
     # 用反馈数据学习过后的模型来预测测试数据
@@ -144,7 +137,7 @@ def get_AL_predict(pct, test_feature, choose_feature, unlabel_feature, test_quer
     # print(predict)
     # print('new_choose', len(choose_query), len(choose_answer))
 
-    return predict, X, new_X_feedback, new_y_feedback#, choose_query, choose_answer
+    return predict, X, new_X_feedback, new_y_feedback, choose_query, choose_answer, rec_api_choose, choose_feature
     # return predict, choose_query, choose_answer, rec_api_choose, choose_feature
 
 

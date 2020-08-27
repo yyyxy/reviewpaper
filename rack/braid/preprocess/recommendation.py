@@ -326,3 +326,145 @@ def recommend_api_class(query_matrix,query_idf_vector,top_questions,questions,ja
     return recommended_api
 
 
+def get_topk_questions(origin_query,query_matrix,query_idf_vector,questions,topk,parent):
+
+    # this function returns a dictionary of the top-k most relevant questions of the query
+    # the key is question id, the value is the similarity between the question and the query
+
+    query_id = '-1'
+    for question in questions:
+        if question.title == origin_query or question.title in origin_query or origin_query in question.title:  # the same question should not appear in the dataset
+            query_id = question.id
+            if query_id not in parent:
+                parent[query_id] = query_id
+
+    relevant_questions = list()
+    for question in questions:
+
+        if query_id in parent and question.id in parent and parent[query_id] == parent[question.id]: #duplicate questions
+            continue
+
+        valid = False
+        for answer in question.answers:
+            if int(answer.score)>=0:
+                valid = True
+        if not valid:
+            continue
+
+        sim = similarity.sim_doc_pair(query_matrix,question.matrix, query_idf_vector, question.idf_vector)
+        relevant_questions.append((question.id, question.title, sim))
+
+    list_relevant_questions = sorted(relevant_questions, key=lambda question: question[2], reverse=True)
+
+    #print(list_relevant_questions)
+    # get the ids of top-k most relevant questions
+    top_questions = dict()
+    for i, item in enumerate(list_relevant_questions):
+        top_questions[item[0]] = item[2]
+        if i+1 == topk:
+            break
+
+    return top_questions
+
+
+def summarize_api_method(api_method, top_questions, questions, javadoc, javadoc_dict_methods):
+    api_descriptions = ''
+    if api_method == 'null':
+        api_descriptions = 'null'
+    else:
+        for api in javadoc:
+            for i, method in enumerate(api.methods):
+                if api.package_name + '.' + api.class_name + '.' + method == api_method:
+                    # print('>>>JavaDoc<<<')
+                    api_descriptions = api.methods_descriptions_pure_text[i].replace('\n',' ').replace('  ',' ').split('.')[0]+'.'
+                    # print(api_descriptions)
+                    break
+
+    titles = dict()
+    code_snippets = dict()
+
+    method_pure_name = api_method.split('.')[-1]
+
+    for question in questions:
+        if question.id not in top_questions:
+            continue
+
+        contains_api = False
+
+        for answer in question.answers:
+
+            soup = BeautifulSoup(answer.body, 'html.parser', from_encoding='utf-8')
+
+
+
+            links = soup.find_all('a')
+            for link in links:
+                link = link['href']
+                if 'docs.oracle.com/javase/' in link and '/api/' in link and 'html' in link:
+                    pair = util.parse_api_link(link)  # pair[0] is class name, pair[1] is method name
+
+                    if pair[1] != '':
+                        method_name = pair[0] + '.' + pair[1]
+                        if method_name == api_method:
+                            titles[question.title] = top_questions[question.id]
+                            contains_api = True
+
+            codes = soup.find_all('code')
+            for code in codes:
+                code = code.get_text()
+                pos = code.find('(')
+                if pos != -1:
+                    code = code[:pos]
+                if code in javadoc_dict_methods:
+                    method_name = javadoc_dict_methods[code]
+                    if method_name == api_method:
+                        titles[question.title] = top_questions[question.id]
+                        contains_api = True
+
+        if contains_api:
+            snippet_list = list()
+            for answer in question.answers:
+                soup = BeautifulSoup(answer.body, 'html.parser', from_encoding='utf-8')
+                code_snippet = soup.find('pre')
+                if code_snippet is not None and code_snippet.get_text().count('\n') <= 5 \
+                        and '.'+method_pure_name+'(' in code_snippet.get_text():
+                    snippet_list.append(code_snippet.get_text())
+            code_snippets[question.title] = snippet_list
+
+    titles = sorted(titles.items(), key=lambda item: item[1], reverse=True)
+
+    #print('>>>Relevant Questions<<<')
+    tot = 0
+    for i, title in enumerate(titles):
+        if tot == 3:
+            break
+        if len(code_snippets[title[0]])>0:
+            tot+=1
+            #print(str(tot)+'.'+title[0])
+
+    if tot<3:
+        for i, title in enumerate(titles):
+            if tot == 3:
+                break
+            if len(code_snippets[title[0]])==0:
+                tot += 1
+                #print(str(tot)+'.'+title[0])
+
+
+    tot = 0
+    for i, title in enumerate(titles):
+        if tot == 3:
+            break
+        if len(code_snippets[title[0]]) > 0:
+            tot += 1
+            # if tot == 1:
+                # print('>>>Code Snippets<<<')
+            #print('/**********code snippet', tot, '**********/')
+            #print(code_snippets[title[0]][0])
+
+    # if tot==0:
+        # print('\n-----------------------------------------------\n')
+    # else: print('-----------------------------------------------\n')
+    return api_descriptions, titles
+
+
