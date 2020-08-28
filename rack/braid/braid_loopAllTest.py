@@ -36,17 +36,17 @@ def get_AL_predict(pct, test_feature, choose_feature, unlabel_feature, test_quer
             # add queried instance into FR
             choose_query.append(unlabel_query[idx])
             choose_answer.append(unlabel_answer[idx])
-            rec_api_choose.extend(rec_api_unlabel[idx*10:idx*10+10])
-            choose_feature.extend(unlabel_feature[idx*10:idx*10+10])
+            rec_api_choose.extend(rec_api_unlabel[idx*30:idx*30+30])
+            choose_feature.extend(unlabel_feature[idx*30:idx*30+30])
 
             # remove queried instance from pool
-            for i in range(10):
-                X_train = np.delete(X_train, idx*10, axis=0)
-                y_train = np.delete(y_train, idx*10)
+            for i in range(30):
+                X_train = np.delete(X_train, idx*30, axis=0)
+                y_train = np.delete(y_train, idx*30)
             del unlabel_query[idx]
             del unlabel_answer[idx]
-            del rec_api_unlabel[idx*10:idx*10+10]
-            del unlabel_feature[idx*10:idx*10+10]
+            del rec_api_unlabel[idx*30:idx*30+30]
+            del unlabel_feature[idx*30:idx*30+30]
             if len(X_train) == 0:
                 break
 
@@ -64,16 +64,17 @@ path1 = 'D:/first_review_data/'
 w2v = gensim.models.Word2Vec.load(path.join(path1, './w2v_model_stemmed'))  # pre-trained word embedding
 idf = pickle.load(open(path.join(path1, './idf'), 'rb'))  # pre-trained idf value of all words in the w2v dictionary
 
-for round in range(10):
+for round in range(1):
     top1, top3, top5, map, mrr = 0, 0, 0, 0, 0
     LTR_top1, LTR_top3, LTR_top5, LTR_map, LTR_mrr = 0, 0, 0, 0, 0
     AL_top1, AL_top3, AL_top5, AL_map, AL_mrr = 0, 0, 0, 0, 0
     X_train, y_train = [], []
 
-    dataset_size = 150
-    # filter_idx = split_data.filter_test_idx('nlp')
-    filter_idx = [i for i in range(dataset_size)]
-    test_idx = sorted(random.sample(filter_idx, 50))
+    dataset_size = 11
+    # # filter_idx = split_data.filter_test_idx('nlp')
+    # filter_idx = [i for i in range(dataset_size)]
+    # test_idx = sorted(random.sample(filter_idx, 50))
+    test_idx = [i for i in range(dataset_size)]
     print('len(test_idx)', len(test_idx), test_idx)
     test_query, test_answer, test_rec_api, test_feature = split_data.idx_to_data(test_idx)
     # train_idx = [i for i in range(dataset_size) if i not in test_idx]
@@ -83,6 +84,7 @@ for round in range(10):
 
     # 反馈数据库
     for id in range(len(test_query)):
+        # try:
         round_top1, round_top3, round_top5, round_map, round_mrr = 0, 0, 0, 0, 0
         LTR_round_top1, LTR_round_top3, LTR_round_top5, LTR_round_map, LTR_round_mrr = 0, 0, 0, 0, 0
         AL_round_top1, AL_round_top3, AL_round_top5, AL_round_map, AL_round_mrr = 0, 0, 0, 0, 0
@@ -139,8 +141,8 @@ for round in range(10):
                 if idx < len(unlabel_query):
                     choose_query.append(unlabel_query[idx])
                     choose_answer.append(unlabel_answer[idx])
-                    choose_rec_api.extend(unlabel_rec_api[idx * 10:idx * 10 + 10])
-                    choose_feature.extend(unlabel_feature[idx * 10:idx * 10 + 10])
+                    choose_rec_api.extend(unlabel_rec_api[idx * 30:idx * 30 + 30])
+                    choose_feature.extend(unlabel_feature[idx * 30:idx * 30 + 30])
 
         # if id == 25:
         #     label_feedback_info = feedback.get_feedback_inf(choose_query, choose_query, choose_answer, choose_rec_api, w2v, idf)
@@ -155,8 +157,8 @@ for round in range(10):
         # AL预测模型
         print('filter_idx', len(filter_idx), filter_idx, len(choose_query))
         AL_predict = []
-        feedback_info = feedback.get_feedback_inf([test_query[id]], choose_query, choose_answer, test_rec_api[id*10:id*10+10], w2v, idf)
-        X = split_data.get_test_feature_matrix(feedback_info, test_feature[id*10:id*10+10])
+        feedback_info = feedback.get_feedback_inf([test_query[id]], choose_query, choose_answer, test_rec_api[id*30:id*30+30], w2v, idf)
+        X = split_data.get_test_feature_matrix(feedback_info, test_feature[id*30:id*30+30])
         X_test = np.array(X)
         # 用反馈数据学习过后的模型来预测测试数据
         for query_idx in range(len(X)):
@@ -172,29 +174,29 @@ for round in range(10):
         print('len(query)', len(unlabel_query), len(choose_query))
         choose_query.append(test_query[id])
         choose_answer.append(test_answer[id])
-        choose_rec_api.extend(test_rec_api[id*10:id*10+10])
-        choose_feature.extend(test_feature[id*10:id*10+10])
+        choose_rec_api.extend(test_rec_api[id*30:id*30+30])
+        choose_feature.extend(test_feature[id*30:id*30+30])
 
         rank_mod, rankall, LTR_rank_mod, LTR_rankall, AL_rank_mod, AL_rankall = [], [], [], [], [], []
         m = 0.1
         n = 0
         # for n in range(len(test_query)):
-        pred1 = LTR_predict[10*n:10*n+10]
-        pred2 = AL_predict[10*n:10*n+10]
+        pred1 = LTR_predict[30*n:30*n+30]
+        pred2 = AL_predict[30*n:30*n+30]
         pred, sum_pred1,sum_pred2 = [], 0, 0
         LTR_pred, AL_pred, LTR_sum,AL_sum = [], [], 0, 0
-        for i in range(10):
+        for i in range(30):
             sum_pred1 += pred1[i] + 5
             sum_pred2 += pred2[i]
         al_idx = []
         rerank_al = sorted(pred2, reverse=True)
-        for i in range(10):
+        for i in range(30):
             temp = rerank_al.index(pred2[i])+1
             while temp in al_idx:
                 temp += 1
             al_idx.append(temp)
         print(al_idx)
-        for num in range(10):
+        for num in range(30):
             sum = (pred1[num]+5)/10+m*pred2[num]/al_idx[num]
             LTR_sum = (pred1[num]+5)/10
             AL_sum = m*pred2[num]/al_idx[num]
@@ -203,15 +205,15 @@ for round in range(10):
             AL_pred.append(AL_sum)
         print(LTR_pred)
         print(AL_pred)
-        print(test_rec_api[10*id:10*id+10])
+        print(test_rec_api[30*id:30*id+30])
         # fr_rec_score, fr_rec_api = split_data.get_fr_cal_sim(test_query[n], fr_matrix, fr_idf_vector, fr_answers, pct, w2v, idf)
-        rank_mod, rankall = metric.re_sort([test_query[id]], pred, test_rec_api[id*10:id*10+10], [test_answer[id]], n, rank_mod, rankall)
-        LTR_rank_mod, LTR_rankall = metric.ALTR_re_sort(LTR_pred, test_rec_api[id*10:id*10+10], [test_answer[id]], n, LTR_rank_mod, LTR_rankall)
-        AL_rank_mod, AL_rankall = metric.ALTR_re_sort(AL_pred, test_rec_api[id*10:id*10+10], [test_answer[id]], n, AL_rank_mod, AL_rankall)
+        rank_mod, rankall = metric.re_sort([test_query[id]], pred, test_rec_api[id*30:id*30+30], [test_answer[id]], n, rank_mod, rankall)
+        LTR_rank_mod, LTR_rankall = metric.ALTR_re_sort(LTR_pred, test_rec_api[id*30:id*30+30], [test_answer[id]], n, LTR_rank_mod, LTR_rankall)
+        AL_rank_mod, AL_rankall = metric.ALTR_re_sort(AL_pred, test_rec_api[id*30:id*30+30], [test_answer[id]], n, AL_rank_mod, AL_rankall)
 
-        temp_top1, temp_top3, temp_top5, temp_map, temp_mrr = metric.metric_val(rank_mod, rankall, len(test_rec_api[id*10:id*10+10]))
-        LTR_temp_top1, LTR_temp_top3, LTR_temp_top5, LTR_temp_map, LTR_temp_mrr = metric.metric_val(LTR_rank_mod, LTR_rankall, len(test_rec_api[id*10:id*10+10]))
-        AL_temp_top1, AL_temp_top3, AL_temp_top5, AL_temp_map, AL_temp_mrr = metric.metric_val(AL_rank_mod, AL_rankall, len(test_rec_api[id*10:id*10+10]))
+        temp_top1, temp_top3, temp_top5, temp_map, temp_mrr = metric.metric_val(rank_mod, rankall, len(test_rec_api[id*30:id*30+30]))
+        LTR_temp_top1, LTR_temp_top3, LTR_temp_top5, LTR_temp_map, LTR_temp_mrr = metric.metric_val(LTR_rank_mod, LTR_rankall, len(test_rec_api[id*30:id*30+30]))
+        AL_temp_top1, AL_temp_top3, AL_temp_top5, AL_temp_map, AL_temp_mrr = metric.metric_val(AL_rank_mod, AL_rankall, len(test_rec_api[id*30:id*30+30]))
         round_top1 += temp_top1
         round_top3 += temp_top3
         round_top5 += temp_top5
@@ -249,12 +251,14 @@ for round in range(10):
         # fw.close()
 
         print(top1/(id+1), top3/(id+1), top5/(id+1), map/(id+1), mrr/(id+1))
+        # except:
+        #     print(id)
 
     print(top1/50, top3/50, top5/50, map/50, mrr/50)
     print(LTR_top1/50, LTR_top3/50, LTR_top5/50, LTR_map/50, LTR_mrr/50)
     print(AL_top1/50, AL_top3/50, AL_top5/50, AL_map/50, AL_mrr/50)
 
-    fw = open('../data/metric_rack.csv', 'a+', newline='')
+    fw = open('../data/metric_biker.csv', 'a+', newline='')
     writer = csv.writer(fw)
     writer.writerow(('BRAID', top1/50, top3/50, top5/50, map/50, mrr/50))
     fw.close()

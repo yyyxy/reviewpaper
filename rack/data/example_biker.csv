@@ -1,0 +1,13 @@
+413result,,,,
+10,20,toBinaryString type error,java.lang.Integer.toBinaryString,
+6,9,"Interpret java strings containing integer literals (dec, hex & oct notation) as integer values",java.lang.Integer.decode,
+5,17,How to take two digit from string in java,java.lang.String.substring,
+10,8,How to replace first occurrence of string in Java,java.lang.String.substring,
+5,14,trying to obtain a first name in the path after first back slash,java.lang.String.split,
+5,18,How to display only time part from date time combination in java,java.util.regex.Pattern.sum,java.lang.String.split
+9,26,How i can to add a significant 0 to int,java.lang.String.format,
+7,30,printing answer up to 9 digits on division in java,java.lang.String.format,
+310result,,,,
+9,2,XML How to Add CDATA data ,org.w3c.dom.Document.createTextNode,
+6,3,Append string to a text file,java.nio.file.Files.newBufferedWriter,
+413result,,,,

@@ -53,7 +53,7 @@ def get_feedback_inf(test, question, answer, rec_api_test, w2v, idf):
     for query in test:
         query_matrix, query_idf_vector = load_matrix(query, w2v, idf)
         feedbacks_inf, feed_sim = get_feedback_api(question, answer, query_matrix, query_idf_vector, w2v, idf)
-        for api in rec_api_test[10*test.index(query):10*test.index(query)+10]:
+        for api in rec_api_test[30*test.index(query):30*test.index(query)+30]:
             feed_label = []
             label, i = 0, 0
             for feed in feedbacks_inf[0:5]:

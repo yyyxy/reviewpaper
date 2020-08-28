@@ -13,12 +13,12 @@ def get_AL_feature(t_answer, t_rec_api, feature):
     training_feature = []
     for i, train in enumerate(t_answer):
         # print('train',i, train)
-        for index, ap in enumerate(t_rec_api[i*10:i*10+10]):
+        for index, ap in enumerate(t_rec_api[i*30:i*30+30]):
             if ap in train:
                 temp = [1]
             else:
                 temp = [0]
-            temp.extend(feature[i*10+index][1:])
+            temp.extend(feature[i*30+index][1:])
             training_feature.append(temp)
             # print(temp)
     return training_feature
@@ -76,7 +76,7 @@ def get_AL_predict(pct, test_feature, choose_feature, unlabel_feature, test_quer
             for idx in range(n_queries):
                 query_idx, query_instance = uncertainty_sampling(classifier=learner, X=X_train)
                 # print('uncertain', query_idx, X_train[query_idx], y_train[query_idx])
-                idx = int(query_idx/10)
+                idx = int(query_idx/30)
                 # print(idx, len(X_train))
                 learner.teach(
                     X=X_train[query_idx].reshape(1, -1),
@@ -87,24 +87,24 @@ def get_AL_predict(pct, test_feature, choose_feature, unlabel_feature, test_quer
                 # add queried instance into FR
                 choose_query.append(unlabel_query[idx])
                 choose_answer.append(unlabel_answer[idx])
-                rec_api_choose.extend(rec_api_unlabel[idx*10:idx*10+10])
-                choose_feature.extend(unlabel_feature[idx*10:idx*10+10])
+                rec_api_choose.extend(rec_api_unlabel[idx*30:idx*30+30])
+                choose_feature.extend(unlabel_feature[idx*30:idx*30+30])
 
                 # remove queried instance from pool
-                for i in range(10):
-                    X_train = np.delete(X_train, idx*10, axis=0)
-                    y_train = np.delete(y_train, idx*10)
+                for i in range(30):
+                    X_train = np.delete(X_train, idx*30, axis=0)
+                    y_train = np.delete(y_train, idx*30)
                 del unlabel_query[idx]
                 del unlabel_answer[idx]
-                del rec_api_unlabel[idx*10:idx*10+10]
-                del unlabel_feature[idx*10:idx*10+10]
+                del rec_api_unlabel[idx*30:idx*30+30]
+                del unlabel_feature[idx*30:idx*30+30]
                 if len(X_train) == 0:
                     break
     else:
-        choose_query = unlabel_query[:10]
-        choose_answer = unlabel_answer[:10]
-        rec_api_choose = rec_api_unlabel[:100]
-        choose_feature = unlabel_feature[:100]
+        choose_query = unlabel_query[:30]
+        choose_answer = unlabel_answer[:30]
+        rec_api_choose = rec_api_unlabel[:300]
+        choose_feature = unlabel_feature[:300]
 
     add_label_feedback_info = feedback.get_feedback_inf(choose_query, choose_query, choose_answer, rec_api_choose, w2v, idf)
     new_X_feedback, new_y_feedback = get_active_data(add_label_feedback_info, choose_feature)
@@ -137,7 +137,7 @@ def get_AL_predict(pct, test_feature, choose_feature, unlabel_feature, test_quer
     # print(predict)
     # print('new_choose', len(choose_query), len(choose_answer))
 
-    return predict, X, new_X_feedback, new_y_feedback, choose_query, choose_answer, rec_api_choose, choose_feature
+    return predict, X, new_X_feedback, new_y_feedback#, choose_query, choose_answer, rec_api_choose, choose_feature
     # return predict, choose_query, choose_answer, rec_api_choose, choose_feature
 
 

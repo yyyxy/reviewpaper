@@ -1,0 +1,9 @@
+How do I read / download webpage content?,java.net.URL.toString,
+How do I get data types supported by database?,java.sql.DatabaseMetaData.getColumns,java.sql.Connection.getMetaData
+How do I print a file using the default registered application?,java.nio.file.Files.newBufferedWriter,
+Instantiate unknown class at runtime and call the object’s methods,java.lang.Class.forName,
+XML How to Add CDATA data ,org.w3c.dom.Document.createTextNode,
+How do I format a number with leading zeros?,java.text.NumberFormat.getCurrencyInstance,java.text.NumberFormat.parse
+Append string to a text file,java.nio.file.Files.newBufferedWriter,
+Check if an image is readable,image,imageicon
+how to read ISO Latin-1 Encoded Data,java.io.ByteArrayOutputStream.toString,java.nio.charset.Charset.encode

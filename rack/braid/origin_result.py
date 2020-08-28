@@ -5,7 +5,7 @@ import split_data
 # split_data.split_test()
 
 # test preprocessing
-fr = open('../data/feedback_all_new_biker.csv', 'r')
+fr = open('../data/feedback_all_new_nlp.csv', 'r')
 reader = csv.reader(fr)
 test_query = []
 test_answer = []
@@ -16,7 +16,7 @@ for row in reader:
 print(test_query)
 print(test_answer)
 
-fr = open('../data/get_feature_new_biker.csv', 'r')
+fr = open('../data/get_feature_new_nlp.csv', 'r')
 reader = csv.reader(fr)
 
 queries = []
@@ -30,24 +30,24 @@ for row in reader:
         temp_api.append(row[-1].lower())
         if count%10 == 9:
             rec_api.append(temp_api)
+            print(test_answer[int(count/10)])
+            print(temp_api)
     count += 1
 
 
 sort, sort_all = [], []
 for i in range(len(test_query)):
-    flag = 0
-    if test_query[i] in queries:
-        index = 1
-        temp_all = []
-        for api in rec_api[queries.index(test_query[i])]:
-            if api.lower() in test_answer[i]:
-                print(i, index, temp_all)
-                temp_all.append(index)
-                if len(temp_all) > 0 and flag == 0:
-                    sort.append(temp_all[0])
-                    flag = 1
-            index += 1
-        sort_all.append(temp_all)
+    tmp_all = []
+    for api in test_answer[i]:
+        tmp_rec_api = rec_api[i]
+        if api in tmp_rec_api and len(api) > 1:
+            tmp_all.append(tmp_rec_api.index(api) + 1)
+    tmp_all = sorted(tmp_all)
+    sort_all.append(tmp_all)
+    if len(tmp_all) == 0:
+        sort.append(-1)
+    else:
+        sort.append(tmp_all[0])
 print(sort)
 print(sort_all)
 
@@ -71,9 +71,9 @@ for n in sort_all:
 for i in sort:
     if i == 1:
         top1 += 1
-    if i <= 3:
+    if i <= 3 and i>-1:
         top3 += 1
-    if i <= 5:
+    if i <= 5 and i>-1:
         top5 += 1
     mrr += 1/i
 
@@ -92,3 +92,9 @@ print(top1/len(test_query), top3/len(test_query), top5/len(test_query), map/len(
 # writer = csv.writer(fw)
 # writer.writerow(('original', top1/len(test_query), top3/len(test_query), top5/len(test_query), map/len(test_query), mrr/len(test_query)))
 # fw.close()
+
+fw = open('../data/miss_nlp.csv', 'w', newline='', encoding='utf-8')
+writer = csv.writer(fw)
+for i in range(len(sort_all)):
+    if len(sort_all[i]) == 0:
+        writer.writerow([test_query[i]]+test_answer[i])

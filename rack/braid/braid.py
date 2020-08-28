@@ -21,11 +21,11 @@ top1, top3, top5, map, mrr = 0, 0, 0, 0, 0
 LTR_top1, LTR_top3, LTR_top5, LTR_map, LTR_mrr = 0, 0, 0, 0, 0
 AL_top1, AL_top3, AL_top5, AL_map, AL_mrr = 0, 0, 0, 0, 0
 
-num_choose = 10
+num_choose = 79
 file_choose = 19
 
 queries = []
-fr = open('../data/feedback_all_new_nlp.csv', 'r')
+fr = open('../data/feedback_all_new_nlp_example.csv', 'r', encoding='utf-8')
 reader = csv.reader(fr)
 for row in reader:
     queries.append(row[0])
@@ -76,8 +76,8 @@ for round in range(1):
         time_ex1 = time.time()
         # 获取AL初始训练数据，即反馈数据
         # choose_query, choose_answer, choose_rec_api, choose_feature = split_data.idx_to_data(choose_idx)
-        # choose_query, choose_answer, choose_rec_api, choose_feature = split_data.get_choose_data(choose_idx, test_query, pct, w2v, idf)
-        choose_query, choose_answer, choose_rec_api, choose_feature = split_data.split_10_choose_data(file_choose)
+        choose_query, choose_answer, choose_rec_api, choose_feature = split_data.get_choose_data(choose_idx, test_query, pct, w2v, idf)
+        # choose_query, choose_answer, choose_rec_api, choose_feature = split_data.split_10_choose_data(file_choose)
         AL_choose_feature = braid_AL.get_AL_feature(choose_answer, choose_rec_api, choose_feature)
 
         # 获取初始未标记数据，从stack overflow获取
@@ -99,22 +99,22 @@ for round in range(1):
         rank_mod, rankall, LTR_rank_mod, LTR_rankall, AL_rank_mod, AL_rankall = [], [], [], [], [], []
         m = 0.1
         for n in range(len(test_query)):
-            pred1 = LTR_predict[10*n:10*n+10]
-            pred2 = AL_predict[10*n:10*n+10]
+            pred1 = LTR_predict[30*n:30*n+30]
+            pred2 = AL_predict[30*n:30*n+30]
             pred, sum_pred1,sum_pred2 = [], 0, 0
             LTR_pred, AL_pred, LTR_sum,AL_sum = [], [], 0, 0
-            for i in range(10):
+            for i in range(30):
                 sum_pred1 += pred1[i] + 5
                 sum_pred2 += pred2[i]
             al_idx = []
             rerank_al = sorted(pred2, reverse=True)
-            for i in range(10):
+            for i in range(30):
                 temp = rerank_al.index(pred2[i])+1
                 while temp in al_idx:
                     temp += 1
                 al_idx.append(temp)
             print(al_idx)
-            for num in range(10):
+            for num in range(30):
                 sum = (pred1[num]+5)/10+m*pred2[num]/al_idx[num]
                 LTR_sum = (pred1[num]+5)/10
                 AL_sum = m*pred2[num]/al_idx[num]
@@ -123,7 +123,7 @@ for round in range(1):
                 AL_pred.append(AL_sum)
             print(LTR_pred)
             print(AL_pred)
-            print(test_rec_api[10*n:10*n+10])
+            print(test_rec_api[30*n:30*n+30])
             # fr_rec_score, fr_rec_api = split_data.get_fr_cal_sim(test_query[n], fr_matrix, fr_idf_vector, fr_answers, pct, w2v, idf)
             rank_mod, rankall = metric.re_sort(test_query, pred, test_rec_api, test_answer, n, rank_mod, rankall)
             LTR_rank_mod, LTR_rankall = metric.ALTR_re_sort(LTR_pred, test_rec_api, test_answer, n, LTR_rank_mod, LTR_rankall)
@@ -180,7 +180,7 @@ print(top1/100, top3/100, top5/100, map/100, mrr/100)
 print(LTR_top1/100, LTR_top3/100, LTR_top5/100, LTR_map/100, LTR_mrr/100)
 print(AL_top1/100, AL_top3/100, AL_top5/100, AL_map/100, AL_mrr/100)
 
-fw = open('../data/metric_nlp.csv', 'a+', newline='')
+fw = open('../data/metric_rack.csv', 'a+', newline='')
 writer = csv.writer(fw)
 # writer.writerow(('BRAID', 11, num_choose, top1/100, top3/100, top5/100, map/100, mrr/100))
 # writer.writerow(('LTR', 11, num_choose, LTR_top1/100, LTR_top3/100, LTR_top5/100, LTR_map/100, LTR_mrr/100))

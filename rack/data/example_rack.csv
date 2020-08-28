@@ -1,0 +1,34 @@
+1,1,How do I read / download webpage content?,url,bufferedreader,bufferedwriter,,
+8,8,How do I get data types supported by database?,databasemetadata,connection,resultset,,
+1,1,How do I print a file using the default registered application?,desktop,file,,,
+1,1,How do I turn the Num Lock button on?,toolkit,keyevent,,,
+1,1,Instantiate unknown class at runtime and call the object’s methods,class,method,,,
+1,1,XML How to Add CDATA data ,element,cdatasection,document,documentbuilderfactory,transformerfactory
+8,7,JavaFX Creating a Sprite Animation,interpolator,transition,imageview,duration,
+1,1,How do I format a number with leading zeros?,numberformat,decimalformat,,,
+1,1,Append string to a text file,printstream,bufferedoutputstream,fileoutputstream,file,
+8,11,Check if an image is readable,image,imageicon,,,
+2,2,how to read ISO Latin-1 Encoded Data,bufferedreader,inputstreamreader,fileinputstream,,
+1,1,How do I read / download webpage content?,url,bufferedreader,bufferedwriter,,,,,,
+8,8,How do I get data types supported by database?,databasemetadata,connection,resultset,,,,,,
+1,1,How do I print a file using the default registered application?,desktop,file,,,,,,,
+1,1,How do I turn the Num Lock button on?,toolkit,keyevent,,,,,,,
+1,1,Instantiate unknown class at runtime and call the object’s methods,class,method,,,,,,,
+1,1,XML How to Add CDATA data ,element,cdatasection,document,documentbuilderfactory,transformerfactory,,,,
+8,7,JavaFX Creating a Sprite Animation,interpolator,transition,imageview,duration,,,,,
+1,1,How do I format a number with leading zeros?,numberformat,decimalformat,,,,,,,
+1,1,Append string to a text file,printstream,bufferedoutputstream,fileoutputstream,file,,,,,
+8,11,Check if an image is readable,image,imageicon,,,,,,,
+2,2,how to read ISO Latin-1 Encoded Data,bufferedreader,inputstreamreader,fileinputstream,,,,,,
+10,3,Converting a small hexadecimal String into a integer,Arrays
+9,9,Check if multiple files exist in Java,Class
+5,1,file.canWrite(); file.canRead(); file.canExceute(); always return true though my file/directory had no access rights,File
+5,1,Incorrect data returned by Calendar API,constant-values,Calendar
+10,3,Converting a small hexadecimal String into a integer,Arrays
+9,9,Check if multiple files exist in Java,Class
+5,1,file.canWrite(); file.canRead(); file.canExceute(); always return true though my file/directory had no access rights,File
+5,1,Incorrect data returned by Calendar API,constant-values,Calendar
+7,2,Converting a small hexadecimal String into a integer,Arrays,BigInteger,ArrayList
+5,1,Check if multiple files exist in Java,Class,File,Files
+5,1,file.canWrite(); file.canRead(); file.canExceute(); always return true though my file/directory had no access rights,File,,
+5,1,Incorrect data returned by Calendar API,constant-values,Calendar,

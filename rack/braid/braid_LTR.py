@@ -16,12 +16,12 @@ def get_LTR_feature(t_answer, t_rec_api, feature):
     training_feature = []
     for i, train in enumerate(t_answer):
         # print('train',i, train)
-        for index, ap in enumerate(t_rec_api[i*10:i*10+10]):
+        for index, ap in enumerate(t_rec_api[i*30:i*30+30]):
             if ap in train:
                 temp = [1]
             else:
                 temp = [0]
-            temp.extend(feature[i*10+index][1:])
+            temp.extend(feature[i*30+index][1:])
             training_feature.append(temp)
             # print(temp)
     return training_feature
@@ -36,9 +36,9 @@ def evalerror(preds, dtrain):       # written by myself
 
 def get_LTR_predict(test_feature, train_x_feature, train_y_feature):
     # 一共2组*每组3条，6条样本，特征维数是2
-    n_group = int(len(train_x_feature)/10)
-    n_testgroup = int(len(test_feature)/10)
-    n_choice = 10
+    n_group = int(len(train_x_feature)/30)
+    n_testgroup = int(len(test_feature)/30)
+    n_choice = 30
 
     # dtrain = np.random.uniform(0, 100, [n_group * n_choice, 2])
     # # numpy.random.choice(a, size=None, replace=True, p=None)
