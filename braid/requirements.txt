@@ -87,7 +87,7 @@ termcolor==1.1.0
 threadpoolctl==2.0.0
 toolz==0.10.0
 tqdm==4.46.0
-urllib3==1.25.9
+urllib3==1.26.5
 virtualenv==20.0.20
 websocket-server==0.4
 Werkzeug==1.0.1
