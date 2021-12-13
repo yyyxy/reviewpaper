@@ -44,7 +44,7 @@ jmespath==0.10.0
 joblib==0.15.1
 jsonschema==3.2.0
 Keras-Preprocessing==1.1.2
-lxml==4.5.0
+lxml==4.6.5
 Markdown==3.2.2
 MarkupSafe==1.1.1
 modAL==0.3.5
