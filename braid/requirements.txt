@@ -61,7 +61,7 @@ py-flags==1.1.4
 py-solc-x==0.6.0
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
-PyJWT==1.7.1
+PyJWT==2.4.0
 pyreadline==2.1
 pyrsistent==0.16.0
 python-dateutil==2.8.1
